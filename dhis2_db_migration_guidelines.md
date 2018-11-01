@@ -1,4 +1,5 @@
 
+
 ## Dhis2 Database Migration Guidelines (V2.31+)
 ### Flyway
 
@@ -35,11 +36,24 @@ The naming is of the format `V<Major>_<Minor>_<Patch>__<Description_separated_by
 	Eg: V2_31_1__Table_alterations_for_adding_sharing_properties_to_Datastore.sql
 		V2_31_2__Upgrading_Scheduler_to_change_JobParameters_to_jsonb.java
 
-We can have multiple migration scripts (as sql files or java classes) for a single release. For eg: 2.31.1 , 2.31.2,........, 2.31.100
+We may have multiple migration scripts (as sql files or java classes) for a single release. For eg: 2.31.1 , 2.31.2,........, 2.31.100
 
 Developers can decide whether they need to _append_ their migrations to an already existing migration file (Say V2.31.1) or they can create a new migration file (V2.31.2). 
 
-*Note*: Appending scripts to an already existing script (which is already applied), will have some consequences for development instances. On the instances on which that particular script (say V2.31.5.sql) was already executed, flyway validates whether there is any checksum mismatches(file changes) and fails. One of the many solutions when this happens, is to simply delete the particular record for that scripts from _flyway_schema_history_ table and restart the application. Flyway then considers the script as an uninstalled version and proceeds to apply that script. For development instances it is also recommended to have [_flyway outOfOrder_](https://flywaydb.org/documentation/commandline/migrate#outOfOrder) setting to true. This can be done by setting the configuration property ```flyway.migrate.out.of.order``` to *true* in `dhis.conf`. OutOfOrder is recommended only for development instances. It ensures that if version 2.31.1 and version 2.31.3 are already installed, but the latest build has version 2.31.2, then it tries to apply that too. 
+
+_flyway_schema_history_ table looks like this
+|installed_rank | version | description | type | script | checksum | installed_by | installed_on | execution_time | success
+|--|--|--|--|--|--|--|--|--|--|
+| 1 | 2.30.0 | Populate dhis2 schema if empty database | JDBC | org.hisp.dhis.db.migration.base.V2_30_0__Populate_dhis2_schema_if_empty_database |  | dhis | 2018-11-01 13:21:06.770871 | 5004 | true |
+| 2 | 2.31.1 | Table alterations for 31 | SQL | 2.31/V2_31_1__Table_alterations_for_31.sql | -1758192732 | dhis | 2018-11-01 13:21:06.781845 | 31 | true |
+| 3 | 2.31.2 | Option sharing menu | SQL | 2.31/V2_31_2__Option_sharing_menu.sql | 1231089097 | dhis | 2018-11-01 13:21:06.818149 | 10 | true |
+| 4 | 2.31.3 | DataStore sharing menu | SQL | 2.31/V2_31_3__DataStore_sharing_menu.sql | -26438716 | dhis | 2018-11-01 13:21:06.832763 | 9 | true |
+| 5 | 2.31.4 | Sample java based migration | JDBC | org.hisp.dhis.db.migration.v31.V2_31_4__Sample_java_based_migration |  | dhis | 2018-11-01 13:21:06.846571 | 0 | true |
+| 6 | 2.31.5 | Create chart yearlyseries table | SQL | 2.31/V2_31_5__Create_chart_yearlyseries_table.sql | -963276479 | dhis | 2018-11-01 13:21:06.850797 | 4 | true |
+
+*Note*: Appending scripts to an already existing script (which may already have been applied to the db you are working), will have some consequences for development instances. On the instances on which that particular script (say V2.31.5.sql) was already executed, flyway validates whether there is any checksum mismatches(file changes) and fails. If flyway fails because of a latest pull of other developers work (or your own work) which has modified one of the installed scripts (for eg: the file 2.31/V2_31_3__DataStore_sharing_menu.sql), you can explicitly delete the row with ```DELETE from flyway_schema_history where installed_rank=4``` and then restart your application. Flyway then considers the script as an uninstalled version and proceeds to apply that script. For this reasons, in development instances you need to have [_flyway outOfOrder_](https://flywaydb.org/documentation/commandline/migrate#outOfOrder) setting to true. This can be done by setting the configuration property ```flyway.migrate.out.of.order``` to *true* in `dhis.conf`. It ensures that if version 2.31.1 and version 2.31.3 are already installed, but the latest build has version 2.31.2, then it tries to apply that too. 
 
 All migration scripts should be made idempotent if possible. Scripts should also consider that it could be executed on a  fresh db (with no data). Idempotency in most cases simply means using the IF NOT EXISTS / IF EXISTS wherever possible. For constraints with explicit names, its also advised to drop the constraint (if exists) first and then create the constraint which ensures the scripts are rerunnable without any side effects.
+
+From 2.31, the database will always have a function named _generate_uid()_ which can be reused in all future upgrade scripts for generating uids. 
 
