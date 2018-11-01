@@ -38,7 +38,7 @@ The naming is of the format `V<Major>_<Minor>_<Patch>__<Description_separated_by
 
 We may have multiple migration scripts (as sql files or java classes) for a single release. For eg: 2.31.1 , 2.31.2,........, 2.31.100
 
-Developers can decide whether they need to _append_ their migrations to an already existing migration file (Say V2.31.1) or they can create a new migration file (V2.31.2). 
+Developers can decide whether they need to _append_ their migrations to an already existing migration file (Say V2.31.1) or they can create a new migration file (V2.31.2). In most cases, it is ideal to create new migration file for your changes, by picking up the next unused integer for the patch version. 
 
 
 _flyway_schema_history_ table looks like this
