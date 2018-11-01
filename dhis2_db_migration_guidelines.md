@@ -42,6 +42,8 @@ Developers can decide whether they need to _append_ their migrations to an alrea
 
 
 _flyway_schema_history_ table looks like this
+
+
 |installed_rank | version | description | type | script | checksum | installed_by | installed_on | execution_time | success
 |--|--|--|--|--|--|--|--|--|--|
 | 1 | 2.30.0 | Populate dhis2 schema if empty database | JDBC | org.hisp.dhis.db.migration.base.V2_30_0__Populate_dhis2_schema_if_empty_database |  | dhis | 2018-11-01 13:21:06.770871 | 5004 | true |
