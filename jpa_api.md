@@ -1,12 +1,11 @@
 
+
 ### JPA criteria query in DHIS2
+
+#### 1. Overview
 From 2.31, Hibernate Native API is replaced by JPA Criteria Query. The old hibernate Restriction/Criteria is deprecated. 
-
-As the native JPA Criteria Query is a bit complicated, we have implemented some common generic methods in **HibernateGenericStore** and **HibernateIdentifiableObjectStore**. 
-
-Some known issues : 
-
-*  We are still using hibernate xml mapping file .hbm, so if we use a compound primary key JPA Criteria API won't be able to find they attributes belong to that compound mapping, For example:
+Known issues : 
+*  We are still using hibernate xml mapping file .hbm, so if we map a compound primary key then JPA Criteria API won't be able to find the attributes belong to that compound ID, For example:
 
           <composite-id>
                   <key-many-to-one name="programStageInstance" class="org.hisp.dhis.program.ProgramStageInstance"
@@ -15,10 +14,28 @@ Some known issues :
                     foreign-key="fk_entityinstancedatavalue_dataelementid" />
             </composite-id>
 
+    This will fail as JPA can't find the property dataElement of the object TrackedEntityDataValue.
 
-    In this case we need to use the HQL query. So for new objects that have Compound primary key, we must create an ID java class for it.
+        CriteriaBuilder builder = getCriteriaBuilder();
+        return getList( builder, newJpaParameters()
+            .addPredicate( root -> builder.equal( root.get( "dataElement" ), dataElement ) ) );
 
-#### Below are some of the code samples using JPA criteria query inside DHIS2: 
+    In this case we need to use the HQL query. 
+
+        String hql = "from TrackedEntityDataValue tv where tv.dataElement =:dataElement";
+        return getList( getQuery( hql ).setParameter( "dataElement", dataElement ) );
+
+    So for new objects that have Compound primary key, we must use an ID Java class.
+* For now, we have only applied the JPA Criteria Query API, but not fully converted from Hibernate configuration to JPA's configuration such as persistence.xml and entity annotation mapping. Therefore,  we can't use EntityManager and its method. We also can't use JPQL .
+
+#### 2. Todo list
+For DHIS2 to fully support JPA specification, below things need to be done.
+- Apply JPA Criteria Query for CriteriaQueryEngine and related classes
+- Convert hibernate xml mapping to jpa entity annotation mapping
+- Convert HibernateConfigurationProvider to JPA's persistence.xml so that we can fully use JPA EntityManager.
+
+#### 3.  Some of the code samples using JPA criteria query inside DHIS2
+Note hat JPA Criteria Query is a bit complicated, so we have implemented some common generic methods in **HibernateGenericStore** and **HibernateIdentifiableObjectStore**.
 
 - Basic get object method 
 
