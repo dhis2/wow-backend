@@ -29,13 +29,13 @@ Known issues :
 * For now, we have only applied the JPA Criteria Query API, but not fully converted from Hibernate configuration to JPA's configuration such as persistence.xml and entity annotation mapping. Therefore,  we can't use EntityManager and its method. We also can't use JPQL .
 
 #### 2. Todo list
-For DHIS2 to fully support JPA specification, below things need to be done.
+For DHIS2 to fully support JPA specification, below need to be done.
 - Apply JPA Criteria Query for CriteriaQueryEngine and related classes
 - Convert hibernate xml mapping to jpa entity annotation mapping
 - Convert HibernateConfigurationProvider to JPA's persistence.xml so that we can fully use JPA EntityManager.
 
 #### 3.  Some of the code samples using JPA criteria query inside DHIS2
-Note hat JPA Criteria Query is a bit complicated, so we have implemented some common generic methods in **HibernateGenericStore** and **HibernateIdentifiableObjectStore**.
+Note that JPA Criteria Query is a bit complicated, so we have implemented some common generic methods in **HibernateGenericStore** and **HibernateIdentifiableObjectStore**.
 
 - Basic get object method 
 
