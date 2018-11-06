@@ -1,3 +1,4 @@
+
 ### JPA criteria query in DHIS2
 From 2.31, Hibernate Native API is replaced by JPA Criteria Query. The old hibernate Restriction/Criteria is deprecated. 
 
@@ -5,18 +6,19 @@ As the native JPA Criteria Query is a bit complicated, we have implemented some 
 
 Some known issues : 
 
-1. We are still using hibernate xml mapping file .hbm, so if we use a compound primary key JPA Criteria API won't be able to find they attributes belong to that compound mapping, For example :
-```xml <composite-id>
-          <key-many-to-one name="programStageInstance" class="org.hisp.dhis.program.ProgramStageInstance"
-            column="programstageinstanceid" foreign-key="fk_entityinstancedatavalue_programstageinstanceid" />
-          <key-many-to-one name="dataElement" class="org.hisp.dhis.dataelement.DataElement" column="dataelementid"
-            foreign-key="fk_entityinstancedatavalue_dataelementid" />
-        </composite-id>
-    </code>
-```
-    <p>In this case we need to use the HQL query. So for new objects that have Compound primary key, we must create an ID java class for it. </p>
+*  We are still using hibernate xml mapping file .hbm, so if we use a compound primary key JPA Criteria API won't be able to find they attributes belong to that compound mapping, For example:
 
-</br>Below are some of the code samples using JPA criteria query inside DHIS2: 
+          <composite-id>
+                  <key-many-to-one name="programStageInstance" class="org.hisp.dhis.program.ProgramStageInstance"
+                    column="programstageinstanceid" foreign-key="fk_entityinstancedatavalue_programstageinstanceid" />
+                  <key-many-to-one name="dataElement" class="org.hisp.dhis.dataelement.DataElement" column="dataelementid"
+                    foreign-key="fk_entityinstancedatavalue_dataelementid" />
+            </composite-id>
+
+
+    In this case we need to use the HQL query. So for new objects that have Compound primary key, we must create an ID java class for it.
+
+#### Below are some of the code samples using JPA criteria query inside DHIS2: 
 
 - Basic get object method 
 
@@ -38,7 +40,7 @@ Some known issues :
             .addPredicate( root -> builder.equal( root, new CompleteDataSetRegistration( dataSet, storedPeriod, source, attributeOptionCombo ) ) ) );
 
 - Count
-	
+    
     * Explicit count expression
         
             return count( builder, newJpaParameters()
@@ -46,20 +48,20 @@ Some known issues :
             .count( root -> builder.countDistinct( root ) ) );
 
     * Implicit count expression: count on root, default distinct = false
-    	 
+         
             return count( builder, newJpaParameters()
             .addPredicate( root -> parseFilter( builder, root, query.getFilters() ) )
             .setUseDistinct( true ) )
 
 - Conjunction 
- 	
+    
         return getList( builder, newJpaParameters()
         .addPredicate( root -> builder.and(
             builder.equal( root.get( "entityInstance" ), entityInstance ),
             builder.equal( root.join( "attribute" ).get( "program" ), program ) ) ) );
 
 - Using Join
- 	
+    
         CriteriaBuilder builder = getCriteriaBuilder();
          JpaQueryParameters<CategoryOptionGroup> parameters = newJpaParameters()
         .addPredicates( getSharingPredicates( builder ) )
