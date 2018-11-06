@@ -79,7 +79,7 @@ Some known issues :
             .setMaxResults( 1 )
             .setCachable( false ) );
 
-- Get objects with data/metadata sharing applied 
+- Get objects with data sharing applied 
     
         CriteriaBuilder builder = getCriteriaBuilder();
         JpaQueryParameters<T> parameters = new JpaQueryParameters<T>()
@@ -91,3 +91,14 @@ Some known issues :
 
         CriteriaBuilder builder = getCriteriaBuilder();
         return getList( builder, new JpaQueryParameters<T>().addPredicates( getSharingPredicates( builder ) ) );
+
+- Using HQL query 
+
+        String hql = "select dv from DataValue dv  where dv.dataElement =:dataElement and dv.period =:period and dv.deleted = false  " +
+            "and dv.attributeOptionCombo =:attributeOptionCombo and dv.categoryOptionCombo =:categoryOptionCombo and dv.source =:source ";
+        return getSingleResult( getQuery( hql )
+            .setParameter( "dataElement", dataElement )
+            .setParameter( "period", storedPeriod )
+            .setParameter( "source", source )
+            .setParameter( "attributeOptionCombo", attributeOptionCombo )
+            .setParameter( "categoryOptionCombo", categoryOptionCombo ) );
