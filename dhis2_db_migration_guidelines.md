@@ -66,23 +66,35 @@ _flyway_schema_history_ table looks like this
 
 ### FAQs
 1. _Error : FlywayException: Validate failed: Migration description mismatch for migration version 2.30.0_
+
 *Reason*: This is because a previous war had already executed the migration v2.30.0 (either java or sql based). Your current war has the same version, but the description has changed. In short, the migration file name has been renamed since your previous deployment.
+
 *Possible quick resolution*: Delete the failing version row from flyway_schema_history table and start your application again. 
 
 2. _Error : FlywayException: Validate failed. Found differences between applied migrations and available migrations: Migration Checksum mismatch for migration V2_31_3__Jsonb_changes.sql_
+
 *Reason*: This is because a previous war had already executed the migration v2.31.3 (sql based). Your current war has the same version, but the content of the migration file has changed. In short, the migration file content has been modified since your previous deployment.
+
 *Possible quick resolution*: Delete the failing version row from flyway_schema_history table and start your application again. 
 
 3. _Error : Syntax error at or near "NOT"_
+
 *Reason*: Your postgres version is lower than the required 9.6.
+
 *Resolution*: Upgrade your postgres to version 9.6 or higher.
 
 4. _Error : You can't operate on a closed Connection!!!_
+
+
 *Reason*: In you java migration class, you have explicitly closed the connection.
+
 *Resolution*. Do not close the connection. Do not use _try with resources_ on the connection object (which closes the connection at the end of try).
 
 5. _Error : Schema-validation: missing column [uid] in table [relationship]_
+
+
 *Reason* : Hibernate does the schema validation after flyway has migrated the db. This error means that there are some changes in some of the hbm.xml files, but the same has not been applied through flyway scripts. 
+
 *Resolution* : Add the corresponding _alter table_ statements into a new(or existing) flyway migration script file.
 
 *Note*: Appending scripts to an already existing script (which may already have been applied to the db you are working), will have some consequences for development instances. On those instances, flyway validates whether there is any checksum mismatches(file changes) and fails. If flyway fails because of a latest pull of other developers work (or your own work) which has modified one of the installed scripts, you can explicitly delete the row with ```DELETE from flyway_schema_history where installed_rank=4``` and then restart your application. Flyway then considers the script as an uninstalled version and proceeds to apply that script. For this reasons, in development instances you need to have [_flyway outOfOrder_](https://flywaydb.org/documentation/commandline/migrate#outOfOrder) setting to true. This can be done by setting the configuration property ```flyway.migrate.out.of.order``` to *true* in `dhis.conf`.  In case deleting the record also does not work, then you may have to start with a fresh demo db again.
