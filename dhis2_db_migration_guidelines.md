@@ -80,20 +80,33 @@ _flyway_schema_history_ table looks like this
 
 *Possible quick resolution*: Delete the failing version row from flyway_schema_history table and start your application again. 
 
-3. _Error : Syntax error at or near "NOT"_
+3. _Error : FlywayException: Validate failed: Detected applied migration not resolved locally: 2.32.1_
+
+*Reason*: This error tells you that your database has 2.32.1 which is not present in your classpth. The most probable cause is you are trying to deploy an older version of dhis2 into a newer version of the database. For example, a successfull deployment of a 2.32 war onto a 2.31 db , will upgrade the db into a 2.32 db. From then on, you cannot deploy a 2.31 war on that same db again.
+
+*Resolution* : If you get the error and you are certain that you are not deploying an old version of war into a new db, then please contact the Flyway Support Helpdesk.
+
+4. _Error : FlywayException: Validate failed: Detected resolved migration not applied to database: 2.31.2_
+
+*Reason*: This error means that your classpath/war has 2.31.2 script which is not present in your database but you have versions greater than 2.31.2 in your database. This should happen only in development streams where you are working with bleeding edge build (latest build from master). The scripts are added based on the order of developer branches getting merged into master, which may not always be in sequence.
+
+*Possible quick resolution*: Add the configuration property `flyway.migrate_out_of_order=true` in your `dhis.conf` .
+*Resolution* : If you continue to get the error even after having the configuration property, then please contact the Flyway Support Helpdesk.
+
+5. _Error : Syntax error at or near "NOT"_
 
 *Reason*: Your postgres version is lower than the required 9.6.
 
 *Resolution*: Upgrade your postgres to version 9.6 or higher.
 
-4. _Error : You can't operate on a closed Connection!!!_
+6. _Error : You can't operate on a closed Connection!!!_
 
 
 *Reason*: In you java migration class, you have explicitly closed the connection.
 
 *Resolution*. Do not close the connection. Do not use _try with resources_ on the connection object (which closes the connection at the end of try).
 
-5. _Error : Schema-validation: missing column [uid] in table [relationship]_
+7. _Error : Schema-validation: missing column [uid] in table [relationship]_
 
 
 *Reason* : Hibernate does the schema validation after flyway has migrated the db. This error means that there are some changes in some of the hbm.xml files, but the same has not been applied through flyway scripts. 
