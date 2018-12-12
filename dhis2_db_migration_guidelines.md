@@ -82,7 +82,7 @@ _flyway_schema_history_ table looks like this
 
 3. _Error : FlywayException: Validate failed: Detected applied migration not resolved locally: 2.32.1_
 
-*Reason*: This error tells you that your database has 2.32.1 which is not present in your classpth. The most probable cause is you are trying to deploy an older version of dhis2 into a newer version of the database. For example, A successfull deployment of a 2.32 war onto a 2.31 db , will upgrades db into a 2.32 db. Then you cannot deploy 2.31 war on that db again.
+*Reason*: This error tells you that your database has 2.32.1 which is not present in your classpth. The most probable cause is you are trying to deploy an older version of dhis2 into a newer version of the database. For example, a successfull deployment of a 2.32 war onto a 2.31 db , will upgrade the db into a 2.32 db. From then on, you cannot deploy a 2.31 war on that same db again.
 
 *Resolution* : If you get the error and you are certain that you are not deploying an old version of war into a new db, then please contact the Flyway Support Helpdesk.
 
