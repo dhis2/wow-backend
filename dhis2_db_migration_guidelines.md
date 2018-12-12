@@ -81,11 +81,13 @@ _flyway_schema_history_ table looks like this
 *Possible quick resolution*: Delete the failing version row from flyway_schema_history table and start your application again. 
 
 3. _Error : FlywayException: Validate failed: Detected applied migration not resolved locally: 2.32.1_
+
 *Reason*: This error tells you that your database has 2.32.1 which is not present in your classpth. The most probable cause is you are trying to deploy an older version of dhis2 into a newer version of the database. For example, A successfull deployment of a 2.32 war onto a 2.31 db , will upgrades db into a 2.32 db. Then you cannot deploy 2.31 war on that db again.
 
 *Resolution* : If you get the error and you are certain that you are not deploying an old version of war into a new db, then please contact the Flyway Support Helpdesk.
 
 4. _Error : FlywayException: Validate failed: Detected resolved migration not applied to database: 2.31.2_
+
 *Reason*: This error means that your classpath/war has 2.31.2 script which is not present in your database but you have versions greater than 2.31.2 in your database. This should happen only in development streams where you are working with bleeding edge build (latest build from master). The scripts are added based on the order of developer branches getting merged into master, which may not always be in sequence.
 
 *Possible quick resolution*: Add the configuration property `flyway.migrate_out_of_order=true` in your `dhis.conf` .
