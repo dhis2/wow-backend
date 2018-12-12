@@ -1,6 +1,7 @@
 
 
 
+
 ## Dhis2 Database Migration Guidelines (V2.31+)
 ### Flyway
 
@@ -49,6 +50,8 @@ Please use sensible descriptions separated by underscores for spaces and refrain
 - All migration scripts should be made idempotent as much as possible. Scripts should also consider that it could be executed on a  fresh db (with no data). Idempotency in most cases simply means using the IF NOT EXISTS / IF EXISTS wherever possible. For constraints with explicit names, when modifying them, its also advised to drop the constraint (if exists) first and then create the constraint which ensures the scripts are rerunnable without any side effects. _In a highly unlikely event_ of having to write a migration script that cannot be made idempotent in a clean way, just add a comment on top of them and leave them _non-idempotent_ . These would help other developers (if required) to manually undo those migrations during debugging (or they could simply curse you and load a fresh database to start over again :laughing: ).
 
 - Set the configuration property ```flyway.migrate_out_of_order``` to *true* in `dhis.conf`. It ensures that if version 2.31.1 and version 2.31.3 are already installed, but the latest build has version 2.31.2, then it tries to apply that too. This is useful for development instances.
+
+- *Important:* When backporting fixes, always use the latest unused integer for that particular branch in which you are fixing. This means the same script will exist as 2.33.2 (in 2.33/master branch) , as 2.32.9 (in 2.32 branch) and as 2.31.11 (in 2.31 branch). *Only backport flyway scripts if they are idempotent* . In other words *never backport non-idempotent flyway scripts*.
 
 
 ### Flyway Schema History Table
