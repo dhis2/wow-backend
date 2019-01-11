@@ -21,6 +21,7 @@ This document is split into multiple files, all written in markdown. There is tw
 * [Flyway database migration](dhis2_db_migration_guidelines.md)
 * [JPA queries](jpa_api.md)
 * [Testing](testing_guidelines.md)
+* [Code formatting](code_formatting.md)
 
 ## FAQ
 
