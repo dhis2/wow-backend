@@ -109,11 +109,16 @@ _flyway_schema_history_ table looks like this
 7. _Error : Schema-validation: missing column [uid] in table [relationship]_
 
 
-*Reason* : Hibernate does the schema validation after flyway has migrated the db. This error means that there are some changes in some of the hbm.xml files, but the same has not been applied through flyway scripts. 
+*Reason*: Hibernate does the schema validation after flyway has migrated the db. This error means that there are some changes in some of the hbm.xml files, but the same has not been applied through flyway scripts. 
 
 *Resolution* : Add the corresponding _alter table_ statements into a new(or existing) flyway migration script file.
 
 *Note*: Appending scripts to an already existing script (which may already have been applied to the db you are working), will have some consequences for development instances. On those instances, flyway validates whether there is any checksum mismatches(file changes) and fails. If flyway fails because of a latest pull of other developers work (or your own work) which has modified one of the installed scripts, you can explicitly delete the row with ```DELETE from flyway_schema_history where installed_rank=4``` and then restart your application. Flyway then considers the script as an uninstalled version and proceeds to apply that script. For this reasons, in development instances you need to have [_flyway outOfOrder_](https://flywaydb.org/documentation/commandline/migrate#outOfOrder) setting to true. This can be done by setting the configuration property ```flyway.migrate_out_of_order``` to *true* in `dhis.conf`.  In case deleting the record also does not work, then you may have to start with a fresh demo db again.
 
+8. _Error : Checksum mismatch for version 2.31.1_
 
+*Reason*: A bug was introduced in 2.31 which was corrected later in the 2.31.1 script. This leads to a checksum mismatch when upgrading.
 
+*Resolution*: Run the following SQL:
+
+	update flyway_schema_history set checksum = '-271885416' where version = '2.31.1';
