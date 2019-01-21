@@ -122,3 +122,7 @@ _flyway_schema_history_ table looks like this
 *Resolution*: Run the following SQL:
 
 	update flyway_schema_history set checksum = '-271885416' where version = '2.31.1';
+
+Conversely, if you for some reason are reverting to an older version you can run the following SQL:
+
+	update flyway_schema_history set checksum = '1602390773' where version = '2.31.1';
