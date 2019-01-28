@@ -23,7 +23,7 @@ This document is split into multiple files, all written in markdown. There is tw
 * [Testing](testing_guidelines.md)
 * [Code formatting](code_formatting.md)
 * [Hotswap](HotSwap.md)
-
+* [Mockito guidelines)(mocking_guidelines.md)
 ## FAQ
 
 A list of frequently asked questions is found in the [FAQ](https://github.com/dhis2/wow-backend/blob/master/FAQ.md).
