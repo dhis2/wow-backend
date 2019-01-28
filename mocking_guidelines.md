@@ -157,7 +157,7 @@ Let's make two examples to clarify this.
 	5.
 	6. Customer c = customerService.getCustomerById(10L);
 	7. assertThat(c.getFirstName(), is("John"));
-  8.
+	8.
 	9. verify(customerDao).get(10L);
   
 In the above example, the last line verifies that the method `get` was effectively called with the exact value `10L`.
@@ -209,7 +209,7 @@ Let's look at an example:
 		Customer mergedCustomer = new Customer();
 		if (c1.getFirstName().equals(c2.getFirstName()) {
 			mergedCustomer.setFirstName(c1.getFirstName());
-	  } else {
+		} else {
 		  mergedCustomer.setFirstName(c2.getFirstName());  
 	  }
 		
@@ -219,7 +219,6 @@ Let's look at an example:
 		customerDao.remove(c2);
 		
 		return customerDao.save(mergedCustomer);
-		
 	}
 	
 If we would have to write a test for the above method, we would need to be sure that the method `save(Customer c)` is called with the right argument. Since the logic that 'creates' the argument (`mergedCustomer`) is within the tested method, we need a way to verify that.
@@ -244,7 +243,6 @@ In other words, Mockito allows you to capture arguments so that you can later ru
 		assertThat(merged.getFirstName(), is("Phil"));
 		verify(customerDao).remove(c1);
 		verify(customerDao).remove(c2);
-		
 	}
 	
 In the above example, we pass the `captor` variable (initialised with the `@Captor` annotation) as an argument of `save()` for verification; this, internally. creates an Argument Matcher that **saves** the argument. Then, we retrieve the captured value with `captor.getValue()` and inspect it with standard assertions.
