@@ -73,8 +73,8 @@ by default, all methods of a mock return "uninitialized" or "empty" values, e.g.
  Mockito offers two ways of stubbing. The first way is "_when this method is called, then do something._" Consider the following snippet:
 	 
 	 Customer sampleCustomer = new Customer();
-   sampleCustomer.setFirstName("John");
-   sampleCustomer.setLastName("Good");
+	 sampleCustomer.setFirstName("John");
+	 sampleCustomer.setLastName("Good");
 	 when(customerDao.get(10L)).thenReturn(sampleCustomer);
 	 
 	 Customer c = customerService.getCustomerById(10L);
