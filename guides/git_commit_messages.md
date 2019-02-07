@@ -1,21 +1,15 @@
-# Git Commit Message guidelines
+# Git Commit Message Principles
 
 The following guidelines for Git commit messages are put in place to make it easy to follow the developments in the various Git branches. We would like to have a concise and consistent commit history so that it becomes an effective tool for communication between developers .For inspiration have a look at the [Spring Boot](https://github.com/spring-projects/spring-boot/commits/master) project.
 
 
 ## Principles
 
-### Limit the subject line to 60 characters.
+1. **Limit the subject line to 60 characters:** Ensure that the subject is short and concise and fits within the GitHub commit history for easy browsing.
 
-Ensure that the subject is short and concise and fits within the GitHub commit history for easy browsing.
+2. **Capitalize the subject line:** Write proper English and being all subject lines with a capital letter. For example: "Introduced performance boost option", not: "introduced performance boost option".
 
-### Capitalize the subject line
-
-Write proper English and being all subject lines with a capital letter. For example: "Introduced performance boost option", not: "introduced performance boost option".
-
-### Do not end the subject line with a period
-
-Trailing punctuation is unnecessary in subject lines.
+3. **Do not end the subject line with a period**: Trailing punctuation is unnecessary in subject lines.
 
 ### Use the imperative mood in the subject line
 
