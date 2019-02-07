@@ -18,12 +18,13 @@ This document is split into multiple files, all written in markdown. There is tw
 
 ## Guides
 
-* [Flyway database migration](dhis2_db_migration_guidelines.md)
-* [JPA queries](jpa_api.md)
-* [Testing](testing_guidelines.md)
-* [Code formatting](code_formatting.md)
-* [Hotswap](HotSwap.md)
-* [Mockito guidelines](mocking_guidelines.md)
+* [Flyway database migration](guides/db_migration.md)
+* [JPA queries](guides/jpa_api.md)
+* [Testing](guides/testing.md)
+* [Code formatting](guides/code_formatting.md)
+* [IDEA hot swapping](guides/idea_hot_swapping.md)
+* [Mockito test mocking](guidelines/test_mocking.md)
+
 ## FAQ
 
 A list of frequently asked questions is found in the [FAQ](https://github.com/dhis2/wow-backend/blob/master/FAQ.md).
