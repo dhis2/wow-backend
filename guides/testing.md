@@ -1,8 +1,9 @@
-## Testing guidelines
+# Testing guidelines
 
 ## Technology stack
 * [JUnit 4](https://junit.org) 
 * [TestContainers](https://www.testcontainers.org): library providing lightweight, throwaway instances of common databases or anything else that can run in a Docker container.
+
 ### Integration testing
 
 #### Prerequisites:

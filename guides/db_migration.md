@@ -1,9 +1,5 @@
-
-
-
-
-## Dhis2 Database Migration Guidelines (V2.31+)
-### Flyway
+# Dhis2 Database Migration Guidelines (V2.31+)
+## Flyway
 
 Starting from version 2.31, DHIS2 will be leveraging [flyway](https://flywaydb.org/documentation/) for database migrations. 
 Flyway is an open-source database migration tool. 
@@ -15,7 +11,7 @@ Some of the relevant/interesting sections of flyway documentations for dhis2 dev
 4. [Java Based Migrations](https://flywaydb.org/documentation/migrations#java-based-migrations)
 
 
-### Dhis2 Support Db Migration Module
+## Dhis2 Support Db Migration Module
 
 The maven project _dhis2-support-db-migration_ under _dhis2-support_ is responsible for handling flyway migrations in dhis2. It contains flyway configurations and  all migration scripts. 
 Migration Scripts can be defined both in Java classes or in sql files. Most of the upgrade/migration scripts would ideally fit in _.sql_ files. But in case there is more complex migrations, Java classes can be the way to go.
@@ -26,13 +22,13 @@ Here is a snapshot of how the dhis2-support-db-migration project looks like.
 ![](resources/images/dhis2-support-db-migration-snap.png)
 
 
-### Hibernate Configuration Changes 
+## Hibernate Configuration Changes 
 Hibernate `hbm2ddl` will always be set to `validate`. Users will not be able to override this setting anymore (using the `connection.schema` property in _dhis.conf_). 
 This also means that when we modify any hbm xml files, we also need to take care of the corresponding DDL scripts ourselves using flyway.
 However, since our unit tests are going to be run on H2 , flyway will be disabled for unit tests, and we will let hibernate create the schema i.e `hbm2ddl` will be set to _create_ only for unit tests.
 
 
-### Development Guidelines
+## Development Guidelines
 
 - The naming is of the format `V<Major>_<Minor>_<Patch>__<Description_separated_by_underscores>`. 
 	Eg: V2_31_1__Table_alterations_for_adding_sharing_properties_to_Datastore.sql
@@ -54,7 +50,7 @@ Please use sensible descriptions separated by underscores for spaces and refrain
 - *Important:* When backporting fixes, always use the latest unused integer for that particular branch in which you are fixing. This means the same script will exist as 2.33.2 (in 2.33/master branch) , as 2.32.9 (in 2.32 branch) and as 2.31.11 (in 2.31 branch). *Only backport flyway scripts if they are idempotent* . In other words *never backport non-idempotent flyway scripts*.
 
 
-### Flyway Schema History Table
+## Flyway Schema History Table
 _flyway_schema_history_ table looks like this
 
 
@@ -67,7 +63,7 @@ _flyway_schema_history_ table looks like this
 | 5 | 2.31.4 | Sample java based migration | JDBC | org.hisp.dhis.db.migration.v31.V2_31_4__Sample_java_based_migration |  | dhis | 2018-11-01 13:21:06.846571 | 0 | true |
 | 6 | 2.31.5 | Create chart yearlyseries table | SQL | 2.31/V2_31_5__Create_chart_yearlyseries_table.sql | -963276479 | dhis | 2018-11-01 13:21:06.850797 | 4 | true |
 
-### FAQs
+## FAQ
 1. _Error : FlywayException: Validate failed: Migration description mismatch for migration version 2.30.0_
 
 *Reason*: This is because a previous war had already executed the migration v2.30.0 (either java or sql based). Your current war has the same version, but the description has changed. In short, the migration file name has been renamed since your previous deployment.

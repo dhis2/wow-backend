@@ -1,6 +1,4 @@
-
-
-### JPA criteria query in DHIS2
+# JPA criteria query in DHIS2
 
 #### 1. Overview
 From 2.31, Hibernate Native API is replaced by JPA Criteria Query. The old hibernate Restriction/Criteria is deprecated. 
