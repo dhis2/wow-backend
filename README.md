@@ -27,7 +27,3 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 * [Git commit messages](guides/git_commit_messages.md)
 * [IDEA hot swapping](guides/idea_hot_swapping.md)
 * [Mockito test mocking](guides/test_mocking.md)
-
-## FAQ
-
-A list of frequently asked questions is found in the [FAQ](https://github.com/dhis2/wow-backend/blob/master/FAQ.md).
