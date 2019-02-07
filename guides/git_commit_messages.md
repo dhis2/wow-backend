@@ -5,11 +5,11 @@ The following guidelines for Git commit messages are put in place to make it eas
 
 ## Principles
 
-1. **Limit the subject line to 60 characters:** Ensure that the subject is short and concise and fits within the GitHub commit history for easy browsing.
+1. **Limit the subject line to 60 characters:** Ensure that the subject is informative, short and concise and fits within the GitHub commit history for easy browsing.
 
 2. **Capitalize the subject line:** Write proper English and being all subject lines with a capital letter. For example: "Introduced performance boost option", not: "introduced performance boost option".
 
-3. **Do not end the subject line with a period**: Trailing punctuation is unnecessary in subject lines.
+3. **Do not end the subject line with a period**: Trailing punctuation is unnecessary in subject lines and space is precious when limiting the subject line length.
 
 4. **Use the imperative mood in the subject line:** Imperative means as if giving a command. Start the subject lines with a verb. Examples: "Update spacecraft launch module", "Refactor JSONB user type". Good verbs to start the subject with are: Add, Fix, Start, Refactor, Reformat, Optimize, Introduce, Document.
 
