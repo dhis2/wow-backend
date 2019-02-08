@@ -15,4 +15,4 @@ The following guidelines for Git commit messages are put in place to make it eas
 
 5. **Use the body to explain what and why:** Use git commit message bodies to communicate what you are doing and why. This is very helpful to other developers to stay up to date on developments in master.
 
-
+6. **Avoid generic messages**: Avoid using generic commit messages like "Minor fix" and "Clean-up", rather explain what you are doing any why.
