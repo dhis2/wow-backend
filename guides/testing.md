@@ -6,7 +6,7 @@ In DHIS2 there are currently 3 categories of tests:
 
 - Unit tests
 - Integration tests using H2
-- Integration tests using Docker and Posgres
+- Integration tests using Docker and Postgres
 
 There is also a fourth test category, used for end to end testing, which is not in scope of this document.
 
