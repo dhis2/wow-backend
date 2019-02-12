@@ -73,8 +73,8 @@ by default, all methods of a mock return "uninitialized" or "empty" values, e.g.
  Mockito offers two ways of stubbing. The first way is "_when this method is called, then do something._" Consider the following snippet:
 	 
 	 Customer sampleCustomer = new Customer();
-   sampleCustomer.setFirstName("John");
-   sampleCustomer.setLastName("Good");
+	 sampleCustomer.setFirstName("John");
+	 sampleCustomer.setLastName("Good");
 	 when(customerDao.get(10L)).thenReturn(sampleCustomer);
 	 
 	 Customer c = customerService.getCustomerById(10L);
@@ -246,6 +246,25 @@ In other words, Mockito allows you to capture arguments so that you can later ru
 	}
 	
 In the above example, we pass the `captor` variable (initialised with the `@Captor` annotation) as an argument of `save()` for verification; this, internally. creates an Argument Matcher that **saves** the argument. Then, we retrieve the captured value with `captor.getValue()` and inspect it with standard assertions.
+
+## Mixing Spring and Mockito
+
+Unit Tests should not be concerned with the Spring Context and they should not require any auto-wiring.
+
+Unit Tests are supposed to test one or more methods of a single class. If a class is depending on other classes, these dependencies can either be stubbed (following the approach described in these guidelines) or can be instantiated and explicitly injected - assuming that the concrete class doesn't depend on some other class.
+
+For instance, let's assume that we need to test a `hasAccess` method on class `SecurityServiceImpl`.
+
+    public class SecurityServiceImpl implements SecurityService {
+	    
+	    private ResourceValidator resourceValidator;
+	    
+	    public boolean hasAccess(User user, Resource resource) {
+		    if (resourceValidator.isValid(resource)) {
+		      ...
+	    
+	    }
+    
 
 ## Mockito anti-patterns
 
