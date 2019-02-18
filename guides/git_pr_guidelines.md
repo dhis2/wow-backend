@@ -16,4 +16,4 @@ The following guidelines apply when raising pull requests:
 
 **6. Write and run tests:** Ensure new features have appropriate test coverage and are covered by at least some unit tests. Run all unit tests and ensure that they pass.
 
-**7. Use draft mode for drafts:** If you are raising a PR which is not yet ready for merging, e.g. for getting review and comments from others, then create a _draft_ PR. From _Create Pull Request_, click the down arrow and select _Create Draft Pull Request_.
+**7. Use draft mode for drafts:** If you are raising a PR which is not yet ready for merging, e.g. for getting review from others, then create a _draft_ PR. From _Create Pull Request_, click the down arrow and select _Create Draft Pull Request_.
