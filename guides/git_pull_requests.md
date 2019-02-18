@@ -1,6 +1,6 @@
 # Git Pull Request Guidelines
 
-The following guidelines apply when raising pull requests:
+The following guidelines apply when raising pull requests.
 
 ## Guidelines
 
