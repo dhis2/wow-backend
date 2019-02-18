@@ -25,5 +25,6 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 * [Testing](guides/testing.md)
 * [Code formatting](guides/code_formatting.md)
 * [Git commit messages](guides/git_commit_messages.md)
+* [Git pull requests](guides/git_pull_requests.md)
 * [IDEA hot swapping](guides/idea_hot_swapping.md)
 * [Mockito test mocking](guides/test_mocking.md)
