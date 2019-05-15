@@ -22,6 +22,7 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 
 * [Flyway database migration](guides/db_migration.md)
 * [JPA queries](guides/jpa_api.md)
+* [Spring conventions](guides/spring_conventions.md)
 * [Transactions](guides/transactions.md)
 * [Testing](guides/testing.md)
 * [Code formatting](guides/code_formatting.md)
