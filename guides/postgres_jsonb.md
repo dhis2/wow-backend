@@ -10,7 +10,7 @@ The following section lists examples of JSONB SQL queries.
 
 ### Add data value to an event with `jsonb_insert`
 
-```
+```sql
 update programstageinstance
 set eventdatavalues = jsonb_set(
 	eventdatavalues,

@@ -10,7 +10,7 @@ Each Service method that does uses a Store class to access the database should b
 
 If the method does not require to modify the database (only read data), the `@Transaction` annotation should have the `readOnly` property set to `true`.
 
-```
+```java
 @Transactional(readOnly = true)
 public User getUser(Long id)
 {
@@ -32,7 +32,7 @@ If the read-only method has no need to be executed within the context of a datab
 
 A Service class should be annotated with the `@Transactional` annotation only if all the methods require a transaction with a specific attribute (e.g. all methods are read-only):
 
-```
+```java
 @Transactional(readOnly = true)
 public class UserService()
 {
@@ -54,7 +54,7 @@ Repository classes should not have methods annotated with the `@Transactional` a
 If a Service method is marked as `@Transactional`, there is no need to explicitly call an Hibernate save operation. 
 When a method is transactional, then entities retrieved within this transaction are in _managed_ state (https://vladmihalcea.com/a-beginners-guide-to-jpa-hibernate-entity-state-transitions), which means that all changes made to them will be persisted to the database automatically *at the end* of the transaction.
 
-```
+```java
 @Transactional
 public void changeName( long id, String name )
 {

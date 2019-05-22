@@ -24,7 +24,7 @@ We can use `@Component` across the application to mark the beans as Spring’s m
 
 Each annotated Spring bean should have an `id` corresponding to the full path of the implementing interface.
 
-```
+```java
 @Service( "org.hisp.dhis.analytics.AnalyticsTableManager" )
 public class JdbcAnalyticsTableManager implements AnalyticsTableManager
 {
@@ -57,7 +57,7 @@ All Spring Beans should only use consutructor-based injection.
 - The constructor should **not** be annotated with `@Autowired`.
 - The constructor should check for the null status of each dependency.
 
-```
+```java
 import static com.google.common.base.Preconditions.checkNotNull;
 
 private final UserStore userStore;
