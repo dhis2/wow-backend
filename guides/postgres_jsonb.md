@@ -1,6 +1,6 @@
 # PostgreSQL JSONB
 
-In DHIS 2 version 2.29 we started to utilize the PostgreSQL JSONB data type. In later PostgreSQL versions, the support for JSONB in terms of querying, manipulation and indexing has been increasingly more sophisticated.
+In DHIS 2 version 2.29 we started to utilize the PostgreSQL `JSONB` data type. In later PostgreSQL versions, the support for JSONB in terms of querying, manipulation and indexing is becoming increasingly more sophisticated.
 
 This guide aims at providing useful examples and tips for working with JSONB in SQL for DHIS 2.
 
