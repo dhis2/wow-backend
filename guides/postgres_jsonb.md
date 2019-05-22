@@ -13,8 +13,13 @@ The following section lists examples of JSONB SQL queries.
 ```sql
 update programstageinstance
 set eventdatavalues = jsonb_set(
-	eventdatavalues,
-	'{"S33cRBsnXPo"}',
-	'{"value":"SKJoPDgjELa", "storedBy":"admin", "created":"2014-11-15T00:00:00.000", "lastUpdated":"2014-11-15T00:00:00.000", "providedElsewhere": false}'::jsonb)
+  eventdatavalues,
+  '{"S33cRBsnXPo"}',
+  '{
+    "value":"SKJoPDgjELa", 
+    "storedBy":"admin", 
+    "created":"2014-11-15T00:00:00.000", 
+    "lastUpdated":"2014-11-15T00:00:00.000", 
+    "providedElsewhere": false}'::jsonb)
 where uid = 'NkvkOpBjkkH';
 ```
