@@ -20,6 +20,7 @@ set eventdatavalues = jsonb_set(
     "storedBy":"admin", 
     "created":"2014-11-15T00:00:00.000", 
     "lastUpdated":"2014-11-15T00:00:00.000", 
-    "providedElsewhere": false}'::jsonb)
+    "providedElsewhere": false
+  }'::jsonb)
 where uid = 'NkvkOpBjkkH';
 ```
