@@ -18,3 +18,13 @@ set eventdatavalues = jsonb_set(
 	'{"value":"SKJoPDgjELa", "storedBy":"admin", "created":"2014-11-15T00:00:00.000", "lastUpdated":"2014-11-15T00:00:00.000", "providedElsewhere": false}'::jsonb)
 where uid = 'NkvkOpBjkkH';
 ```
+
+### Get value of specific data element for events
+
+```sql
+select psi.eventdatavalues->'qrur9Dvnyt5'->>'value' as "Age in years"
+from programstageinstance psi
+where psi.programinstanceid = 1150223
+and psi.eventdatavalues->'qrur9Dvnyt5' is not null
+limit 100;
+```
