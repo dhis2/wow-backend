@@ -8,7 +8,7 @@ This guide aims at providing useful examples and tips for working with JSONB in 
 
 The following section lists examples of JSONB SQL queries.
 
-### Add data value to an event with `jsonb_set`
+### Add or update data value of an event with `jsonb_set`
 
 ```sql
 update programstageinstance
@@ -33,4 +33,12 @@ from programstageinstance psi
 where psi.programinstanceid = 1150223
 and psi.eventdatavalues->'qrur9Dvnyt5' is not null
 limit 100;
+```
+
+### Delete data value of event for a data element
+
+```sql
+update programstageinstance
+set eventdatavalues = eventdatavalues - 'S33cRBsnXPo'
+where uid = 'NkvkOpBjkkH';
 ```
