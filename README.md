@@ -31,4 +31,5 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 * [IDEA hot swapping](guides/idea_hot_swapping.md)
 * [Mockito test mocking](guides/test_mocking.md)
 * [PostgreSQL JSONB](guides/postgres_jsonb.md)
+* [Monitoring](guides/monitoring.md)
 
