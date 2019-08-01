@@ -4,6 +4,10 @@
 
 The purpose of the component owner concept is to have at least one person making sure that changes and improvements are well-aligned with the overall design and architecture of a component. This is meant to ensure that the code quality remains high and to avoid "patchwork" code fixes.
 
+The list of components and owners can be found below:
+
+[Components and owners] (https://jira.dhis2.org/projects/DHIS2?selectedItem=com.atlassian.jira.jira-projects-plugin:components-page)
+
 ## Responsibility
 
 The component owner is responsible for:
