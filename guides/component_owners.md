@@ -6,7 +6,7 @@ The purpose of the component owner concept is to have at least one person making
 
 The list of components and owners can be found below:
 
-[Components and owners] (https://jira.dhis2.org/projects/DHIS2?selectedItem=com.atlassian.jira.jira-projects-plugin:components-page)
+[Components and owners](https://jira.dhis2.org/projects/DHIS2?selectedItem=com.atlassian.jira.jira-projects-plugin:components-page)
 
 ## Responsibility
 
