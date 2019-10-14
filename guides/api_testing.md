@@ -63,7 +63,7 @@ When writing API tests, your objective is to test without knowing the implementa
 
 	```java 
   assertEquals( 403, response.statusCode(), "Wrong status code when creating org unit without permissions" );
-
+  ```
 - Set up your own data for testing, don’t rely on existing data. This way you have full control over what you are testing.
 
   
