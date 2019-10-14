@@ -21,7 +21,7 @@ API tests are good options for testing code in certain situations, but in other 
 
 - If a feature can more easily be tested with a unit or integration test. Usually when a lot of conditions needs to be set up before the test.
 
-- Avoid testing cases that are not showstoppers. If a test fails, it should block the release until it has been resolved. (This means if a test can be `@Disabled´, it might not be that valuable)
+- Avoid testing cases that are not showstoppers. If a test fails, it should block the release until it has been resolved. (This means if a test can be `@Disabled`, it might not be that valuable)
 
 - If you need to test a wide range of flows in your test, unit or integration tests are often a better option. 
 For example: you want to test validation messages, edge-case scenarios.  Controlling the test flow is harder in API tests than in unit tests, where mocking is possible, so writing API tests for every scenario is going to be more expensive than writing several unit tests. In this case, you might want to test one of the edge-case scenarios or validation messages to make sure that the response structure is as expected, but test the other flows with unit tests. 
