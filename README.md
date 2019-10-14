@@ -25,6 +25,7 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 * [Spring conventions](guides/spring_conventions.md)
 * [Transactions](guides/transactions.md)
 * [Testing](guides/testing.md)
+* [API testing](guides/api_testing.md)
 * [Code formatting](guides/code_formatting.md)
 * [Git commit messages](guides/git_commit_messages.md)
 * [Git pull requests](guides/git_pull_requests.md)
