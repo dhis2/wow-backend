@@ -9,7 +9,7 @@ The following guidelines for Git commit messages are put in place to make it eas
 
 2. **Start the message with a prefix:** Start with a prefix in lower-case followed by colon. Try to use one of the following prefixes: `feat: `, `fix:`, `chore:`, `ci:`, `docs:`, `refactor:`, `perf:`, `test:`.
 
-3. **Refer to Jira issue:** Include a reference to a Jira issue as often as possible in the commit message. Specify the issue ID in brackets, e.g. like this: [DHIS2-6299].
+3. **Refer to Jira issue:** Include a reference to a Jira issue as often as possible in the subject or body of the commit message. Specify the issue ID in brackets, e.g. like this: [DHIS2-6299].
 
 3. **Capitalize the subject line:** Write proper English and being all subject lines with a capital letter. For example use  "Introduced performance boost option", not "introduced performance boost option".
 
