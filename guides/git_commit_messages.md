@@ -15,7 +15,7 @@ The following guidelines for Git commit messages are put in place to make it eas
 
 4. **Do not end the subject line with a period**: Trailing punctuation is unnecessary in subject lines and space is precious when limiting the subject line length.
 
-5. **Use the imperative mood in the subject line:** Imperative means as if giving a command. Start the subject lines with a verb. Examples: "Update spacecraft launch module", "Refactor JSONB user type". Good verbs to start the subject with are: Add, Fix, Start, Refactor, Reformat, Optimize, Introduce, Document.
+5. **Use the imperative mood in the subject line:** Imperative means as if giving a command. Start the subject lines with a verb. Examples: "Add spacecraft launch module", "Refactor JSONB user type".
 
 6. **Use the body to explain what and why:** Use git commit message bodies to communicate what you are doing and why. This is very helpful to other developers to stay up to date on developments in master.
 
