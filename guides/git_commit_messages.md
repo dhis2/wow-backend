@@ -23,6 +23,8 @@ The following guidelines for Git commit messages are put in place to make it eas
 
 ### Prefix overview
 
+The table below shows availabe prefixes and their purpose.
+
 Prefix | Purpose
 --- | ---
 feat: | New feature
@@ -34,7 +36,9 @@ refactor: | Code refactor
 perf: | Performance improvement
 test: | Unit or integration test
 
-### Example messages
+### Example commit messages
+
+Some example commit messages are listed below.
 
     feat: Add new endpoint for static images [DHIS2-7656]
 
