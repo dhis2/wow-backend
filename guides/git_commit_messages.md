@@ -36,6 +36,8 @@ test: | Unit or integration test
 
 ### Example messages
 
-  feat: Add new endpoint for static images [DHIS2-7656]
-  fix: Expire user sessions at password change [DHIS2-7355]
-  chore: Clean up code for attribute value service
+    feat: Add new endpoint for static images [DHIS2-7656]
+
+    fix: Expire user sessions at password change [DHIS2-7355]
+
+    chore: Clean up code for attribute value service
