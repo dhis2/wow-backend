@@ -5,7 +5,7 @@ The following guidelines for Git commit messages are put in place to make it eas
 
 ## Principles
 
-1. **Limit the subject line to 70 characters:** Ensure that the subject is informative, short and concise and fits within the GitHub commit history for easy browsing.
+1. **Limit the subject line to 50 characters:** Ensure that the subject is informative, short and concise and fits within the GitHub commit history for easy browsing.
 
 2. **Start the message with a prefix:** Start with a prefix in lower-case followed by colon. Try to use one of the following prefixes: `feat: `, `fix:`, `chore:`, `ci:`, `docs:`, `refactor:`, `perf:`, `test:`.
 
