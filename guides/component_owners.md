@@ -27,6 +27,9 @@ Being a component owner does _not_ mean that you need or should to do all coding
 When working on a PR you need to ask the component owner for review. If you _are_ the component owner, you can ask some other developer with knowledge about the code.
 
 ## Component owners
+
+The following table describes the various components and their leads.
+
 |Component                     |Lead                |Description                                                              |
 |------------------------------|--------------------|-------------------------------------------------------------------------|
 |[API] Analytics               |Luciano Fiandesio   |Analytics API and engine                                                 |
