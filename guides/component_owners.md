@@ -38,7 +38,7 @@ When working on a PR you need to ask the component owner for review. If you _are
 |[API] Data value set          |Abyot Asalefew Gizaw|Data value set API and service                                           |
 |[API] Database migration      |Mohamed Ameen       |Database migration and upgrade scripts                                   |
 |[API] Events                  |Morten Hansen       |Event API and service                                                    |
-|[API] Frameworks and libraries|Morten Hansen       |Upgrades of application frameworks and libraries                         |
+|[API] Frameworks/libraries    |Morten Hansen       |Upgrades of application frameworks and libraries                         |
 |[API] Job scheduler           |Stian Sandvold      |Background job scheduling                                                |
 |[API] Messaging               |Zubair Asghar       |Message conversations and program messages                               |
 |[API] Metadata import-export  |Morten Hansen       |Metadata API and import-export                                           |
@@ -48,7 +48,7 @@ When working on a PR you need to ask the component owner for review. If you _are
 |[API] Program rules           |Zubair Asghar       |Program rules service and API                                            |
 |[API] Security                |Morten Svanæs       |Application security, access control and authorization                   |
 |[API] Synchronization         |David Katuscak      |Server-to-server synchronization of data and metadata                    |
-|[API] System configuration    |Mohamed Ameen       |Configuration including settings and config files|
+|[API] System configuration    |Mohamed Ameen       |Configuration including settings and configuration files|
 |[API] Tracker                 |Morten Hansen       |Tracked entity and enrollment API and service                            |
 |[API] Translations            |Jason Pickering     |User interface and database translations                                 |
 |[API] User                    |Mohamed Ameen       |User data model, service and API                                         |
