@@ -1,5 +1,7 @@
 # Component Owners
 
+This guide explains the concept of components owners and an overview of components and leads.
+
 ## Overview
 
 The purpose of the component owner concept is to have at least one person making sure that changes and improvements are well-aligned with the overall design and architecture of a component. This is meant to ensure that the code quality remains high and to avoid "patchwork" code fixes.
