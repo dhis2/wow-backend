@@ -22,7 +22,7 @@ It is important to take into account:
 
 ## Reservations
 
-The table below contains a list of potential migration versions. Please reserve the appropriate version using a link to the PR.
+The table below contains a list of migration versions. Please reserve the appropriate version using a link to the PR.
 
 ### 2.34
 
