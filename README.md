@@ -7,7 +7,7 @@ The purpose of this document is to works as a resource for any developer working
 1. Using this document
 2. Contributing
 3. Guides
-3. FAQ
+3. Coordination
 
 ## Using this document
 
@@ -18,7 +18,7 @@ This document is split into multiple files, all written in markdown. There is tw
 
 ## Contributing
 
-Guides are placed in the _/guides_ directory. Start guides with the \# h1 header, then use subsequent header numbering (\## h2, and so on).
+Guides are placed in the _/guides_ directory. Start guides with the \# h1 header, then use subsequent header numbering (\## h2, and so on). Coordination pages are placed in the _/coordination_ directory.
 
 ## Guides
 
