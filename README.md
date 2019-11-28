@@ -16,6 +16,8 @@ This document is split into multiple files, all written in markdown. There is tw
 * Using the file-browser, find the topic you are looking for.
 * Using the links from this document, navigate from topic to topic.
 
+## Contributing
+
 Guides are placed in the _/guides_ directory. Start guides with the \# h1 header, then use subsequent header numbering (\## h2, and so on).
 
 ## Guides
