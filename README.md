@@ -22,6 +22,8 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 
 ## Guides
 
+The following section lists guides on various topics.
+
 * [API testing](guides/api_testing.md)
 * [Auditing](guides/auditing.md)
 * [Code formatting](guides/code_formatting.md)
@@ -37,3 +39,9 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 * [Spring conventions](guides/spring_conventions.md)
 * [Transactions](guides/transactions.md)
 * [Testing](guides/testing.md)
+
+## Coordination
+
+The following section lists various areas of coordination.
+
+* [Flyway versioning] (coordination/flyway_versioning.md)
