@@ -44,4 +44,4 @@ The following section lists guides on various topics.
 
 The following section lists various areas of coordination.
 
-* [Flyway versioning] (coordination/flyway_versioning.md)
+* [Flyway versioning](coordination/flyway_versioning.md)
