@@ -22,7 +22,7 @@ It is important to take into account:
 
 ## Reservations
 
-The table below contains a list of migration versions. Please reserve the appropriate version using a link to the PR.
+The table below contains a list of migration versions. Please reserve the appropriate version using the migration version and the link to the corresponding PR.
 
 ### 2.34
 
@@ -35,19 +35,19 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_5 | |
 | V2_34_6 | https://github.com/dhis2/dhis2-core/pull/4178 |
 | V2_34_7 | |
-| V2_34_8 | |
-| V2_34_9 | |
-| V2_34_10 | |
-| V2_34_11 | |
-| V2_34_12 | |
-| V2_34_13 | |
-| V2_34_14 | |
-| V2_34_15 | |
-| V2_34_16 | |
-| V2_34_17 | |
-| V2_34_18 | |
-| V2_34_19 | |
-| V2_34_20 | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
+| V2_34_ | |
 
 
 ### 2.35
@@ -57,23 +57,23 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_1 | |
 | V2_35_2 | |
 | V2_35_3 | |
-| V2_35_4 | |
-| V2_35_5 | |
-| V2_35_6 | |
-| V2_35_7 | |
-| V2_35_8 | |
-| V2_35_9 | |
-| V2_35_10 | |
-| V2_35_11 | |
-| V2_35_12 | |
-| V2_35_13 | |
-| V2_35_14 | |
-| V2_35_15 | |
-| V2_35_16 | |
-| V2_35_17 | |
-| V2_35_18 | |
-| V2_35_19 | |
-| V2_35_20 | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
+| V2_35_ | |
 
 ### 2.36
 
@@ -82,23 +82,23 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_1 | |
 | V2_36_2 | |
 | V2_36_3 | |
-| V2_36_4 | |
-| V2_36_5 | |
-| V2_36_6 | |
-| V2_36_7 | |
-| V2_36_8 | |
-| V2_36_9 | |
-| V2_36_10 | |
-| V2_36_11 | |
-| V2_36_12 | |
-| V2_36_13 | |
-| V2_36_14 | |
-| V2_36_15 | |
-| V2_36_16 | |
-| V2_36_17 | |
-| V2_36_18 | |
-| V2_36_19 | |
-| V2_36_20 | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
+| V2_36_ | |
 
 ### 2.37
 
@@ -107,21 +107,21 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_37_1 | |
 | V2_37_2 | |
 | V2_37_3 | |
-| V2_37_4 | |
-| V2_37_5 | |
-| V2_37_6 | |
-| V2_37_7 | |
-| V2_37_8 | |
-| V2_37_9 | |
-| V2_37_10 | |
-| V2_37_11 | |
-| V2_37_12 | |
-| V2_37_13 | |
-| V2_37_14 | |
-| V2_37_15 | |
-| V2_37_16 | |
-| V2_37_17 | |
-| V2_37_18 | |
-| V2_37_19 | |
-| V2_37_20 | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
+| V2_37_ | |
 
