@@ -41,7 +41,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_11| https://github.com/dhis2/dhis2-core/pull/4661 |
 | V2_34_12| https://github.com/dhis2/dhis2-core/pull/4432 |
 | V2_34_13| https://github.com/dhis2/dhis2-core/pull/4432 |
-| V2_34_ | |
+| V2_34_14| https://github.com/dhis2/dhis2-core/pull/4627 |
 | V2_34_ | |
 | V2_34_ | |
 | V2_34_ | |
