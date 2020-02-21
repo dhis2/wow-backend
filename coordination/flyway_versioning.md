@@ -37,16 +37,16 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_7 | https://github.com/dhis2/dhis2-core/pull/4478 |
 | V2_34_8 | https://github.com/dhis2/dhis2-core/pull/4411 |
 | V2_34_9 | https://github.com/dhis2/dhis2-core/pull/4414 |
-| V2_34_10| https://github.com/dhis2/dhis2-core/pull/4587 |
-| V2_34_11| https://github.com/dhis2/dhis2-core/pull/4661 |
-| V2_34_12| https://github.com/dhis2/dhis2-core/pull/4432 |
-| V2_34_13| https://github.com/dhis2/dhis2-core/pull/4432 |
-| V2_34_14| https://github.com/dhis2/dhis2-core/pull/4627 |
+| V2_34_10 | https://github.com/dhis2/dhis2-core/pull/4587 |
+| V2_34_11 | https://github.com/dhis2/dhis2-core/pull/4661 |
+| V2_34_12 | https://github.com/dhis2/dhis2-core/pull/4432 |
+| V2_34_13 | https://github.com/dhis2/dhis2-core/pull/4432 |
+| V2_34_14 | https://github.com/dhis2/dhis2-core/pull/4627 |
 | V2_34_15 | https://github.com/dhis2/dhis2-core/pull/4721 |
 | V2_34_16 | https://github.com/dhis2/dhis2-core/pull/4727 |
-| V2_34_17| https://github.com/dhis2/dhis2-core/pull/4696 |
-| V2_34_18| https://github.com/dhis2/dhis2-core/pull/4851 |
-| V2_34_ | |
+| V2_34_17 | https://github.com/dhis2/dhis2-core/pull/4696 |
+| V2_34_18 | https://github.com/dhis2/dhis2-core/pull/4851 |
+| V2_34_19 | https://github.com/dhis2/dhis2-core/pull/4913 |
 | V2_34_ | |
 | V2_34_ | |
 | V2_34_ | |
