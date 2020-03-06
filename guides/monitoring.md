@@ -159,7 +159,8 @@ Finally, the `PrometheusScrapeEndpointController` is the controller responsible 
 
 ## DHIS2 Monitoring configuration
 
-The monitoring subsystem is disabled by default.
+The monitoring subsystem is disabled by default, and can be enabled by defining a set of properties in the `dhis.conf` DHIS 2 configuration file.
+
 Each metrics cluster has to be explicitely enabled in order for the metrics to be exported.
 The metrics can be enabled by setting to `true` the following configuration keys:
 
