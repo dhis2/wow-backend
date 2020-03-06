@@ -34,7 +34,7 @@ The following metrics are exposed for each API endpoint exposed by DHIS2 (`/api/
 
 | name            | type    | description                                                                               |
 |-----------------|---------|-------------------------------------------------------------------------------------------|
-| `seconds_max`   | gauge   | a moving window max of the maximum recorded value in a client-side configurable interval. |
+| `seconds_max`   | gauge   | a moving window of the maximum recorded value in a client-side configurable interval      |
 | `seconds_count` | summary | the number of times the API has been called                                               |
 | `seconds_sum`   | summary | the accumulated duration of the API call                                                  |
 
