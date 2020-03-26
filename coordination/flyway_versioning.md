@@ -56,7 +56,7 @@ The table below contains a list of migration versions. Please reserve the approp
 
 | Version | Pull request URL |
 | -- | -- |
-| V2_34_1 | |
+| V2_35_1 | https://github.com/dhis2/dhis2-core/pull/5191 |
 | V2_35_2 | |
 | V2_35_3 | |
 | V2_35_ | |
