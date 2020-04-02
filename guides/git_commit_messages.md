@@ -1,6 +1,6 @@
 # Git Commit Message Principles
 
-The following guidelines for Git commit messages are put in place to make it easy to follow the developments in the various Git branches. We would like to have a concise and consistent commit history so that it becomes an effective tool for communication between developers .For inspiration have a look at the [Spring Boot](https://github.com/spring-projects/spring-boot/commits/master) project.
+The following guidelines for Git commit messages are put in place to make it easy to follow the developments in the various Git branches. We would like to have a concise and consistent commit history so that it becomes an effective tool for communication between developers. For inspiration have a look at the [Spring Boot](https://github.com/spring-projects/spring-boot/commits/master) project.
 
 
 ## Principles
