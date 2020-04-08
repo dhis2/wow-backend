@@ -2,7 +2,7 @@
 
 ## Maven Plugin
 
-Dhis2 is using Speedy Spotless (https://github.com/commitd/speedy-spotless) to automatically format the code base.
+DHIS2 is using Speedy Spotless (https://github.com/commitd/speedy-spotless) to automatically format the code base.
 
 ### Step 1: Installing pre-commit hook
 
