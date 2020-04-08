@@ -1,5 +1,37 @@
 # Code formatting
 
+## Maven Plugin
+
+Dhis2 is using Speedy Spotless (https://github.com/commitd/speedy-spotless) to automatically format the code base.
+
+### Step 1: Installing pre-commit hook
+
+From the root dhis2 directory, execute
+
+    mvn speedy-spotless:install-hooks
+        
+This will install the pre-commit hook that invoke Spotless only on modified Java files
+
+Note: make sure that git core.hooksPath is set to .git/hooks in order for Speedy Spotless to work.
+
+    git config core.hooksPath .git/hooks
+
+### Step 2: Commit your code
+
+When committing your code, Spotless will format all and only the staged files using the current DHIS2 Eclipse formatting rules
+ [dhis2-core/dhis-2/DHISFormatter.xml](https://github.com/dhis2/dhis2-core/blob/master/dhis-2/DHISFormatter.xml).
+ 
+A conditional formatting can be used to prevent the automatic formatter to format blocks of code:
+
+    // @formatter:off
+    IN_USER_ORG_UNIT_HIERARCHY_CACHE = cacheProvider.newCacheBuilder( Boolean.class )
+        .forRegion( "inUserOuHierarchy" )
+        .expireAfterWrite( 3, TimeUnit.HOURS )
+        .withInitialCapacity( 1000 )
+        .forceInMemory()
+        .withMaximumSize( SystemUtils.isTestRun(env.getActiveProfiles() ) ? 0 : 20000 ).build();
+    // @formatter:on
+
 ## Eclipse
 
 ### Step 1: Eclipse formatting definition location
