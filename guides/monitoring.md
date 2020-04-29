@@ -23,7 +23,11 @@ Currently, the metrics exposed by the application are:
 
 Metrics are exported by micrometer.io (http://micrometer.io/). Micrometer is a Java based framework that acts as a facade over the instrumentation clients for the most popular monitoring systems. It supports many monitoring engines, including Prometheus.
 
-The complete set of metrics is available from the following API endpoint: `/api/metrics`.
+The complete set of metrics is available from the following API endpoint:
+
+```
+/api/metrics
+```
 
 ### API Monitoring
 
