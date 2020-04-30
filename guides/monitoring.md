@@ -166,16 +166,16 @@ Finally, the `PrometheusScrapeEndpointController` is the controller responsible 
 The monitoring subsystem is disabled by default, and can be enabled by defining a set of properties in the `dhis.conf` DHIS 2 configuration file.
 
 Each metrics cluster has to be explicitely enabled in order for the metrics to be exported.
-The metrics can be enabled by setting to `true` the following configuration keys:
+The metrics can be enabled by setting to `on` the following configuration keys (the default is `off`):
 
-| key name                       | metrics              |
-|--------------------------------|----------------------|
-| `monitoring.api.enabled`       | API                  |
-| `monitoring.jvm.enabled `      | JVM                  |
-| `monitoring.dbpool.enabled`    | Connection Pool      |
-| `monitoring.hibernate.enabled` | Hibernate            |
-| `monitoring.uptime.enabled`    | Uptime               |
-| `monitoring.cpu.enabled`       | CPU                  |
+| key name                       | value     | metrics              |
+|--------------------------------|-----------|----------------------|
+| `monitoring.api.enabled`       | off \| on | API                  |
+| `monitoring.jvm.enabled `      | off \| on | JVM                  |
+| `monitoring.dbpool.enabled`    | off \| on | Connection Pool      |
+| `monitoring.hibernate.enabled` | off \| on | Hibernate            |
+| `monitoring.uptime.enabled`    | off \| on | Uptime               |
+| `monitoring.cpu.enabled`       | off \| on | CPU                  |
 
 Please note that the Hibernate metrics activates the Hibernate property `hibernate.generate_statistics`.
 Hibernate statistics are designed to help debug performance problems and are not supposed to be used on a production environment on a permanent basis.
