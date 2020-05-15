@@ -20,6 +20,8 @@ It is important to take into account:
 * The reservation should not be done too early, as it will make it more complex to merge. Make the reservation at the time of raising the PR for review.
 * PRs which contain migrations must be merged in the order of the migration versions. This is done so that migrations will be applied in the appropriate, ascending order.
 
+Regarding back-ports of Flyway migrations, extreme caution needs to be taken. Only critical Flyway migrations should be backported and we should stay on the conservative side. For non-critical clean-ups, SQL scripts can be made available and run manually.
+
 ## Reservations
 
 The table below contains a list of migration versions. Please reserve the appropriate version using the migration version and the link to the corresponding PR.
