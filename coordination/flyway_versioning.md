@@ -66,7 +66,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_6 | https://github.com/dhis2/dhis2-core/pull/5766 |
 | V2_35_7 | https://github.com/dhis2/dhis2-core/pull/5766 |
 | V2_35_8 | https://github.com/dhis2/dhis2-core/pull/5779 |
-| V2_35_ | |
+| V2_35_9 | https://github.com/dhis2/dhis2-core/pull/5784 |
 | V2_35_ | |
 | V2_35_ | |
 | V2_35_ | |
