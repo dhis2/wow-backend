@@ -23,7 +23,11 @@ Currently, the metrics exposed by the application are:
 
 Metrics are exported by micrometer.io (http://micrometer.io/). Micrometer is a Java based framework that acts as a facade over the instrumentation clients for the most popular monitoring systems. It supports many monitoring engines, including Prometheus.
 
-The complete set of metrics is available from the following API endpoint: `/api/metrics`.
+The complete set of metrics is available from the following API endpoint:
+
+```
+/api/metrics
+```
 
 ### API Monitoring
 
@@ -34,7 +38,7 @@ The following metrics are exposed for each API endpoint exposed by DHIS2 (`/api/
 
 | name            | type    | description                                                                               |
 |-----------------|---------|-------------------------------------------------------------------------------------------|
-| `seconds_max`   | gauge   | a moving window max of the maximum recorded value in a client-side configurable interval. |
+| `seconds_max`   | gauge   | a moving window of the maximum recorded value in a client-side configurable interval      |
 | `seconds_count` | summary | the number of times the API has been called                                               |
 | `seconds_sum`   | summary | the accumulated duration of the API call                                                  |
 
@@ -159,18 +163,19 @@ Finally, the `PrometheusScrapeEndpointController` is the controller responsible 
 
 ## DHIS2 Monitoring configuration
 
-The monitoring subsystem is disabled by default.
-Each metrics cluster has to be explicitely enabled in order for the metrics to be exported.
-The metrics can be enabled by setting to `true` the following configuration keys:
+The monitoring subsystem is disabled by default, and can be enabled by defining a set of properties in the `dhis.conf` DHIS 2 configuration file.
 
-| key name                       | metrics              |
-|--------------------------------|----------------------|
-| `monitoring.api.enabled`       | API                  |
-| `monitoring.jvm.enabled `      | JVM                  |
-| `monitoring.dbpool.enabled`    | Connection Pool      |
-| `monitoring.hibernate.enabled` | Hibernate            |
-| `monitoring.uptime.enabled`    | Uptime               |
-| `monitoring.cpu.enabled`       | CPU                  |
+Each metrics cluster has to be explicitely enabled in order for the metrics to be exported.
+The metrics can be enabled by setting to `on` the following configuration keys (the default is `off`):
+
+| key name                       | value     | metrics              |
+|--------------------------------|-----------|----------------------|
+| `monitoring.api.enabled`       | off \| on | API                  |
+| `monitoring.jvm.enabled `      | off \| on | JVM                  |
+| `monitoring.dbpool.enabled`    | off \| on | Connection Pool      |
+| `monitoring.hibernate.enabled` | off \| on | Hibernate            |
+| `monitoring.uptime.enabled`    | off \| on | Uptime               |
+| `monitoring.cpu.enabled`       | off \| on | CPU                  |
 
 Please note that the Hibernate metrics activates the Hibernate property `hibernate.generate_statistics`.
 Hibernate statistics are designed to help debug performance problems and are not supposed to be used on a production environment on a permanent basis.
