@@ -61,7 +61,6 @@ shared_buffers = 2000MB
 work_mem = 64MB
 maintenance_work_mem = 2048MB
 effective_cache_size = 6000MB
-
 max_wal_size = 2GB
 checkpoint_timeout = 15min
 
