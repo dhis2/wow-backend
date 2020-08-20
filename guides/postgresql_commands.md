@@ -2,7 +2,7 @@
 
 # PostgreSQL setup
 
-This guide provides useful PostgreSQL commands for a development environment on Ubuntu/Debian.
+This guide provides useful PostgreSQL commands for a Debian/Ubuntu based development environment.
 
 ## Install PostgreSQL 12
 
@@ -94,7 +94,7 @@ search_path = '"$user", public, postgis'
 # pg_stat_statements.track = all
 ```
 
-Set ownership of the file and move it the config directory:
+Set ownership of the file and move it to the config directory:
 
 ```bash
 sudo chown postgres:postgres pg_custom.conf
