@@ -121,23 +121,18 @@ sudo service postgresql restart
 
 ## Manage database
 
-First change to the `postgres` with:
-
-```bash
-sudo su postgres
-```
+This section provides commands for manipulating databases.
 
 ### Drop database
 
 ```bash
-dropdb {name}
+sudo -u postgres dropdb {name}
 ```
 
 ### Create database
 
-
 ```bash
-createdb -O {owning_user} {name}
+sudo -u postgres createdb -O {owning_user} {name}
 ```
 
 ### Create PostGIS extension for database
@@ -152,7 +147,7 @@ psql -d {name} -U {user} -c "create extension postgis;
 pg_dump "{name}" -U {user} -T "analytics*" -T "_*" | gzip > {name}.sql.gz
 ```
 
-### Restore compressed dump
+### Restore compressed dump of database
 
 ```bash
 gunzip {name}.sql.gz
