@@ -2,6 +2,8 @@
 
 # PostgreSQL setup
 
+This guide provides useful PostgreSQL commands for a development environment.
+
 ## Install PostgreSQL 12
 
 ```bash
@@ -52,7 +54,7 @@ sudo service postgresql restart
 Create file `pg_custom.conf` with the following content:
 
 ```properties
-# resource dependent settings
+# Resource specific settings
 
 max_connections = 300
 shared_buffers = 2000MB
@@ -63,29 +65,29 @@ effective_cache_size = 6000MB
 max_wal_size = 2GB
 checkpoint_timeout = 15min
 
-# ssd settings
+# SSD settings
 
 random_page_cost = 1.1
 
-# generic settings
+# Generic settings
 
 synchronous_commit = off
 wal_writer_delay = 10000ms
 checkpoint_completion_target = 0.9
 max_locks_per_transaction = 96
 
-# include postgis schema in search path
+# Log settings
+
+log_lock_waits = on
+log_duration = on
+log_statement = 'all'
+log_min_duration_statement = 10
+
+# Include postgis schema in search path
 
 search_path = '"$user", public, postgis'
 
-# log settings
-
-# log_lock_waits = on
-# log_duration = on
-# log_statement = 'all'
-# log_min_duration_statement = 10
-
-# pg_stat_statements settings
+# Extension pg_stat_statements settings
 
 # shared_preload_libraries = 'pg_stat_statements'
 # track_activity_query_size = 2048
