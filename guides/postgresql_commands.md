@@ -97,7 +97,7 @@ search_path = '"$user", public, postgis'
 Open the main config file:
 
 ```
-sudo nano /etc/postgresql/12/main/postgresql.conf`
+sudo nano /etc/postgresql/12/main/postgresql.conf
 ```
 
 Include the custom config by including this line at the end of the file:
