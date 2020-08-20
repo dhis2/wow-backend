@@ -4,13 +4,13 @@
 
 This guide provides useful PostgreSQL commands for a Debian/Ubuntu based development environment.
 
-## Install PostgreSQL 12
+## Install PostgreSQL 12 and PostGIS
 
 ```bash
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
 sudo apt update
-sudo apt -y install postgresql-12 postgresql-client-12
+sudo apt -y install postgresql-12 postgresql-client-12 postgis postgresql-12-postgis-3
 ```
 
 ## Start and stop
@@ -117,5 +117,45 @@ Restart to make changes take effect:
 
 ```bash
 sudo service postgresql restart
+```
+
+## Manage database
+
+First change to the `postgres` with:
+
+```bash
+sudo su postgres
+```
+
+### Drop database
+
+```bash
+dropdb {name}
+```
+
+### Create database
+
+
+```bash
+createdb -O {owning_user} {name}
+```
+
+### Create PostGIS extension for database
+
+```bash
+psql -d {name} -U {user} -c "create extension postgis;
+```
+
+### Create compressed dump of database 
+
+```bash
+pg_dump "{name}" -U {user} -T "analytics*" -T "_*" | gzip > {name}.sql.gz
+```
+
+### Restore compressed dump
+
+```bash
+gunzip {name}.sql.gz
+psql -d "{name}" -U {user} -f {name}.sql
 ```
 
