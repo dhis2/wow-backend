@@ -87,7 +87,6 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_23 | TECH-436 |
 | V2_35_24 | DHIS2-9295 |
 
-
 ### 2.36
 
 | Version | Pull request URL |
