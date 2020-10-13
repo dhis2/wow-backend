@@ -50,12 +50,13 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_18 | https://github.com/dhis2/dhis2-core/pull/4851 |
 | V2_34_19 | https://github.com/dhis2/dhis2-core/pull/4913 |
 | V2_34_20 | https://github.com/dhis2/dhis2-core/pull/4963 |
-| V2_34_ | |
+| V2_34_21 | ? |
 | V2_34_22 | https://github.com/dhis2/dhis2-core/pull/5836 |
-| V2_34_23 | |
+| V2_34_23 | ? |
 | V2_34_24 | https://github.com/dhis2/dhis2-core/pull/5949 |
-| V2_35_25 | TECH-436 |
-| V2_34_26 | DHIS2-9295 |
+| V2_35_25 | https://github.com/dhis2/dhis2-core/pull/6336 |
+| V2_34_26 | DHIS2-9295-1 |
+| V2_34_27 | DHIS2-9295-2 |
 
 
 ### 2.35
@@ -84,8 +85,10 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_20 | ? |
 | V2_35_21 | https://github.com/dhis2/dhis2-core/pull/6044 |
 | V2_35_22 | https://github.com/dhis2/dhis2-core/pull/6154 |
-| V2_35_23 | TECH-436 |
-| V2_35_24 | DHIS2-9295 |
+| V2_35_23 | https://github.com/dhis2/dhis2-core/pull/6338 |
+| V2_35_24 | DHIS2-9295-1 |
+| V2_35_25 | DHIS2-9295-2 |
+
 
 ### 2.36
 
@@ -94,9 +97,9 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_1 | https://github.com/dhis2/dhis2-core/pull/6302 |
 | V2_36_2 | https://github.com/dhis2/dhis2-core/pull/6302 |
 | V2_36_3 | https://github.com/dhis2/dhis2-core/pull/6334 |
-| V2_36_4 | DHIS2 - 9295 |
+| V2_36_4 | DHIS2 - 9295-1 |
 | V2_36_5 | ? |
-| V2_36_ | |
+| V2_36_6 | DHIS2 - 9295-2 |
 | V2_36_ | |
 | V2_36_ | |
 | V2_36_ | |
