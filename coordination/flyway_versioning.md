@@ -100,7 +100,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_4 | DHIS2 - 9295-1 |
 | V2_36_5 | DHIS2 - 8411 |
 | V2_36_6 | DHIS2 - 9295-2 |
-| V2_36_ | |
+| V2_36_7 | DHIS2 - 1561, DHIS2 - 5587 |
 | V2_36_ | |
 | V2_36_ | |
 | V2_36_ | |
