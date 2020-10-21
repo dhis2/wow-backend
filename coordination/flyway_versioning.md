@@ -104,7 +104,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_8 | https://github.com/dhis2/dhis2-core/pull/5862 |
 | V2_36_9 | https://github.com/dhis2/dhis2-core/pull/5862 |
 | V2_36_10 | https://github.com/dhis2/dhis2-core/pull/5862 |
-| V2_36_ | |
+| V2_36_11 | https://github.com/dhis2/dhis2-core/pull/5862 |
 | V2_36_ | |
 | V2_36_ | |
 | V2_36_ | |
