@@ -58,6 +58,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_26 | DHIS2-9295-1 |
 | V2_34_27 | DHIS2-9295-2 |
 | V2_34_28 | DHIS2-8911 |
+| V2_34_29 | https://github.com/dhis2/dhis2-core/pull/6917 |
 
 
 ### 2.35
@@ -90,6 +91,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_24 | DHIS2-9295-1 |
 | V2_35_25 | DHIS2-9295-2 |
 | V2_35_26 | DHIS2-8911 |
+| V2_35_27 | https://github.com/dhis2/dhis2-core/pull/6915 |
 
 
 
@@ -113,7 +115,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_14 | DHIS2-9841 |
 | V2_36_15 | https://github.com/dhis2/dhis2-core/pull/6567 |
 | V2_36_16 | DHIS2-10054 |
-| V2_36_ | |
+| V2_36_17 | https://github.com/dhis2/dhis2-core/pull/6914 |
 | V2_36_ | |
 | V2_36_ | |
 | V2_36_ | |
