@@ -5,7 +5,7 @@
 - One solution is to created a custom database function which uses JSONB operators inside. Then register that function with `PostgisPG95Dialect`. By that, we can call the registered function with JPA Criteria API.
 - This solution can be applied to other cases where you just want to call a database function in JPA. 
 
-#### 2. Code Example
+#### 2. Code example
 2.1 Create database function and put it in a flyway script.
 ```sql
 CREATE or replace FUNCTION jsonb_has_user_id(jsonb, text )
@@ -16,7 +16,7 @@ $$
 LANGUAGE SQL IMMUTABLE PARALLEL SAFE;
 ```
 
-2.2 Register database function with `PostgisPG95Dialect`
+2.2 Register database function in `DhisPostgresDialect`
 ```java
 public class DhisPostgresDialect
     extends PostgisPG95Dialect
@@ -30,7 +30,7 @@ public class DhisPostgresDialect
     }
 }
 ```
-2.3 Call custom function with JPA `CriteriaBuilder`
+2.3 Call registered database function with JPA `CriteriaBuilder`
 
 ```java
 builder.function(  
@@ -40,7 +40,7 @@ builder.function(
                     builder.literal( userUid ) // second argument
                 )
 ```
-2.4 Call custom function with HQL query
+2.4 Call registered database function with HQL query
 ```java
-String sql = "select dataelement from dataelement where function('jsonb_has_user_id', sharing, 'y2pwrlq0RAa')";
+String sql = "select dataelement from dataelement where function('jsonb_has_user_id', sharing, 'y2pwrlq0RAa') = true";
 ```
