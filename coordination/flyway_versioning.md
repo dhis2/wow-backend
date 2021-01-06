@@ -118,7 +118,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_17 | https://github.com/dhis2/dhis2-core/pull/6914 |
 | V2_36_18 | https://github.com/dhis2/dhis2-core/pull/6918 |
 | V2_36_19 | https://github.com/dhis2/dhis2-core/pull/6975 |
-| V2_36_ | |
+| V2_36_20 | DHIS2-5814 |
 
 ### 2.37
 
