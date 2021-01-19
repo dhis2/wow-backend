@@ -6,11 +6,11 @@ DHIS2 is using Speedy Spotless (https://github.com/commitd/speedy-spotless) to a
 
 ### Step 1: Installing pre-commit hook
 
-From the root dhis2 directory, execute
+From the root dhis2 directory, execute:
 
     mvn speedy-spotless:install-hooks
         
-This will install the pre-commit hook that invoke Spotless only on modified Java files
+This will install the pre-commit hook that invoke Spotless only on modified Java files.
 
 Note: make sure that git core.hooksPath is set to .git/hooks in order for Speedy Spotless to work.
 
@@ -54,7 +54,6 @@ The DHIS 2 XML formatting definition is located in the DHIS 2 project root: [dhi
 4. Click the “Formatter” link and ensure the “DHIS 2.0 Formatter” formatter is selected as active.
 5. Click OK.
 
-
 ## IntelliJ Idea
 
 ### Step 1: Download the formatting definition
@@ -80,3 +79,9 @@ Locate the Eclipse formatting definition, same as in Step 1 for Eclipse.
 7. Set the "Eclipse Java Formatter config file" to the location of the DHIS2 XML formatting definition file.
 8. Set the "Java Formatting Profile" to "DHIS 2.0 Formatter".
 9. Select "Optimize imports"
+
+## Maintenance
+
+To apply the plugin to an existing project which is not yet formatted, execute:
+
+    mvn speedy-spotless:apply
