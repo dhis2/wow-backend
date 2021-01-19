@@ -9,10 +9,10 @@ DHIS2 is using Speedy Spotless (https://github.com/commitd/speedy-spotless) to a
 From the root dhis2 directory, execute:
 
     mvn speedy-spotless:install-hooks
-        
+
 This will install the pre-commit hook that invoke Spotless only on modified Java files.
 
-Note: make sure that git core.hooksPath is set to .git/hooks in order for Speedy Spotless to work.
+**Note:** Make sure that git `core.hooksPath` is set to `.git/hooks` in order for Speedy Spotless to work.
 
     git config core.hooksPath .git/hooks
 
@@ -20,7 +20,7 @@ Note: make sure that git core.hooksPath is set to .git/hooks in order for Speedy
 
 When committing your code, Spotless will format all and only the staged files using the current DHIS2 Eclipse formatting rules
  [dhis2-core/dhis-2/DHISFormatter.xml](https://github.com/dhis2/dhis2-core/blob/master/dhis-2/DHISFormatter.xml).
- 
+
 A conditional formatting can be used to prevent the automatic formatter to format blocks of code:
 
     // @formatter:off
