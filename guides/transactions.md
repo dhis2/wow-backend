@@ -2,9 +2,9 @@
 
 ## Annotating methods
 
-In DHIS2, transaction boundaries are declared programmatically, via the `@ org.springframework.transaction.annotation.Transactional` annotation on Service methods of concrete classes (as opposed to interfaces).
+In DHIS2, transaction boundaries are specified declaratively, via the `@ org.springframework.transaction.annotation.Transactional` annotation on Service methods of concrete classes (as opposed to interfaces).
 
-Each Service method that does uses a Store class to access the database should be annotated with the `@Transactional` annotation.
+Each Service method that does use a Store class to access the database should be annotated with the `@Transactional` annotation.
 
 ## Read-only transactions
 
