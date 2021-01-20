@@ -40,7 +40,7 @@ When writing API tests, your objective is to test without knowing the implementa
 
 - Do not depend on other DHIS2 modules than the dhis-e2e-test. Think from consumers, who doesn't know implementation details, perspective.
 
-- Do not write complex code. Test code should be as straight-forward and error-prone as possible.
+- Do not write complex code. Test code should be as straight-forward and robust as possible.
 
 - Don’t write tests that depends on execution order of other tests. Your test should not fail when executed alone, selectively picking few tests from different categories or when executed with different test runners.
 
