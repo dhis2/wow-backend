@@ -18,8 +18,9 @@ This will install the pre-commit hook that invoke Spotless only on modified Java
 
 ### Step 2: Commit your code
 
-When committing your code, Spotless will format all and only the staged files using the current DHIS2 Eclipse formatting rules
- [dhis2-core/dhis-2/DHISFormatter.xml](https://github.com/dhis2/dhis2-core/blob/master/dhis-2/DHISFormatter.xml).
+When committing your code, Spotless will format the staged files, using the current DHIS2 Eclipse formatting rules:
+
+[dhis2-core/dhis-2/DHISFormatter.xml](https://github.com/dhis2/dhis2-core/blob/master/dhis-2/DHISFormatter.xml).
 
 A conditional formatting can be used to prevent the automatic formatter to format blocks of code:
 
