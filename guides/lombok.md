@@ -8,6 +8,9 @@ To have Lombok function properly in IDEs like Intellij and Eclipse you will have
 
 Maven already supports APT (through the lombok depdendency), so for CI servers etc no additional setup is needed.
 
+Occasionally IntelliJ tends to get out of sync with lombok and shows errors related to generated code even if setup is correct and compilation works.
+In such case use `File` => `Invalidate Caches / Restart...`.
+
 ## Allowed annotations
 
 Current we only allow Lombok to be used for simple bean classes (DTOs, parameter classes etc), and we only allow the following annotations.
