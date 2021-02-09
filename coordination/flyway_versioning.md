@@ -123,6 +123,10 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_23 | https://github.com/dhis2/dhis2-core/pull/7116 |
 | V2_36_24 | https://github.com/dhis2/dhis2-core/pull/7194 |
 | V2_36_25 | https://github.com/dhis2/dhis2-core/pull/7296 |
+| V2_36_26 | DHIS2-8937 |
+| V2_36_27 | DHIS2-8937 |
+| V2_36_28 | DHIS2-8937 |
+
 
 ### 2.37
 
