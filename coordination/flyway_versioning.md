@@ -126,6 +126,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_26 | DHIS2-8937 |
 | V2_36_27 | DHIS2-8937 |
 | V2_36_28 | DHIS2-8937 |
+| V2_36_29 | DHIS2-10447 |
 
 
 ### 2.37
