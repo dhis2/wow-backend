@@ -93,6 +93,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_26 | DHIS2-8911 |
 | V2_35_27 | https://github.com/dhis2/dhis2-core/pull/6915 |
 | V2_35_28 | DHIS2-8911 - fix |
+| V2_35_29 | DHIS2-10556 |
 
 ### 2.36
 
