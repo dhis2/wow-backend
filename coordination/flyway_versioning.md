@@ -62,6 +62,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_30 | ? |
 | V2_34_31 | ? |
 | V2_34_32 | DHIS2-10556 |
+| V2_34_33 | DHIS2-5587 |
 
 
 
