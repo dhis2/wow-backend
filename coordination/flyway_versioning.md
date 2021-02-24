@@ -99,6 +99,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_28 | DHIS2-8911 - fix |
 | V2_35_29 | ? |
 | V2_35_30 | DHIS2-10556 |
+| V2_35_31 | DHIS2-5587 |
 
 ### 2.36
 
