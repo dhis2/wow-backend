@@ -13,6 +13,13 @@ The following guidelines apply when raising pull requests.
 **4. Fix deprecation warnings:** If you upgrade libraries and it leads to deprecation warnings, please fix it and introduce the upgrade path as early as possible to avoid code debt.
 
 **5. Write a clear commit message and description:** Write a good commit message and a description for the PR according to the guide [Git Commit Message Principles](https://chris.beams.io/posts/git-commit/).
+  * Separate subject from body with a blank line
+  * Limit the subject line to 50 characters
+  * Capitalize the subject line
+  * Do not end the subject line with a period
+  * Use the imperative mood in the subject line
+  * Wrap the body at 72 characters
+  * Use the body to explain what and why vs. how
 
 **6. Write and run tests:** Ensure new features have appropriate test coverage and are covered by at least some unit tests. Run all unit tests and ensure that they pass.
 
