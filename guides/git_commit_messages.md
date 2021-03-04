@@ -1,6 +1,6 @@
 # Git PR & Commit Message Principles
 
-The following guidelines for Git PRs and commit messages are put in place to make it easy to follow the developments in the various Git branches. We would like to have a concise and consistent commit history so that it becomes an effective tool for communication between developers. For inspiration have a look at the [Spring Boot](https://github.com/spring-projects/spring-boot/commits/master) project. The same principles apply for PRs as for commits.
+The following guidelines for Git PRs and commit messages are put in place to make it easy to follow the developments in the various Git branches. We would like to have a concise and consistent commit history so that it becomes an effective tool for communication between developers. The principles large follow the [Git commit message](https://chris.beams.io/posts/git-commit/) rules. For inspiration have a look at the [Spring Boot](https://github.com/spring-projects/spring-boot/commits/master) project. The same principles apply for PRs as for commits.
 
 
 ## Principles
