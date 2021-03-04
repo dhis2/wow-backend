@@ -12,7 +12,7 @@ The following guidelines apply when raising pull requests.
 
 **4. Fix deprecation warnings:** If you upgrade libraries and it leads to deprecation warnings, please fix it and introduce the upgrade path as early as possible to avoid code debt.
 
-**5. Write a clear commit message and description:** Write a good commit message and a description for the PR according to the guide [Git Commit Message Principles](https://chris.beams.io/posts/git-commit/).
+**5. Write a clear commit message and description:** Write a good commit message and a description for the PR according to the guide [Git Commit Message Principles](https://chris.beams.io/posts/git-commit/). For more detail see the [commit message guide](https://github.com/dhis2/wow-backend/blob/master/guides/git_commit_messages.md).
   * Separate subject from body with a blank line
   * Limit the subject line to 50 characters
   * Capitalize the subject line
