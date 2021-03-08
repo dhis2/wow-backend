@@ -148,7 +148,7 @@ The table below contains a list of migration versions. Please reserve the approp
 
 | Version | Pull request URL |
 | -- | -- |
-| V2_37_1 | |
+| V2_37_1 | https://github.com/dhis2/dhis2-core/pull/7563 |
 | V2_37_2 | |
 | V2_37_3 | |
 | V2_37_ | |
