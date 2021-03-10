@@ -143,7 +143,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_32 | ??? |
 | V2_36_33 | DHIS2-10556 |
 | V2_36_34 | tracker-query-sql performance |
-| V2_36_35 |
+| V2_36_35 | https://github.com/dhis2/dhis2-core/pull/7580 |
 
 
 ### 2.37
