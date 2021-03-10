@@ -39,6 +39,7 @@ The following section lists guides on various topics.
 * [Spring conventions](guides/spring_conventions.md)
 * [Transactions](guides/transactions.md)
 * [Testing](guides/testing.md)
+* [Spring controller testing](guides/spring_controller_testing.md)
 * [PostgreSQL commands](guides/postgresql_commands.md)
 
 ## Coordination

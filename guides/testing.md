@@ -59,6 +59,21 @@ A H2-based integration test, creates the database schema automatically using the
  This category of test is not executed automatically when running `mvn test`. It requires a dedicated Maven profile, named `integration`.
  To run Docker-based tests using Maven, use `mvn test -Pintegration`
 
+### Integration tests for Spring REST-Controllers
+
+A convinient way to test REST controllers in a spring integration test is to extend `DhisControllerConvenienceTest`.
+
+They offer `GET`, `POST`, `PUT`, `PATCH` and `DELETE` methods with:
+
+* 2 args: URL + body (except `GET`)
+* 1 arg + varargs: URL +  arguments for URL parameters
+
+The result returned by these is implicitly or explcitly verified against a HTTP status code or series (2xx,3xx etcetera)
+and can be "virtually mapped" as some JSON object which can be used to make assertions.
+
+All details are found on page [Spring controller testing](guides/spring_controller_testing.md).
+
+
 ## Test architecture
 
 The unit/integration testing architecture is based on JUnit 4 and a number of test frameworks, such as [Spring Test](https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html), Mockito, [Test Containers](https://www.testcontainers.org/), etc.
@@ -73,5 +88,3 @@ There are two additional profiles in use, which determine the database to use du
 These profiles are applied whenever a test extends from `org.hisp.dhis.DhisSpringTest` or `org.hisp.dhis.IntegrationTestBase`.
 
 Flyway database evolutions are only applied if the `test-postgres` profile is in use.
-
-
