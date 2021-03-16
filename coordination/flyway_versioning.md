@@ -66,6 +66,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_34 | tracker-query-sql performance |
 | V2_34_35 | https://github.com/dhis2/dhis2-core/pull/7571 |
 | V2_34_36 | https://github.com/dhis2/dhis2-core/pull/7582 |
+| V2_34_37 | DHIS2-10697 |
 
 
 
@@ -106,6 +107,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_31 | DHIS2-5587 |
 | V2_35_32 | tracker-query-sql performance |
 | V2_35_33 | https://github.com/dhis2/dhis2-core/pull/7581 |
+| V2_35_34 | DHIS2-10697 |
 
 ### 2.36
 
@@ -147,6 +149,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_34 | tracker-query-sql performance |
 | V2_36_35 | https://github.com/dhis2/dhis2-core/pull/7580 |
 | V2_36_36 | https://jira.dhis2.org/browse/DHIS2-10642 |
+| V2_36_37 | DHIS2-10697
 
 
 ### 2.37
@@ -156,7 +159,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_37_1 | https://github.com/dhis2/dhis2-core/pull/7563 |
 | V2_37_2 | tracker-query-sql performance |
 | V2_37_3 |  https://jira.dhis2.org/browse/DHIS2-10642 |
-| V2_37_ | |
+| V2_37_4 | DHIS2-10697 |
 | V2_37_ | |
 | V2_37_ | |
 | V2_37_ | |
