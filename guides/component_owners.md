@@ -34,7 +34,7 @@ The following table describes the various components and their leads.
 
 |Component                     |Lead                |Description                                                              |
 |------------------------------|--------------------|-------------------------------------------------------------------------|
-|[API] Analytics               |Luciano Fiandesio   |Analytics API and engine                                                 |
+|[API] Analytics               |Maikel Arabori      |Analytics API and engine                                                 |
 |[API] App management          |Mohamed Ameen       |App management                                                           |
 |[API] App Store               |Viktor Varland      |App store backend service                                                |
 |[API] Data administration     |Stian Sandvold      |Maintenance, SQL views, resource tables and scheduling                   |
@@ -52,9 +52,9 @@ The following table describes the various components and their leads.
 |[API] Predictors              |Jim Grace           |Predictors API and service                                               |
 |[API] Program rules           |Zubair Asghar       |Program rules service and API                                            |
 |[API] Security                |Morten Svanæs       |Application security, access control and authorization                   |
-|[API] Synchronization         |David Katuscak      |Server-to-server synchronization of data and metadata                    |
+|[API] Synchronization         |Enrico Colasante    |Server-to-server synchronization of data and metadata                    |
 |[API] System configuration    |Mohamed Ameen       |Configuration including settings and configuration files|
 |[API] Tracker                 |Morten Hansen       |Tracked entity and enrollment API and service                            |
-|[API] Translations            |Jason Pickering     |User interface and database translations                                 |
+|[API] Translations            |Phil Donnelly       |User interface and database translations                                 |
 |[API] User                    |Mohamed Ameen       |User data model, service and API                                         |
 |[API] Validation              |Jim Grace           |Data validation and data quality services                                |
