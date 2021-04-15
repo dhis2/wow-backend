@@ -111,6 +111,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_34 | DHIS2-10697 |
 | V2_35_35 | ? |
 | V2_35_36 | https://github.com/dhis2/dhis2-core/pull/7795 |
+| V2_35_37 | DHIS2-1127 |
 
 ### 2.36
 
