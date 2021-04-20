@@ -29,7 +29,7 @@ The following section lists guides on various topics.
 * [Code formatting](guides/code_formatting.md)
 * [Component owners](guides/component_owners.md)
 * [Flyway database migration](guides/db_migration.md)
-* [Git commit messages](guides/git_commit_messages.md)
+* [Git PR & commit messages](guides/git_commit_messages.md)
 * [Git pull requests](guides/git_pull_requests.md)
 * [IDEA hot swapping](guides/idea_hot_swapping.md)
 * [JPA queries](guides/jpa_api.md)
