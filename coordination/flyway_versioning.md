@@ -172,7 +172,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_37_6 | ? |
 | V2_37_7 | https://github.com/dhis2/dhis2-core/pull/7798 |
 | V2_37_8 | DHIS2-1127 |
-| V2_37_ | |
+| V2_37_9 | DHIS2-7029-1|
 | V2_37_ | |
 | V2_37_ | |
 | V2_37_ | |
