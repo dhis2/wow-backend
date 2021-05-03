@@ -162,19 +162,19 @@ The table below contains a list of migration versions. Please reserve the approp
 
 ### 2.37
 
-| Version | Pull request URL |
-| -- | -- |
-| V2_37_1 | https://github.com/dhis2/dhis2-core/pull/7563 |
-| V2_37_2 | tracker-query-sql performance |
-| V2_37_3 |  https://jira.dhis2.org/browse/DHIS2-10642 |
-| V2_37_4 | DHIS2-10697 |
-| V2_37_5 | ? |
-| V2_37_6 | ? |
-| V2_37_7 | https://github.com/dhis2/dhis2-core/pull/7798 |
-| V2_37_8 | DHIS2-1127 |
-| V2_37_9 | DHIS2-7029-1, https://github.com/dhis2/dhis2-core/pull/7867|
-| V2_37_ | |
-| V2_37_ | |
+| Version  | Pull request URL |
+| -- | --  |
+| V2_37_1  | https://github.com/dhis2/dhis2-core/pull/7563 |
+| V2_37_2  | tracker-query-sql performance |
+| V2_37_3  |  https://jira.dhis2.org/browse/DHIS2-10642 |
+| V2_37_4  | DHIS2-10697 |
+| V2_37_5  | ? |
+| V2_37_6  | ? |
+| V2_37_7  | https://github.com/dhis2/dhis2-core/pull/7798 |
+| V2_37_8  | DHIS2-1127 |
+| V2_37_9  | DHIS2-7029-1, https://github.com/dhis2/dhis2-core/pull/7867|
+| V2_37_10 | ? |
+| V2_37_11 | DHIS2-7776, https://jira.dhis2.org/browse/DHIS2-7776 |
 | V2_37_ | |
 | V2_37_ | |
 | V2_37_ | |
