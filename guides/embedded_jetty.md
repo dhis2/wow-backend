@@ -45,7 +45,7 @@ You can also easily start the Jetty container directly from your IDE.
 #### Step 1: Open JettyEmbeddedCoreWeb.java file
 Open the JettyEmbeddedCoreWeb.java file in the "dhi2-web-embedded-jetty" module.
 
-#### Step 2: Click play button on the main method
+#### Step 2: Click the play button on the main method
 ![](resources/images/intellij-embedded-play.png)
 
 #### Step 3: Edit run configuration
