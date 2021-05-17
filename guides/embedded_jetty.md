@@ -9,7 +9,7 @@ The module called "dhis2-embedded-jetty" in the dhis2-core project is responsibl
 From the root dhis2 directory, execute:
 
     mvn clean install -Pdev -Pjdk11 -T 100C
-    
+
 ### Step 2: Set DHIS2 home directory and run jar file
 
 From the root dhis2 directory, execute:
