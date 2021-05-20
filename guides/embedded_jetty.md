@@ -4,6 +4,10 @@
 
 The module called "dhis2-embedded-jetty" in the dhis2-core project is responsible for configuring and starting up an embedded Jetty container, and exposing the DHIS2 API on the default port of 9080.
 
+> **NOTE:** To skip the compile of the new "dhis2-embedded-jetty" module and basickly get the same compile time as before you can do the following to exlude it from the build:
+    
+    mvn clean install -Pdev -Pjdk11 -T 100C -pl -dhis-web-embedded-jetty
+
 ### Step 1: Compiling the DHIS2 core
 
 From the root dhis2 directory, execute:
