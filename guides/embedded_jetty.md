@@ -35,9 +35,9 @@ java -jar ./dhis-web-embedded-jetty/target/dhis-web-embedded-jetty.jar
 java -Djetty.host=$HOST -Djetty.http.port=$PORT -jar ./dhis-web-embedded-jetty/target/dhis-web-embedded-jetty.jar
 ```
 
-#### Alternative:
+#### Alternative
 
-The runApi.sh script will do exactly the same as above, but you will need to define your DHIS2_HOME first.
+The `run-api.sh` script will do exactly the same as above, but you will need to define your DHIS2_HOME first.
 
 #### Step 1: Set DHIS2_HOME
 
@@ -47,7 +47,7 @@ From the root dhis2 directory, execute:
 export DHIS2_HOME=[Your dhis2 home dir.]
 ```
 
-#### Step 2: Run runApi.sh script
+#### Step 2: Run the bash script
 
 From the root dhis2 directory, execute:
 
