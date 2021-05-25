@@ -2,29 +2,39 @@
 
 ## Compiling and starting an embedded Jetty container from the command line
 
-The module called "dhis2-embedded-jetty" in the dhis2-core project is responsible for configuring and starting up an embedded Jetty container, and exposing the DHIS2 API on the default port of 9080.
+The module called `dhis2-embedded-jetty` in the dhis2-core project is responsible for configuring and starting up an embedded Jetty container, and exposing the DHIS2 API on the default port of 9080.
 
-> **NOTE:** To skip the compile of the new "dhis2-embedded-jetty" module and basickly get the same compile time as before you can do the following to exlude it from the build:
-    
-    mvn clean install -Pdev -Pjdk11 -T 100C -pl -dhis-web-embedded-jetty
+Note that JDK 11 is required to run the API with the embedded Jetty server.
+
+To skip the compile of the new `dhis2-embedded-jetty` module and get the same compile process as before you can do the following to exclude it from the build:
+
+```sh
+mvn clean install -Pdev -Pjdk11 -T 100C -pl -dhis-web-embedded-jetty
+```
 
 ### Step 1: Compiling the DHIS2 core
 
 From the root dhis2 directory, execute:
 
-    mvn clean install -Pdev -Pjdk11 -T 100C
+```sh
+mvn clean install -Pdev -Pjdk11 -T 100C
+```
 
 ### Step 2: Set DHIS2 home directory and run jar file
 
 From the root dhis2 directory, execute:
-    
-    DHIS2_HOME=[your dhis2 home] \ 
-    java -jar ./dhis-web-embedded-jetty/target/dhis-web-embedded-jetty.jar
-    
+
+```sh    
+DHIS2_HOME=[your dhis2 home] \ 
+java -jar ./dhis-web-embedded-jetty/target/dhis-web-embedded-jetty.jar
+```
+
 *TIP: You can also define the port and host/ip you want like this:*
 
-    java -Djetty.host=$HOST -Djetty.http.port=$PORT -jar ./dhis-web-embedded-jetty/target/dhis-web-embedded-jetty.jar
-    
+```sh
+java -Djetty.host=$HOST -Djetty.http.port=$PORT -jar ./dhis-web-embedded-jetty/target/dhis-web-embedded-jetty.jar
+```
+
 #### Alternative:
 
 The runApi.sh script will do exactly the same as above, but you will need to define your DHIS2_HOME first.
@@ -33,14 +43,17 @@ The runApi.sh script will do exactly the same as above, but you will need to def
 
 From the root dhis2 directory, execute:
 
-    export DHIS2_HOME=[Your dhis2 home dir.]
-    
+```sh
+export DHIS2_HOME=[Your dhis2 home dir.]
+```
+
 #### Step 2: Run runApi.sh script
 
 From the root dhis2 directory, execute:
 
-    ./runApi.sh
-
+```sh
+./run-api.sh
+```
     
 ## Starting an embedded Jetty container from IntelliJ
 
