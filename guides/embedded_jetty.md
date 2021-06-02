@@ -1,10 +1,26 @@
 # DHIS2 API with Embedded Jetty 
 
+The DHIS 2 backend API can be built as a JAR file and deployed with an embedded Jetty server for rapid development and testing.
+
+## Quickstart
+
+Build the JAR file and serve up the Jetty web server by running the provided script in the `dhis-2` directory:
+
+```sh
+./run-api.sh
+```
+
+This will make the API accessible at the following URL. Note that by browsing the API URLs in the browser, the browser will typically present a built-in authentication dialog.
+
+```url
+http://localhost:9090/api/
+```
+
 ## Compiling and starting an embedded Jetty container from the command line
 
 The module called `dhis2-embedded-jetty` in the dhis2-core project is responsible for configuring and starting up an embedded Jetty container, and exposing the DHIS2 API on the default port which is `9090`.
 
-Note that JDK 11 is required to run the API with the embedded Jetty server.
+Note that JDK 11 is required to run the API with the embedded Jetty server. Also note that no web apps will bee included in the build.
 
 To skip the compile of the new `dhis2-embedded-jetty` module and get the same compile process as before you can do the following to exclude it from the build:
 
