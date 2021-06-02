@@ -13,7 +13,7 @@ Build the JAR file and serve up the Jetty web server by running the provided scr
 This will make the API accessible at the following URL. Note that by browsing the API URLs in the browser, the browser will typically present a built-in authentication dialog.
 
 ```
-(http://localhost:9090/api/)[http://localhost:9090/api/]
+http://localhost:9090/api/
 ```
 
 ## Compiling and starting an embedded Jetty container from the command line
