@@ -2,7 +2,7 @@
 
 ## Compiling and starting an embedded Jetty container from the command line
 
-The module called `dhis2-embedded-jetty` in the dhis2-core project is responsible for configuring and starting up an embedded Jetty container, and exposing the DHIS2 API on the default port of 9080.
+The module called `dhis2-embedded-jetty` in the dhis2-core project is responsible for configuring and starting up an embedded Jetty container, and exposing the DHIS2 API on the default port which is `9090`.
 
 Note that JDK 11 is required to run the API with the embedded Jetty server.
 
