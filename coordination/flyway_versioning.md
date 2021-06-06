@@ -182,7 +182,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_37_10 | ? |
 | V2_37_11 | DHIS2-7776, https://jira.dhis2.org/browse/DHIS2-7776 |
 | V2_37_12 | https://jira.dhis2.org/browse/DHIS2-11030 | 
-| V2_37_ | |
+| V2_37_13 | https://jira.dhis2.org/browse/TECH-608 | 
 | V2_37_ | |
 | V2_37_ | |
 | V2_37_ | |
