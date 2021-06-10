@@ -71,8 +71,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_39 | DHIS2-1127 |
 | V2_34_40 | DHIS2-1164 |
 | V2_34_41 | https://jira.dhis2.org/browse/DHIS2-11030 |
-
-
+| V2_34_42 | https://jira.dhis2.org/browse/DHIS2-9674  |
 
 ### 2.35
 
