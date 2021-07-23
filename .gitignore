@@ -1,2 +1,14 @@
 *.md.backup
 
+# Code
+.vscode/*
+
+# Eclipse
+.metadata
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea
+*.iml
