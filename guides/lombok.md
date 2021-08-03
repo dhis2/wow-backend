@@ -19,7 +19,7 @@ Current we only allow Lombok to be used for simple bean classes (DTOs, parameter
 2. [@Value](https://projectlombok.org/features/Value)
 3. [@Builder](https://projectlombok.org/features/Builder)
 4. [@Getter, @Setter](https://projectlombok.org/features/GetterSetter)
-5. [Constructors](https://projectlombok.org/features/constructor)
+5. [@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor](https://projectlombok.org/features/constructor)
 
 ## Examples
 
