@@ -41,9 +41,7 @@ When demoing the DHIS 2 Capture Android application (and other Android apps), it
    scrcpy -t
    ```
 
-   This will open the scrcpy app and display the Android device on your local machine in an application screen. 
-   
-   You can use both the touchscreen on the device and the touchpad/mouse on your local machine to control the screen.
+   This will open the scrcpy app and display the Android device on your local machine in an application screen. You can use both the touchscreen on the device and the touchpad/mouse on your local machine to control the screen. 
    
    A wealth of options are available which can be explored with `$ scrcpy --help` or from the [README](https://github.com/Genymobile/scrcpy).
 
