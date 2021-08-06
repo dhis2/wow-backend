@@ -44,7 +44,7 @@ The following section lists guides on various topics.
 * [Test mocking with Mockito](guides/test_mocking.md)
 * [Testing](guides/testing.md)
 * [Transactions](guides/transactions.md)
-* [Ubuntu Android emulator](guides/ubuntu_android_emulator.md) 
+* [Ubuntu Linux Android app mirroring](guides/ubuntu_android_app_mirroring.md) 
 
 ## Coordination
 

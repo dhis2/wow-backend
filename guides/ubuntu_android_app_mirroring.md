@@ -1,6 +1,6 @@
-# Emulate Android apps on Ubuntu Linux
+# Display Android apps on Ubuntu Linux
 
-When demoing the DHIS 2 Capture Android application (and other Android apps), it is quite useful to be able to display the phone screen on your local machine, so that the screen can be shared on video conference calls or projectors. A great way to do so is to emulate the Android app on your local machine. The [scrcpy](https://github.com/Genymobile/scrcpy) application from *Genymotion* is a good choice as it works on Windows, Mac and Linux. For Ubuntu 18.04 and later it is available as a *snap* package. This guide explains how to install scrcpy on Ubuntu from the command line and connect to your Android device.
+When demoing the DHIS 2 Capture Android application (and other Android apps), it is quite useful to be able to display the phone screen on your local machine, so that the screen can be shared on video conference calls or projectors. A great application for displaying and controlling your Android device through USB connection (or over TCP/IP) is the [scrcpy](https://github.com/Genymobile/scrcpy) application from *Genymotion*. It is cross-platform (GNU/Linux, macOS and Windows) and does not require any root access. For Ubuntu 18.04 and later it is available as a *snap* package. This guide explains how to install scrcpy on Ubuntu from the command line and connect to your Android device.
 
 ## Steps
 
