@@ -38,7 +38,7 @@ When demoing the DHIS 2 Capture Android application (and other Android apps), it
 6. Start scrcpy with this command:
 
    ```
-   scrcpy -t
+   $ scrcpy -t
    ```
 
    This will open the scrcpy app and display the Android device on your local machine in an application screen. You can use both the touchscreen on the device and the touchpad/mouse on your local machine to control the screen. 
