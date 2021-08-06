@@ -25,7 +25,7 @@ When demoing the DHIS 2 Capture Android application (and other Android apps), it
 
 4. Connect your Android device to your local machine using a USB cable.
 
-5. A dialog called **Use USB to** will appear. Select the **Transfer files** option.
+5. A dialog called **Use USB to** will appear on the device. Select the **Transfer files** option.
 
 6. Enable USB debugging on the Android device. 
 
