@@ -1,6 +1,6 @@
 # Display Android apps on Ubuntu Linux
 
-When demoing the DHIS 2 Capture Android application (and other Android apps), it is quite useful to be able to display the phone screen on your local machine, so that the screen can be shared on video conference calls or projectors. A great application for displaying and controlling your Android device through USB connection (or over TCP/IP) is the [scrcpy](https://github.com/Genymobile/scrcpy) application from *Genymotion*. It is cross-platform (GNU/Linux, macOS and Windows) and does not require any root access. For Ubuntu 18.04 and later it is available as a *snap* package. This guide explains how to install scrcpy on Ubuntu from the command line and connect to your Android device.
+When demoing the DHIS 2 Capture Android application (and other Android apps), it is quite useful to be able to display the phone screen on your local machine, so that the screen can be shared on video conference calls or projectors. A great application for displaying and controlling your Android device through USB connection (or over TCP/IP) is the [scrcpy](https://github.com/Genymobile/scrcpy) application from Genymotion. It is cross-platform (GNU/Linux, macOS and Windows) and does not require any root access. For Ubuntu 18.04 and later it is available as a *snap* package. This guide explains how to install scrcpy on Ubuntu from the command line and connect to your Android device.
 
 ## Steps
 
@@ -43,5 +43,5 @@ When demoing the DHIS 2 Capture Android application (and other Android apps), it
 
    This will open the scrcpy app and display the Android device on your local machine in an application screen. You can use both the touchscreen on the device and the touchpad/mouse on your local machine to control the screen. 
    
-   A wealth of options are available which can be explored with `$ scrcpy --help` or from the [README](https://github.com/Genymobile/scrcpy).
+   A wealth of options are available which can be explored with `$ scrcpy --help` or from the [README](https://github.com/Genymobile/scrcpy) file.
 
