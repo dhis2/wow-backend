@@ -31,7 +31,7 @@ When demoing the DHIS 2 Capture Android application (and other Android apps), it
 
    1. On the Android device, open the **Settings** app.
    2. In the settings app, search for **About phone** and navigate to that screen.
-   3. Tap the **Build number** option 7 times.
+   3. Tap the **Build number** option 7 times. This will enable developer mode on the device.
    4. Search for **Developer options** and navigate to that screen.
    5. Under **Debugging**, enable **USB debugging**.
 
