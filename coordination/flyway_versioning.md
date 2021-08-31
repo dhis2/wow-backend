@@ -201,3 +201,4 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_37_28 | https://jira.dhis2.org/browse/DHIS2-11607 |
 | V2_37_29 | https://jira.dhis2.org/browse/DHIS2-11574 - Add translations to Expression |
 | V2_37_30 | https://jira.dhis2.org/browse/DHIS2-11574 - Add translations to Predictor |
+| V2_37_31 | https://jira.dhis2.org/browse/DHIS2-10287 |
