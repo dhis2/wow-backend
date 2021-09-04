@@ -199,8 +199,8 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_37_26 | https://jira.dhis2.org/browse/DHIS2-11057 |
 | V2_37_27 | https://jira.dhis2.org/browse/DHIS2-2162 |
 | V2_37_28 | https://jira.dhis2.org/browse/DHIS2-11607 |
-| V2_37_29 | https://jira.dhis2.org/browse/DHIS2-11574 - Add translations to Expression |
-| V2_37_30 | https://jira.dhis2.org/browse/DHIS2-11574 - Add translations to Predictor |
+| V2_37_29 | https://jira.dhis2.org/browse/DHIS2-11574 |
+| V2_37_30 | https://jira.dhis2.org/browse/DHIS2-11574 |
 | V2_37_31 | https://jira.dhis2.org/browse/DHIS2-10287 |
 | V2_37_32 | https://jira.dhis2.org/browse/DHIS2-11690 |
 | V2_37_33 | https://jira.dhis2.org/browse/DHIS2-11700 |
