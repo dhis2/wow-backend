@@ -119,6 +119,8 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_39 | https://jira.dhis2.org/browse/DHIS2-11030  |
 | V2_35_40 | https://jira.dhis2.org/browse/DHIS2-9674  |
 | V2_35_41 | https://jira.dhis2.org/browse/DHIS2-11599  |
+| V2_35_42 | https://jira.dhis2.org/browse/DHIS2-11792 |
+
 
 ### 2.36
 
