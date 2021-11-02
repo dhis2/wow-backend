@@ -72,6 +72,8 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_40 | DHIS2-1164 |
 | V2_34_41 | https://jira.dhis2.org/browse/DHIS2-11030 |
 | V2_34_42 | https://jira.dhis2.org/browse/DHIS2-9674  |
+| V2_34_43 | https://jira.dhis2.org/browse/DHIS2-11599  |
+| V2_34_44 | https://jira.dhis2.org/browse/DHIS2-11693  |
 
 ### 2.35
 
@@ -117,6 +119,10 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_38 | DHIS2-1164 |
 | V2_35_39 | https://jira.dhis2.org/browse/DHIS2-11030  |
 | V2_35_40 | https://jira.dhis2.org/browse/DHIS2-9674  |
+| V2_35_41 | https://jira.dhis2.org/browse/DHIS2-11599  |
+| V2_35_42 | https://jira.dhis2.org/browse/DHIS2-11792 |
+| V2_35_43 | https://jira.dhis2.org/browse/DHIS2-11693 |
+
 
 ### 2.36
 
@@ -165,6 +171,9 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_41 | DHIS2-1164 |
 | V2_36_42 | https://jira.dhis2.org/browse/DHIS2-11030  |
 | V2_36_43 | https://jira.dhis2.org/browse/DHIS2-9674  |
+| V2_36_44 | https://jira.dhis2.org/browse/DHIS2-11599  |
+| V2_36_45 | https://jira.dhis2.org/browse/DHIS2-11720 |
+| V2_36_46 | https://jira.dhis2.org/browse/DHIS2-11693 |
 
 
 ### 2.37
@@ -195,5 +204,35 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_37_22 | https://jira.dhis2.org/browse/DHIS2-11437 |
 | V2_37_23 | https://jira.dhis2.org/browse/TECH-648 |
 | V2_37_24 | https://jira.dhis2.org/browse/TECH-648 |
+| V2_37_25 | https://jira.dhis2.org/browse/DHIS2-11599 |
+| V2_37_26 | https://jira.dhis2.org/browse/DHIS2-11057 |
+| V2_37_27 | https://jira.dhis2.org/browse/DHIS2-2162 |
+| V2_37_28 | https://jira.dhis2.org/browse/DHIS2-11607 |
+| V2_37_29 | https://jira.dhis2.org/browse/DHIS2-11574 |
+| V2_37_30 | https://jira.dhis2.org/browse/DHIS2-11574 |
+| V2_37_31 | https://jira.dhis2.org/browse/DHIS2-10287 |
+| V2_37_32 | https://jira.dhis2.org/browse/DHIS2-11690 |
+| V2_37_33 | https://jira.dhis2.org/browse/DHIS2-11700 |
+| V2_37_34 | https://jira.dhis2.org/browse/DHIS2-11720 |
+| V2_37_35 | https://jira.dhis2.org/browse/DHIS2-11738 |
+| V2_37_36 | https://jira.dhis2.org/browse/DHIS2-11737 |
+| V2_37_37 | https://jira.dhis2.org/browse/DHIS2-11767 |
+| V2_37_38 | https://jira.dhis2.org/browse/DHIS2-11951 |
 
 
+### 2.38
+
+| Version  | Pull request URL |
+| -- | --  |
+| V2_38_1  | https://jira.dhis2.org/browse/DHIS2-7317 |
+| V2_38_2  | https://jira.dhis2.org/browse/DHIS2-7317 |
+| V2_38_3  | https://jira.dhis2.org/browse/DHIS2-7317 |
+| V2_38_4  | https://jira.dhis2.org/browse/DHIS2-5075 |
+| V2_38_5  | https://jira.dhis2.org/browse/DHIS2-11767 |
+| V2_38_6  | https://jira.dhis2.org/browse/DHIS2-3789 |
+| V2_38_7  | https://jira.dhis2.org/browse/DHIS2-4828 |
+| V2_38_8  | https://jira.dhis2.org/browse/TECH-689 |
+| V2_38_9  | https://jira.dhis2.org/browse/DHIS2-11801 |
+| V2_38_10 | https://jira.dhis2.org/browse/DHIS2-11951 |
+| V2_38_11 | https://jira.dhis2.org/browse/TECH-703 |
+| V2_38_12 | https://jira.dhis2.org/browse/TECH-703 |
