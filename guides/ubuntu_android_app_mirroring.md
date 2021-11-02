@@ -37,7 +37,9 @@ When demoing the DHIS 2 Capture Android application (and other Android apps), it
 
 2. A dialog called **Use USB to** will appear on the device. Select the **Transfer files** option.
 
-3. Start scrcpy with this command:
+3. A dialog called **Allow USB debugging** _might_ appear. If so, select **OK**.
+
+4. Start scrcpy with this command:
 
    ```
    $ scrcpy -t
