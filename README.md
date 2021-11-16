@@ -56,5 +56,5 @@ The following section lists various areas of coordination.
 
 The following pages contain high-level developer documentation for various solutions.
 
-* [Job scheduling](doc/job_scheduling.md)
+* [Job scheduling](docs/job_scheduling.md)
 
