@@ -122,6 +122,8 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_35_41 | https://jira.dhis2.org/browse/DHIS2-11599  |
 | V2_35_42 | https://jira.dhis2.org/browse/DHIS2-11792 |
 | V2_35_43 | https://jira.dhis2.org/browse/DHIS2-11693 |
+| V2_35_44 | https://jira.dhis2.org/browse/DHIS2-11574 |
+| V2_35_45 | https://jira.dhis2.org/browse/DHIS2-11574 |
 
 
 ### 2.36
@@ -174,6 +176,8 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_36_44 | https://jira.dhis2.org/browse/DHIS2-11599  |
 | V2_36_45 | https://jira.dhis2.org/browse/DHIS2-11720 |
 | V2_36_46 | https://jira.dhis2.org/browse/DHIS2-11693 |
+| V2_36_47 | https://jira.dhis2.org/browse/DHIS2-11574 |
+| V2_36_48 | https://jira.dhis2.org/browse/DHIS2-11574 |
 
 
 ### 2.37
