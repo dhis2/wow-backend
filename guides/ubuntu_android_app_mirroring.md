@@ -2,7 +2,7 @@
 
 When demoing the DHIS 2 Capture Android application (and other Android apps), it is quite useful to be able to display the phone screen on your local machine, so that the screen can be shared on video conference calls or projectors. A great application for displaying and controlling your Android device through USB connection (or over TCP/IP) is the [scrcpy](https://github.com/Genymobile/scrcpy) application from Genymotion. It is cross-platform (GNU/Linux, macOS and Windows) and does not require any root access. For Ubuntu 18.04 and later it is available as a *snap* package. This guide explains how to install scrcpy on Ubuntu from the command line and connect to your Android device.
 
-## Steps
+## Installation
 
 1. Ensure you have *snapd* installed on your system. If not, install it with:
 
@@ -22,12 +22,8 @@ When demoing the DHIS 2 Capture Android application (and other Android apps), it
    ```
    $ which scrcpy
    ```
-
-4. Connect your Android device to your local machine using a USB cable.
-
-5. A dialog called **Use USB to** will appear on the device. Select the **Transfer files** option.
-
-6. Enable USB debugging on the Android device. 
+   
+3. Enable USB debugging on the Android device. 
 
    1. On the Android device, open the **Settings** app.
    2. In the settings app, search for **About phone** and navigate to that screen.
@@ -35,7 +31,15 @@ When demoing the DHIS 2 Capture Android application (and other Android apps), it
    4. Search for **Developer options** and navigate to that screen.
    5. Under **Debugging**, enable **USB debugging**.
 
-6. Start scrcpy with this command:
+## Run
+
+1. Connect your Android device to your local machine using a USB cable.
+
+2. A dialog called **Use USB to** will appear on the device. Select the **Transfer files** option.
+
+3. A dialog called **Allow USB debugging** _might_ appear. If so, select **OK**.
+
+4. Start scrcpy with this command:
 
    ```
    $ scrcpy -t
