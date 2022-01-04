@@ -5,7 +5,7 @@ Mostly the pitfalls have their origin in reasonable expectations that aren't mea
 Overview
 | Pitfall                                                    | Beware ... |
 | ---------------------------------------------------------- | ---------- |
-| `List.of` as a replacement for `Arrays.asList` and alike   | `null` is not allowed |
+| `List.of` / `List.copyOf` as a replacement for `Arrays.asList` and alike   | `null` is not allowed |
 | `collect(toUnmodifiableList())` instead of `collect(toList())` | `null` is not allowed |
 | `Stream.forEach` as a replacement for `for`/`while` loops  | `forEach` does not guarantee order |
 | `Map.of` to create maps with few entries                   | `null` is not allowed and map does not retain order of entries |
@@ -19,6 +19,8 @@ or the factory function will throw a `NullPointerException`.
 
 Use `List.of` with care and can only replace `Arrays.asList` and co 
 when the list is initialised with constants that are clearly not `null`.
+
+Same is true for `List.copyOf` and its cousins `Set.copyOf` and `Map.copyOf`. 
 
 ----
 
