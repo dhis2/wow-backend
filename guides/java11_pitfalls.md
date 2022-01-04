@@ -4,10 +4,10 @@ Mostly the pitfalls have their origin in reasonable expectations that aren't mea
 
 Overview
 | Pitfall                                                    | Beware ... |
-| ---------------------------------------------------------- | ----------|
+| ---------------------------------------------------------- | ---------- |
 | `List.of` as a replacement for `Arrays.asList` and alike   | `null` is not allowed |
 | `Stream.forEach` as a replacement for `for`/`while` loops  | `forEach` does not guarantee order |
-| `Map.of` as a convinuent way to create testing data        | `null` is not allowed and map does not retain order of entries |
+| `Map.of` to create maps with few entries                   | `null` is not allowed and map does not retain order of entries |
 
 ----
 
