@@ -6,6 +6,7 @@ Overview
 | Pitfall                                                    | Beware ... |
 | ---------------------------------------------------------- | ---------- |
 | `List.of` as a replacement for `Arrays.asList` and alike   | `null` is not allowed |
+| `collect(toUnmodifiableList())` instead of `collect(toList())` | `null` is not allowed |
 | `Stream.forEach` as a replacement for `for`/`while` loops  | `forEach` does not guarantee order |
 | `Map.of` to create maps with few entries                   | `null` is not allowed and map does not retain order of entries |
 
@@ -18,6 +19,13 @@ or the factory function will throw a `NullPointerException`.
 
 Use `List.of` with care and can only replace `Arrays.asList` and co 
 when the list is initialised with constants that are clearly not `null`.
+
+----
+
+### `collect(toUnmodifiableList())` instead of `collect(toList())`
+Consistent with the immutable lists created by `List.of` 
+the unmodifiable list created by a collector do also not allow `null` values.
+If there is a chance for `null` values in the stream use `collect(toList())`.
 
 ----
 
