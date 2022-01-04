@@ -40,7 +40,7 @@ The proper replacement for ordered iteration is called `Stream.forEachOrdered`.
 
 ----
 
-### `Map.of` as a convinuent way to create testing data
+### `Map.of` to create maps with few entries
 Consistent with `List.of` the `Map.of` has special semantics of not allowing `null` references
 for both keys and values. 
 
