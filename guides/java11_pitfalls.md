@@ -27,6 +27,8 @@ Consistent with the immutable lists created by `List.of`
 the unmodifiable list created by a collector do also not allow `null` values.
 If there is a chance for `null` values in the stream use `collect(toList())`.
 
+In JDK16 `Stream.toList()` is added which results in an unmodifiable list which does allow `null` values.
+
 ----
 
 ### `Stream.forEach` as a replacement for `for`/`while` loops
