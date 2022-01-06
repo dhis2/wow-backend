@@ -254,6 +254,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_38_17 | https://jira.dhis2.org/browse/DHIS2-11929 |
 | V2_38_18 | https://jira.dhis2.org/browse/TECH-795 |
 | V2_38_19 | https://jira.dhis2.org/browse/DHIS2-12222 |
-| V2_38_20 | https://jira.dhis2.org/browse/DHIS2-12154 |
-| V2_38_21 | https://jira.dhis2.org/browse/TECH-891 |
-| V2_38_22 | https://jira.dhis2.org/browse/TECH-905 |
+| V2_38_20 | https://jira.dhis2.org/browse/TECH-820 |
+| V2_38_21 | https://jira.dhis2.org/browse/DHIS2-12154 |
+| V2_38_22 | https://jira.dhis2.org/browse/TECH-891 |
+| V2_38_23 | https://jira.dhis2.org/browse/TECH-905 |
