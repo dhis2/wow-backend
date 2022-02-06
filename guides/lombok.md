@@ -20,6 +20,7 @@ Current we only allow Lombok to be used for simple bean classes (DTOs, parameter
 3. [@Builder](https://projectlombok.org/features/Builder)
 4. [@Getter, @Setter](https://projectlombok.org/features/GetterSetter)
 5. [@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor](https://projectlombok.org/features/constructor)
+6. [@Accessors(chain=true)](https://projectlombok.org/features/experimental/Accessors)
 
 ## Fine Tuning
 Be careful when using `@ToString` or `@EqualsAndHashCode` (and by implication also `@Data`) as they by default include all fields. This is mostly a problem for domain objects where circular or very deep graphs would be referenced and effectivly considered in `toString()` and `hashCode()` generated. For that reason such classes often had manually written implementations where certain fields intentionally were left out. The same can be done using `@ToString` or `@EqualsAndHashCode` by annotating the fields with `@ToString.Exclude` or `@EqualsAndHashCode.Exclude`.
