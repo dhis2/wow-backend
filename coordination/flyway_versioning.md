@@ -278,6 +278,10 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_38_38 | https://jira.dhis2.org/browse/DHIS2-12590 |
 | V2_38_39 | https://jira.dhis2.org/browse/DHIS2-12734 |
 | V2_38_40 | https://jira.dhis2.org/browse/DHIS2-12182 |
+| V2_38_41 | ? |
+| V2_38_42 | https://jira.dhis2.org/browse/DHIS2-13002 |
+| V2_38_43 | https://jira.dhis2.org/browse/DHIS2-13002 |
+| V2_38_44 | https://jira.dhis2.org/browse/DHIS2-13002 |
 
 
 ### 2.39
