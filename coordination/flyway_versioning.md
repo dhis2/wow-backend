@@ -285,3 +285,6 @@ The table below contains a list of migration versions. Please reserve the approp
 | Version  | Pull request URL |
 | -- | --  |
 | V2_39_1  | https://jira.dhis2.org/browse/DHIS2-12182 |
+| V2_39_2  | https://jira.dhis2.org/browse/DHIS2-13002 |
+| V2_39_3  | https://jira.dhis2.org/browse/DHIS2-13002 |
+| V2_39_4  | https://jira.dhis2.org/browse/DHIS2-13002 |
