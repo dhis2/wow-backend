@@ -297,4 +297,5 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_39_3  | https://jira.dhis2.org/browse/DHIS2-13002 |
 | V2_39_4  | https://jira.dhis2.org/browse/DHIS2-13002 |
 | V2_39_5  | https://jira.dhis2.org/browse/DHIS2-10688 |
+| V2_39_6  | https://jira.dhis2.org/browse/DHIS2-10688 |
 
