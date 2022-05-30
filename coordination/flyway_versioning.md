@@ -237,6 +237,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_37_47 | https://jira.dhis2.org/browse/DHIS2-13002 |
 | V2_37_48 | https://jira.dhis2.org/browse/DHIS2-13002 |
 | V2_37_49 | https://jira.dhis2.org/browse/DHIS2-13002 |
+| V2_37_50 | https://jira.dhis2.org/browse/DHIS2-11534 |
 
 
 ### 2.38
