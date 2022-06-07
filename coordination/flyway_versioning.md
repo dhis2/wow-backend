@@ -309,3 +309,4 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_39_13 | https://jira.dhis2.org/browse/DHIS2-11534 |
 | V2_39_14 | https://jira.dhis2.org/browse/DHIS2-13300 |
 | V2_39_15 | https://jira.dhis2.org/browse/DHIS2-13042 |
+| V2_39_14 | https://jira.dhis2.org/browse/DHIS2-13301 |
