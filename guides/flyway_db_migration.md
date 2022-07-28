@@ -23,7 +23,7 @@ Here is a snapshot of how the dhis2-support-db-migration project looks like.
 
 
 ## Hibernate Configuration Changes 
-Hibernate `hbm2ddl` will always be set to `validate`. Users will not be able to override this setting anymore (using the `connection.schema` property in _dhis.conf_). 
+Hibernate `hbm2ddl` will always be set to `validate`. Users will not be able to override this setting anymore (using the legacy `connection.schema` property in _dhis.conf_). 
 This also means that when we modify any hbm xml files, we also need to take care of the corresponding DDL scripts ourselves using flyway.
 However, since our unit tests are going to be run on H2 , flyway will be disabled for unit tests, and we will let hibernate create the schema i.e `hbm2ddl` will be set to _create_ only for unit tests.
 
@@ -35,19 +35,21 @@ However, since our unit tests are going to be run on H2 , flyway will be disable
 V2_31_2__Upgrading_Scheduler_to_change_jobparameters_column_to_jsonb.java
 Please use sensible descriptions separated by underscores for spaces and refrain from using camel cases for multiple words. Thumb rule : Think from a db admin perspective, and ensure the description is self explanatory.
 
-- We may have multiple migration scripts (as sql files or java classes) for a single release. For eg: 2.31.1 , 2.31.2,........, 2.31.100. Developers can decide whether they need to _append_ their migrations to an already existing migration file (Say V2.31.1) or they can create a new migration file (V2.31.2). In most cases, it is ideal to create new migration file for your changes, by picking up the next unused integer for the patch version. 
+- We may have multiple migration scripts (as sql files or java classes) for a single release. For eg: 2.31.1 , 2.31.2,........, 2.31.100. It is ideal to create new migration file for your changes, by picking up the next unused integer for the patch version. 
 
 - Always use lower case for sql scripts added into .sql files.
 
-- From 2.31, the database will always have a function named _generate_uid()_  for generating uids. Reuse this function for all future versions.
+- From 2.31, the database will always have a function named _generate_uid()_  for generating uids. Reuse this function for all future versions to generate uids.
 
 - Transactions and sql connection resource handlings are done by flyway. Refrain from explicitly beginning/commiting transactions in sql migration scripts. Also refrain from explicitly closing connections in java  migration scripts.
 
-- All migration scripts should be made idempotent as much as possible. Scripts should also consider that it could be executed on a  fresh db (with no data). Idempotency in most cases simply means using the IF NOT EXISTS / IF EXISTS wherever possible. For constraints with explicit names, when modifying them, its also advised to drop the constraint (if exists) first and then create the constraint which ensures the scripts are rerunnable without any side effects. _In a highly unlikely event_ of having to write a migration script that cannot be made idempotent in a clean way, just add a comment on top of them and leave them _non-idempotent_ . These would help other developers (if required) to manually undo those migrations during debugging (or they could simply curse you and load a fresh database to start over again :laughing: ).
+- All migration scripts should be made idempotent as much as possible. This is to make the development environment more easily recoverable should something go wrong. Scripts should also consider that it could be executed on a  fresh db (with no data). Idempotency in most cases simply means using the IF NOT EXISTS / IF EXISTS wherever possible. For constraints with explicit names, when modifying them, its also advised to drop the constraint (if exists) first and then create the constraint which ensures the scripts are rerunnable without any side effects. In the rare event of having to write a migration script that cannot be made idempotent in a clean way, just add a comment on top of them and leave them _non-idempotent_ . These would help other developers (if required) to manually undo those migrations during debugging.
 
-- Set the configuration property ```flyway.migrate_out_of_order``` to *true* in `dhis.conf`. It ensures that if version 2.31.1 and version 2.31.3 are already installed, but the latest build has version 2.31.2, then it tries to apply that too. This is useful for development instances.
+- For development environment alone, the configuration property ```flyway.migrate_out_of_order``` can be set to *true* in `dhis.conf`. This means that if the db has 2.31.1 and version 2.31.3 are already installed, but the latest build has version 2.31.2, then flyway applies 2.31.2 as well. Without the configuration property, flyway will simply throw an error that "2.31.2 resolved but not applied". The setting is useful for development instances.
 
-- *Important:* When backporting fixes, always use the latest unused integer for that particular branch in which you are fixing. This means the same script will exist as 2.33.2 (in 2.33/master branch) , as 2.32.9 (in 2.32 branch) and as 2.31.11 (in 2.31 branch). *Only backport flyway scripts if they are idempotent* . In other words *never backport non-idempotent flyway scripts*.
+- *Important:* When backporting fixes, always use the latest unused integer for that particular branch in which you are fixing. This means the same script will exist as 2.33.2 (in 2.33/master branch) , as 2.32.9 (in 2.32 branch) and as 2.31.11 (in 2.31 branch). 
+
+- **Very Important**: *Only idempotent flyway scripts should be backported. Never backport non-idempotent flyway scripts*.
 
 
 ## Flyway Schema History Table
@@ -122,3 +124,14 @@ _flyway_schema_history_ table looks like this
 Conversely, if you for some reason are reverting to an older version you can run the following SQL:
 
 	update flyway_schema_history set checksum = '1602390773' where version = '2.31.1';
+
+9. I have made an error in a flyway script and merged it. Can I change it now?
+A. The answer depends on certain scenarios. 
+
+	If the erroneous flyway script is a java based migration script, it can be changed. But make sure the behaviour/outcome of the the script is the same and only the bug is removed and no behaviour is changed.
+
+	If the erroneous flyway script is a sql based migration script, then the following has to be noted.
+	If the merged/checked in sql flyway script has not been released in any of the patch releases, the script can be modified without renaming the flyway versions. There may be flyway checksum mismatches in the development environment in some cases, which can be fixed by using the ```flyway.repair_before_migration``` to *true* in `dhis.conf`.
+
+	If the merged/checked in sql flyway script has been released in any of the major or patch releases, then the specific script should not be changed. Instead, it should be deleted and added (or renamed) as a new flyway script in the same version with the latest available flyway script number. For example, if there was bug identified in 2.36.20 which has been publically released in a patch releease (or major release), then the script 2.36.20 has to be removed from that branch and instead the fixed script has to be added using the "latest" available flyway script number. This fixed script will then be part of the subsequent release. Once again, care has to be taken to make this idempotent or atleast the script should respect that the previous erroneous script might have been executed on some instances.
+
