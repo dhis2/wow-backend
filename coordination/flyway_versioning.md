@@ -315,3 +315,4 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_39_16 | https://jira.dhis2.org/browse/DHIS2-13301 |
 | V2_39_17 | https://jira.dhis2.org/browse/DHIS2-12816 |
 | V2_39_18 | https://jira.dhis2.org/browse/DHIS2-13105 |
+| V2_39_19 | https://jira.dhis2.org/browse/DHIS2-12249 |
