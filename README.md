@@ -59,3 +59,10 @@ The following pages contain high-level developer documentation for various solut
 
 * [Job scheduling](docs/job_scheduling.md)
 
+
+## Talks
+
+The following pages are slides used in talks from Thursday meetings:
+
+* [JSON stream processing](talks/json_stream_processing.md)
+* [PEG parsers](talks/peg_parsers.md)
