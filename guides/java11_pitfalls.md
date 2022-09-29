@@ -7,8 +7,9 @@ Overview
 | ---------------------------------------------------------- | ---------- |
 | `List.of` / `List.copyOf` as a replacement for `Arrays.asList` and alike   | `null` is not allowed |
 | `collect(toUnmodifiableList())` instead of `collect(toList())` | `null` is not allowed |
-| `Stream.forEach` as a replacement for `for`/`while` loops  | `forEach` does not guarantee order |
+| `Stream.forEach` as a replacement for `for`/`while` loops  | `forEach` does not guarantee order, consider `forEachOrdered` |
 | `Map.of` to create maps with few entries                   | `null` is not allowed and map does not retain order of entries |
+| `Set.of` for deduplication                                 | does not allow `null` or duplicates |
 
 ----
 
@@ -47,3 +48,6 @@ for both keys and values.
 A quick lock at the implementation `MapN` appears to preserve the order of key-value pairs. 
 This is misleading. Maps created by `Map.of` do **not** provide a determenistic order.
 To create a map with fixed entry order still a class like `LinkedHashMap` is required.
+
+### `Set.of` to perform deduplication
+Besides not allowing `null` values unmodifiable sets also do not allow duplicate values.
