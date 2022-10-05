@@ -25,7 +25,7 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 The following section lists guides on various topics.
 
 * [Java11 Pitfalls](guides/java11_pitfalls.md)
-* [Preferred Pattern](guides/preferred_patterns.md)
+* [Preferred Coding Pattern](guides/preferred_patterns.md)
 * [API testing](guides/api_testing.md)
 * [Auditing](guides/auditing.md)
 * [Code formatting](guides/code_formatting.md)
