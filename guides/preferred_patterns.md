@@ -1,4 +1,4 @@
-# Preferred Patterns
+# Preferred Coding Patterns
 
 The presented patterns are meant as a general guide but should not be understood 
 as rules to follow blindly or use as a knockout argument or sledgehammer 
