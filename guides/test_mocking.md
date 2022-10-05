@@ -264,10 +264,16 @@ For instance, let's assume that we need to test a `hasAccess` method on class `S
 		      ...
 	    
 	    }
-    
+
+## Avoiding `Strictness.LENIENT`
+Instead of making the entire setup lenient by annotating the test with `@MockitoSettings( strictness = Strictness.LENIENT )`
+test should 
+* either call appropiate setup methods as part of the test scenario so each scenario only uses needed setup
+* or use `lenient().when(...` in a common setup to exclude the part of the setup that does not always apply.
 
 ## Mockito anti-patterns
 
 - Everything is a mock
 - Do not mock value objects or data structures
 - Don't mock type you don't own (like a 3rd party lib)
+- making the entire mocking setup lenient by using `@MockitoSettings( strictness = Strictness.LENIENT )`
