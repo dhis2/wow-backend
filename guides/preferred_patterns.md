@@ -10,9 +10,9 @@ a reasoning and direction with the goal of a more uniform codebase which can
 benefit from the advantages that emerge when using the described patterns.
 
 ## Overview
-| Pattern | Prefer | Over                    |
-|---------|---------------------|-------------------------|
-| Consider collection unmodifiable | copy before modification | copy before returning |
+| Pattern                                | Prefer | Over                    |
+|----------------------------------------|---------------------|-------------------------|
+| Consider collections as _unmodifiable_ | copy before modification | copy before returning |
 
 ## Patterns
 
