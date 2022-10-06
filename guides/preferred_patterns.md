@@ -36,6 +36,10 @@ others don't, adding annotations helps to draw the line between the two.
 * enable static analysis
 * avoid adding too much annotation "clutter"
 
+**Exceptions:**
+* constructors of spring injected beans do not benefit much from the annotation 
+  as spring will throw exception for missing dependencies 
+
 ## Prefer Immutability
 Manipulation of mutable state is hard to follow and opens for permutation of
 possibilities that programmers need to consider. This unnecessarily creates a
