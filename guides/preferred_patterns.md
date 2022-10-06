@@ -9,14 +9,22 @@ However, when in doubt which approach might be more fitting the guides provide
 a reasoning and direction with the goal of a more uniform codebase which can
 benefit from the advantages that emerge when using the described patterns.
 
-## Overview
-| Pattern                                | Prefer | Over                    |
-|----------------------------------------|---------------------|-------------------------|
-| Consider collections as _unmodifiable_ | copy before modification | copy before returning |
+#### Overview
+| Type | Pattern                                | Prefer | Over                    |
+|------|----------------------------------------|---------------------|-------------------------|
+| Prefer Immutability | Consider collections as _unmodifiable_ | copy before modification | copy before returning |
 
-## Patterns
+## Prefer Immutability
+Manipulation of mutable state is hard to follow and opens for permutation of
+possibilities that programmers need to consider. This unnecessarily creates a
+larger surface for error. Immutability as a concept should help keeping
+effects local,easy to follow and think through. 
 
-Provides more detailed reasoning why and when to use a certain pattern. 
+The idea of immutability can take many forms some of which are presented here 
+in greater detail. In Java this usually is not all are black and white banning
+mutable state altogether. Typically, mutation is limited to a small scope that 
+is easy(er) to think though and on the boundaries immutability is assumed
+(parameters) or ensured (return values).
 
 ### Consider Collections as _unmodifiable_
 When working with collections errors can arise from trying to manipulate an
@@ -27,7 +35,7 @@ of abstractions and the application architecture. The other approach to this
 is to generally consider any collection that wasn't created within or as part 
 of the code that wants to modify the collection as _unmodifiable_. 
 
-In practice this means any collection received from a virtual method call or
+In practice this means any collection received from a non-private method call or
 as parameter to a method should be considered _unmodifiable_ and copied once
 where the algorithm needs a modifiable collection.
 
