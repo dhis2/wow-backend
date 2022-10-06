@@ -10,9 +10,31 @@ a reasoning and direction with the goal of a more uniform codebase which can
 benefit from the advantages that emerge when using the described patterns.
 
 #### Overview
-| Type | Pattern                                | Prefer | Over                    |
-|------|----------------------------------------|---------------------|-------------------------|
+| Type                | Pattern                                | Prefer | Over                    |
+|---------------------|----------------------------------------|---------------------|-------------------------|
+| Avoid `null`        | Use `@NotNull` in APIs                 | annotate bit too much | annotate too little |
 | Prefer Immutability | Consider collections as _unmodifiable_ | copy before modification | copy before returning |
+
+## Avoid Null
+
+### Use `@NotNull` in APIs
+Using an annotation to communicate expectations (parameters) and guarantees
+(return values) in regard to whether or not they can be `null` helps both
+programmers and static analysis tools to avoid NPEs. 
+
+Heavy use of extra information can also clutter the code and make it less
+readable. To strike a balance it is recommended to use 
+`javax.validation.constraints.NotNull` first and foremost in APIs for both 
+method parameters and return values. 
+
+Another useful example are private helper methods that deal with mutable
+state and low level details, where some methods have to handle `null` and 
+others don't, adding annotations helps to draw the line between the two.
+
+**Goals:**
+* communicate `null` dependent behaviour
+* enable static analysis
+* avoid adding too much annotation "clutter"
 
 ## Prefer Immutability
 Manipulation of mutable state is hard to follow and opens for permutation of
