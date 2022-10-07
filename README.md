@@ -24,17 +24,17 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 
 The following section lists guides on various topics.
 
-* [Java11 Pitfalls](guides/java11_pitfalls.md)
-* [Preferred Coding Pattern](guides/preferred_patterns.md)
 * [API testing](guides/api_testing.md)
 * [Auditing](guides/auditing.md)
 * [Code formatting](guides/code_formatting.md)
+* [Coding Patterns](guides/preferred_patterns.md)
 * [Component owners](guides/component_owners.md)
 * [Embedded Jetty API build](guides/embedded_jetty.md)
 * [Flyway database migration](guides/flyway_db_migration.md)
 * [Git PR & commit messages](guides/git_commit_messages.md)
 * [Git pull requests](guides/git_pull_requests.md)
 * [IDEA hot swapping](guides/idea_hot_swapping.md)
+* [Java11 Pitfalls](guides/java11_pitfalls.md)
 * [JPA and database functions](guides/jpa_database_functions.md)
 * [JPA queries](guides/jpa_api.md)
 * [Lombok annotations](guides/lombok.md)
