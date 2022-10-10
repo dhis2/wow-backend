@@ -31,6 +31,11 @@ Another useful example are private helper methods that deal with mutable
 state and low level details, where some methods have to handle `null` and 
 others don't, adding annotations helps to draw the line between the two.
 
+While it is useful to know that return values can be `null` by annotating them
+with `@CheckForNull` the goal for the codebase should be to keep the usage low.
+Before using `@CheckForNull` it is recommended to consider if `null` can be
+avoided instead or if the use of `Optional` could improve the API.
+
 **Goals:**
 * communicate `null` dependent behaviour
 * enable static analysis
@@ -38,7 +43,8 @@ others don't, adding annotations helps to draw the line between the two.
 
 **Exceptions:**
 * constructors of spring injected beans do not benefit much from the annotation 
-  as spring will throw exception for missing dependencies 
+  as spring will throw exception for missing dependencies
+
 
 ## Prefer Immutability
 Manipulation of mutable state is hard to follow and opens for permutation of
