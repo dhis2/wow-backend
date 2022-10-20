@@ -5,11 +5,11 @@ Mostly the pitfalls have their origin in reasonable expectations that aren't mea
 Overview
 | Pitfall                                                    | Beware ... |
 | ---------------------------------------------------------- | ---------- |
-| `List.of` / `List.copyOf` as a replacement for `Arrays.asList` and alike   | `null` is not allowed |
+| `List.of` / `List.copyOf` as a replacement for `Arrays.asList` and alike   | `null` is not allowed, `contains(null)` => NPE |
 | `collect(toUnmodifiableList())` instead of `collect(toList())` | `null` is not allowed |
 | `Stream.forEach` as a replacement for `for`/`while` loops  | `forEach` does not guarantee order, consider `forEachOrdered` |
-| `Map.of` to create maps with few entries                   | `null` is not allowed and map does not retain order of entries |
-| `Set.of` for deduplication                                 | does not allow `null` or duplicates |
+| `Map.of` to create maps with few entries                   | `null` is not allowed and map does not retain order of entries, key must also never be `null` when reading using `contains`, `get`, `getOrDefault` |
+| `Set.of` for deduplication                                 | does not allow `null` or duplicates, `contains(null)` => NPE |
 
 ----
 
