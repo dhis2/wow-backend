@@ -17,7 +17,7 @@ Current we only allow Lombok to be used for simple bean classes (DTOs, parameter
 
 1. [@Data](https://projectlombok.org/features/Data) (and by implication also [@ToString](https://projectlombok.org/features/ToString) and [@EqualsAndHashCode](https://projectlombok.org/features/EqualsAndHashCode) )
 2. [@Value](https://projectlombok.org/features/Value)
-3. [@Builder](https://projectlombok.org/features/Builder)
+3. [@Builder, @Singular](https://projectlombok.org/features/Builder)
 4. [@Getter, @Setter](https://projectlombok.org/features/GetterSetter)
 5. [@NoArgsConstructor, @RequiredArgsConstructor, @AllArgsConstructor](https://projectlombok.org/features/constructor)
 6. [@Accessors(chain=true)](https://projectlombok.org/features/experimental/Accessors)
