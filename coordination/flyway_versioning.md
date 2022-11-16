@@ -319,3 +319,10 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_39_21 | https://jira.dhis2.org/browse/DHIS2-7882 |
 | V2_39_22 | https://jira.dhis2.org/browse/DHIS2-9378 |
 | V2_39_23 | https://jira.dhis2.org/browse/DHIS2-9900 |
+
+### 2.40
+
+| Version  | Pull request URL |
+| -- | --  |
+| V2_40_1  | https://dhis2.atlassian.net/browse/DHIS2-13988) |
+| V2_40_2  | https://jira.dhis2.org/browse/DHIS2-13002 |
