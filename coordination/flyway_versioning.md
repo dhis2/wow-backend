@@ -324,5 +324,5 @@ The table below contains a list of migration versions. Please reserve the approp
 
 | Version  | Pull request URL |
 | -- | --  |
-| V2_40_1  | https://dhis2.atlassian.net/browse/DHIS2-13988) |
-| V2_40_2  | https://jira.dhis2.org/browse/DHIS2-13002 |
+| V2_40_1  | https://dhis2.atlassian.net/browse/DHIS2-13988 |
+| V2_40_2  | https://dhis2.atlassian.net/browse/DHIS2-13988 |
