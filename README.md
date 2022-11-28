@@ -47,6 +47,7 @@ The following section lists guides on various topics.
 * [Testing](guides/testing.md)
 * [Transactions](guides/transactions.md)
 * [Ubuntu Linux Android app mirroring](guides/ubuntu_android_app_mirroring.md) 
+* [OpenAPI](guides/open_api.md)
 
 ## Coordination
 
