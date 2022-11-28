@@ -296,23 +296,23 @@ At first glance this appears to substitute one specific type with another one.
 However, when adding inheritance this is no longer the case. 
 The endpoint context defines `@EntityType` differently for different
 controllers inheriting an endpoint from a common abstract base class. 
-For each of these the actual type used is different now different.
+For each of these the actual type used is different now.
 
 This can also be applied to complex DTOs which have a field based on the
 context dependent type.
 
 ```java
-class ExampleResponse {
+class ExampleResponse<T> {
     
     @JsonProperty
     Pager pager;
     
     @OpenApi.Property( EntityType[].class )
     @JsonProperty
-    List<Object> entries;
+    List<T> entries;
 }
 ```
-In this example `List<Object>` is now substituted with different actual array
+In this example `List<T>` is now substituted with different actual array
 types based on what is the substitution type for the endpoint. For example,
 `User[]`, `UserGroup[]`... . Again, making use of the fact that array and 
 collection types have the same result in an OpenAPI document.
