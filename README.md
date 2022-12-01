@@ -43,6 +43,7 @@ The following section lists guides on various topics.
 * [PostgreSQL commands](guides/postgresql_commands.md)
 * [Spring controller testing](guides/spring_controller_testing.md)
 * [Spring conventions](guides/spring_conventions.md)
+* [Spring controller endpoints](guides/controller_endpoints.md)
 * [Test mocking with Mockito](guides/test_mocking.md)
 * [Testing](guides/testing.md)
 * [Transactions](guides/transactions.md)
