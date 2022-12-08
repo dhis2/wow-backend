@@ -66,5 +66,6 @@ The following pages contain high-level developer documentation for various solut
 
 The following pages are slides used in talks from Thursday meetings:
 
-* [JSON stream processing](talks/json_stream_processing.md)
-* [PEG parsers](talks/peg_parsers.md)
+* [JSON stream processing](talks/json_stream_processing.md) ([html slides](talks/json_stream_processing.html))
+* [PEG parsers](talks/peg_parsers.md) ([html slides](talks/peg_parsers.html))
+* [Reflection, Generics & Type Erasure](talks/generics.md) ([html slides](talks/generics.html))

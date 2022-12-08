@@ -1,3 +1,9 @@
+---
+theme: default
+class: invert
+headingDivider: 2
+---
+
 # JSON Stream Processing
 
 Original source is found at https://github.com/jbee/json-streama/blob/main/PRESENTATION.md
@@ -17,15 +23,16 @@ Typical basic case:
 }
 ```
 
-#### Mapping 
+## Mapping vs. Streaming
+
+Mapping
 
     JSON => Objects => process(Objects)
 
-vs
 
+## Mapping vs. Streaming 
 
-#### Streaming 
-(stream processing)
+Streaming (or _stream processing_)
 
     JSON => process(JSON*)
 
@@ -33,15 +40,10 @@ vs
 
 could also think of it as: 
 
-    JSON => new Wrapper(JSON) => process(Wrapper) 
+    JSON => new Wrapper(JSON) => process(Wrapper)
 
 
-
-
-
-## Why Streaming?  - Pros & Cons
-
-#### Mapping
+## Why Streaming?  - Mapping Pros & Cons
 
 **Pros**:
 
@@ -63,7 +65,7 @@ could also think of it as:
   * needs guard against too large input
 
 
-#### Streaming
+## Why Streaming?  - Streaming Pros & Cons
 
 **Pros**:
 
@@ -82,13 +84,9 @@ could also think of it as:
 * in streams order is significant by nature
 * streams by nature are transient
 
-----
-
-#### Wouldn't it be nice to have the best of both worlds?
 
 
-
-
+## Wouldn't it be nice to have the best of both worlds?
 
 
 ## What makes stream processing difficult?
@@ -134,6 +132,9 @@ Jackson's "Wrapper" is `JsonParser`
 * order very important => difficult to code
 * internal state tracking nightmare 😱
 
+
+## Stream Processing JSON with Jackson II
+
 Pseudo code:
 ```java
 while (parser.hasTokens()) {
@@ -147,11 +148,10 @@ while (parser.hasTokens()) {
   // and... what state are we in again?
 }
 ```
-**what is the state in the parser???**
+You have to wonder...
 
-**what is the state of the processing code variables???**
-
-<center><img src="https://i.kym-cdn.com/photos/images/newsfeed/000/498/390/4a8.jpg" width="250" /></center>
+* **what is the state in the parser???**
+* **what is the state of the processing code variables???**
 
 
 ## Wouldn't it be nice...
@@ -159,6 +159,7 @@ while (parser.hasTokens()) {
 ... to have best of both worlds?
 
 #### Wishlist
+
 * fast
 * low-footprint (memory, CPU)
 * can handle large input
@@ -172,20 +173,11 @@ while (parser.hasTokens()) {
 * no JSON level concerns in our code => we want to deal with objects
 
 
-<center><img src="https://memegenerator.net/img/instances/71645180/computer-says-no.jpg" width="250" /></center>
-
-
-
 ## 1 ½ Magic Trick
 
 Fake it 'till you make it 😎
 
-Let's just pretend we have objects...
-
-Use interfaces to model an object graph API:
-
-<table><tr><td>
-
+Let's just pretend we have objects... use interfaces to model an object graph API:
 
 ```java
 interface Payload {
@@ -196,13 +188,8 @@ interface Header {
   String id();
   String name();
 }
-interface Entry {
-  //...
-}
+interface Entry { /* ... */ }
 ```
-
-</td>
-<td valign="top">
 
 ```json
 {
@@ -214,8 +201,7 @@ interface Entry {
 }
 ```
 
-</td></tr></table>
-
+## 1 ½ Magic Trick II
 
 Usage:
 ```java
@@ -238,21 +224,9 @@ root.entries().forEach(entry -> {
 * can stream processing be applied to JSON arrays and object "maps"? **Yes**
 * can the root be an array or object "map"? **Yes**
 * can stream processed entries use other Java types than `Stream`? **Yes**, supported are:
-  * `Stream`
-  * `Iterator`
-  * `Consumer`
-
-```java
-interface Payload {
-
-  Stream<Entry> entries();
-
-  Iterator<Entry> entries();
-
-  void entries(Consumer<Entry> forEachEntry);
-}
-```
-
+  - `Stream` (`Stream<Entry> entries()`)
+  - `Iterator` (`Iterator<Entry> entries()`)
+  - `Consumer` (`void entries(Consumer<Entry> forEachEntry)`)
 
 
 
@@ -293,6 +267,8 @@ interface Track {
   String name();
 }
 ```
+
+## Managing Expectations II
 
 Restricting size using `minOccur` and `maxOccur`:
 

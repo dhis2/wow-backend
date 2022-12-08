@@ -1,3 +1,9 @@
+---
+theme: default
+class: invert
+headingDivider: 2
+---
+
 # PEG Parsers
 
 Original source is found at https://github.com/dhis2/expression-parser/blob/main/PRESENTATION.md
@@ -21,33 +27,32 @@ What is DHIS2 expression language?
 ```
 
 
-## Parsing - Grammars - Basics
+## Parsing - Grammars - Terminal vs. Non-Terminal
 
 Butchered (but useful) terminology:
 
 **Terminal**: 
 
-* something that **is not** composed of parts
-* a leaf in a tree
+- something that **is not** composed of parts
+- a leaf in a tree
 
 Examples: literals (numbers, constants, strings)
 
 
-
 **Non-Terminal**: 
 
-* something that **is** composed of parts
-* a node in a tree
+- something that **is** composed of parts
+- a node in a tree
 
 Examples: operators
 
-**Production Rule**:
+
+## Parsing - Grammars - Production Rules
 
 ```
 NonTerminal = (NonTerminal | Terminal)+
 ```
-The non-terminal on the left is defined as 
-the sequence of non-terminal and terminals on the right.
+The non-terminal on the left is defined as the sequence of non-terminal and terminals on the right.
 
 More (usually):
 * `a | b` => a OR b (in order of precedence)
@@ -61,17 +66,12 @@ More (usually):
 * or `[a b]` ~~could mean: same as `(a b)?`~~ (not here)
 
 
-
-
-
 ## Parser Jargon
+
+Terms
 
 * _consume_: moving current position forward in the input
 * _gobble_: consume and discard input (ignore, like WS)
-
-
-
-
 
 
 ## CFGs (Context-Free Grammars)
@@ -88,6 +88,8 @@ expr = term '*' term
 term = number | constant
 ```
 
+## CFGs (Context-Free Grammars) - Example
+
 Example expression:
 ```
 a + b * c + d
@@ -102,18 +104,7 @@ a   *
    / \
   b   c
 ```
-or short
-```
-(a + (b * c)) + d 
-```
-but could also be
-```
-a + ((b * c) + d) 
-```
-
-
-
-
+or short `(a + (b * c)) + d `; but could also be `a + ((b * c) + d)`
 
 
 
@@ -130,13 +121,7 @@ a + ((b * c) + d)
 better 😌
 
 
-
 **Parsing is somewhere between linear and factorial complexity**
-
-
-
-
-
 
 
 
@@ -147,6 +132,9 @@ https://en.wikipedia.org/wiki/Parsing_expression_grammar
 * PEGs cannot be ambiguous (unlike CFGs)
 * if a string parses, it has exactly one valid parse tree
 * (presumably: OR not allowed in production rules) 
+
+
+## PEG (Parsing Expression Grammar) - Example 
 
 The toy example again, defined slightly different
 ```
@@ -161,7 +149,6 @@ and so forth, otherwise this is an illegal input for the language.
 **Parsing is linear***
 
 _* theoretically one could build backtracking into PEG parsers..._ 
-
 
 
 ## Lookahead
@@ -202,6 +189,9 @@ a, +, b, *, c, +, d
 ```
 Everything is in a "flat" sequence of typed nodes.
 
+
+## Recreating a tree from a flat sequence
+
 Now we walk the "tree" and merge only the operator with the highest precedence 
 into a structured operator with children:
 
@@ -225,6 +215,9 @@ CFGs (ANTLR)
 * worst case complexity is factorial  
 * => bend your problem to suit the parser
 
+
+## CFG vs PEG II
+
 PEGs
 
 * decidability problem forces to recognise and solve collisions right away
@@ -236,6 +229,7 @@ PEGs
 * worst case complexity is linear*
 * => write the parser to suit the problem
 
+
 ## How do PEGs work?
 
 Key idea:
@@ -244,11 +238,11 @@ void what(Input in, Context ctx);
 ```
 * _what_ is the name of the token/block processed
 * `Input` 
-  * is whatever is processed and "consumed" while parsing
+  - is whatever is processed and "consumed" while parsing
 * `Context` 
-  * is whatever is build, the "output"
-  * usually emitting the base data for creating nodes in an AST
-  * also might hold state like lookup by name
+  - is whatever is build, the "output"
+  - usually emitting the base data for creating nodes in an AST
+  - also might hold state like lookup by name
 
 Example Grammar:
 ```
@@ -256,6 +250,9 @@ expr = term (op term)*
 term = number | constant
 op   = '+' | '*'
 ```
+
+## How do PEGs work? - Example Parser
+
 PEG parser:
 ```java
 void expr(Input in, Context ctx) {
