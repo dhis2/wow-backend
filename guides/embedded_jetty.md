@@ -92,7 +92,6 @@ After setting the DHIS2_HOME variable, click "OK".
 #### Step 5: Click play again and choose run or debug 
 ![](resources/images/intellij-embedded-run.png)
 
-
 ## Running embedded Jetty with front-end web apps
 
 Starting from version 2.40, the embedded Jetty server supports serving the front-end web apps. As of January 2023, a developement/preview version of Struts-less front-end is built into the embedded Jetty module. You need to follow the instructions above in order to run the embedded Server with the front-end web apps. There are currently some caveats which will be resolved when all the front-end web apps have migrated to the new Struts-less backend. Mainly the password reset, self-registration and two-factor login are not supported in the development preview. Regular form/username password login is supported and is now the default redirect when accessing the server trough e.g. `http://localhost:9090/api`. There are some apps which are currently unsupported and will not work:
@@ -103,4 +102,3 @@ Starting from version 2.40, the embedded Jetty server supports serving the front
 See this PR for details: https://github.com/dhis2/dhis2-core/pull/12663
 
 Follow progress on Jira epic: https://dhis2.atlassian.net/browse/DHIS2-14092
-
