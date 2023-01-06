@@ -105,6 +105,7 @@ There are also some apps that is currently unsupported and will not work at all,
 * Old tracker capture
 
 See PR: https://github.com/dhis2/dhis2-core/pull/12663
+
 Follow progress on epic: https://dhis2.atlassian.net/browse/DHIS2-14092
 
 
