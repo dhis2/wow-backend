@@ -93,19 +93,14 @@ After setting the DHIS2_HOME variable, click "OK".
 ![](resources/images/intellij-embedded-run.png)
 
 
-## Running embedded Jetty with front-end
-From 2.40 the emedded Jetty server now also support serving the front-end.
-Rigth now, as of January 2023 there exist a developement/preview version of Struts less front-end build into the embedded Jetty module.
-In order to use this, you just need to follow the same instructions above in order to run the embedded Server with a front-end.
-There are currently some caveats, that is intended to be resolved when all the front-end apps have migrated to the new Struts less backend.
-Mainly the password reset, self-registration, two factor login is not supported in this development preview.
-Normal form/username password login is supported and is now the default redirect when trying to access the server trough e.g http://localhost:9090/api etc.
-There are also some apps that is currently unsupported and will not work at all, these are:
-* Old data entry
-* Old tracker capture
+## Running embedded Jetty with front-end web apps
 
-See PR: https://github.com/dhis2/dhis2-core/pull/12663
+Starting from version 2.40, the embedded Jetty server supports serving the front-end web apps. As of January 2023, a developement/preview version of Struts-less front-end is built into the embedded Jetty module. You need to follow the instructions above in order to run the embedded Server with the front-end web apps. There are currently some caveats which will be resolved when all the front-end web apps have migrated to the new Struts-less backend. Mainly the password reset, self-registration and two-factor login are not supported in the development preview. Regular form/username password login is supported and is now the default redirect when accessing the server trough e.g. `http://localhost:9090/api`. There are some apps which are currently unsupported and will not work:
 
-Follow progress on epic: https://dhis2.atlassian.net/browse/DHIS2-14092
+* Old data entry module
+* Old tracker capture web app
 
+See this PR for details: https://github.com/dhis2/dhis2-core/pull/12663
+
+Follow progress on Jira epic: https://dhis2.atlassian.net/browse/DHIS2-14092
 
