@@ -6,7 +6,7 @@ DHIS2 is using Speedy Spotless (https://github.com/commitd/speedy-spotless) to a
 
 ### Step 1: Installing pre-commit hook
 
-From the root dhis2 directory, execute:
+From the DHIS2 project root ([dhis2-core/dhis-2](https://github.com/dhis2/dhis2-core/blob/master/dhis-2)), execute:
 
     mvn speedy-spotless:install-hooks
 
@@ -37,7 +37,7 @@ A conditional formatting can be used to prevent the automatic formatter to forma
 
 ### Step 1: Eclipse formatting definition location
 
-The DHIS 2 XML formatting definition is located in the DHIS 2 project root: [dhis2-core/dhis-2/DHISFormatter.xml](https://github.com/dhis2/dhis2-core/blob/master/dhis-2/DHISFormatter.xml)
+The DHIS2 XML formatting definition is located in the DHIS2 project root: [dhis2-core/dhis-2/DHISFormatter.xml](https://github.com/dhis2/dhis2-core/blob/master/dhis-2/DHISFormatter.xml)
 
 ### Step 2: Add the formatting definition file to Eclipse
 
