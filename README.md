@@ -34,6 +34,7 @@ The following section lists guides on various topics.
 * [Git PR & commit messages](guides/git_commit_messages.md)
 * [Git pull requests](guides/git_pull_requests.md)
 * [IDEA hot swapping](guides/idea_hot_swapping.md)
+* [Java coding principles](guides/java_coding_principles.md)
 * [Java11 Pitfalls](guides/java11_pitfalls.md)
 * [JPA and database functions](guides/jpa_database_functions.md)
 * [JPA queries](guides/jpa_api.md)
