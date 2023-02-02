@@ -2,7 +2,7 @@
 
 This guide describes a collection of good Java coding principles.
 
-* **Auto-generate constructors:** Use *Lombok* over manual constructors, except when calling the super constructor.
+* **Auto-generate constructors:** Use *Lombok* over manual constructors, except when calling the super constructor. This removed boilerplate code and makes the code more readable.
 
 * **Use @RequiredArgsConstructor:** Use `@RequiredArgsConstructor` over `@AllArgsConstructor` to ensure dependencies are marked as `final`.
 
