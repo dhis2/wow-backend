@@ -10,13 +10,13 @@ This guide describes a collection of good Java coding principles.
 
 *  **Return empty collections:** For methods with collection based return type, return an empty collection instead of returning null. Avoid redundant null checks in calling code. Avoiding returning null makes the code less error prone.
 
-* **Avoid long streams:** Avoid very long and complex stream code blocks as it makes reading the code difficult. Find the right balance between readability and compact code.
+* **Avoid long streams:** Avoid very long and complex stream code blocks as it makes reading the code difficult. Find the right balance between code readability and compactness.
 
-* **Factor out utility functions:** Look for potential utility functions within long methods, and factor the code out into smaller, well-documented, static utility methods. This improves code readability and testability and ensures logic is handled consistently across the system.
+* **Factor out utility functions:** Look for potential utility functions within long methods, and factor the code out into smaller, well-documented, well-tested and static utility methods. This improves code readability and testability and ensures logic is handled consistently across the system.
 
 * **Make methods do one thing:** Favor small, documented methods over long methods with inline comments. Make sure a method handles one concern, and split the method into multiple methods to handle multiple concerns. This makes code more readable, reusable and testable.
 
-* **Write Javadoc:** Write proper Javadoc for methods. Fill out `@params`, `@return`. Use `{@link}` for class entity references. Use `{@code}` for inline code. Keep Javadoc up to date. With proper Javadoc, a method could be used by calling code without having to inspect the source code.
+* **Write Javadoc:** Write proper Javadoc for methods. Fill out `@params`, `@return`. Use `{@link}` for class entity references. Use `{@code}` for code. Keep Javadoc up to date. With proper Javadoc, a method could be used by calling code without having to inspect the source code.
 
 * **Immutable collections:** Do not directly modify collections which are passed into methods. This will lead hidden state changes from the perspective of the calling code. Make a copy of the collection internally before modifying it instead. Ensure unit tests use immutable collections as arguments to detect internal collection modification.
 
