@@ -2,7 +2,7 @@
 
 This guide describes a collection of good Java coding principles.
 
-* **Auto-generate constructors:** Use Lombok over manual constructors, except when calling super constructor.
+* **Auto-generate constructors:** Use *Lombok* over manual constructors, except when calling the super constructor.
 
 * **Use @RequiredArgsConstructor:** Use `@RequiredArgsConstructor` over `@AllArgsConstructor` to ensure dependencies are marked as `final`.
 
@@ -18,8 +18,8 @@ This guide describes a collection of good Java coding principles.
 
 * **Write Javadoc:** Write proper Javadoc for methods. Fill out `@params`, `@return`. Use `{@link}` for class entity references. Use `{@code}` for inline code. Keep Javadoc up to date.
 
-* **Immutable collections:** Do not directly modify collections which are passed into methods. This will lead hidden state changes from the perspective of the calling code. Make a copy of the collection internally before modifying it instead.
+* **Immutable collections:** Do not directly modify collections which are passed into methods. This will lead hidden state changes from the perspective of the calling code. Make a copy of the collection internally before modifying it instead. Ensure unit tests use immutable collections as arguments to detect internal collection modification.
 
-* **Avoid null arguments:** Avoid having methods where calling code frequently uses `null` as arguments. Favor a query object or enum instead, or refactor the logic to avoid null values.
+* **Avoid null arguments:** Avoid having methods where calling code frequently uses `null` as arguments. This makes the code error prone. Favor a query object or enum instead, or refactor the logic to avoid null values.
 
   
