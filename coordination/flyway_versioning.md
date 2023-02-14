@@ -338,8 +338,8 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_40_12  | https://dhis2.atlassian.net/browse/DHIS2-14691 |
 | V2_40_13  | https://dhis2.atlassian.net/browse/DHIS2-14606 |
 | V2_40_14  | https://dhis2.atlassian.net/browse/DHIS2-12193 |
-| V2_40_15  | https://dhis2.atlassian.net/browse/DHIS2-12193 |
+| V2_40_15  | https://dhis2.atlassian.net/browse/DHIS2-14367 |
 | V2_40_16  | https://dhis2.atlassian.net/browse/DHIS2-14526 |
 | V2_40_17  | https://dhis2.atlassian.net/browse/DHIS2-14526 |
 | V2_40_18  | https://dhis2.atlassian.net/browse/DHIS2-7093 |
-| V2_40_19  | https://dhis2.atlassian.net/browse/DHIS2-12193 |
+| V2_40_19  | https://dhis2.atlassian.net/browse/DHIS2-14367 |
