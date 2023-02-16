@@ -33,8 +33,10 @@ An exception is the usage of qualified table names, meaning including the schema
 
 When creating a new database table the following applies.
 
-* Use `int8` instead of `integer ` for primary key and foreign key int columns. The 8 byte int data type is more appropriate given that primary keys in many implementations have gone above the 2.1B max value for 4 byte data type.
-* Include a primary key constraint on the primary key identifier column.
+* Use `int8` instead of `integer` for primary key and foreign key int columns. The 8 byte int data type is more appropriate given that primary keys in many implementations have gone above the 2.1B max value for 4 byte data type.
+* Include a primary key constraint on the primary key identifier column.* Use `timestamp` instead of `timestamp without timezone` for created and last updated columns.
+* Use `varchar` over `character varying` for limited text columns.
+* Use `text` over `varchar` for unlimited text columns mapped to `text` in the Hibernate schema definition.
 * Include foreign key constraints on all foreign key columns.
 * Include unique constrains on unique columns such as `uid`, `code`, `name` and `shortname` (if appropriate).
 * Ensure constraints have unique and readable names.
