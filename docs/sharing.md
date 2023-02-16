@@ -151,6 +151,10 @@ SELECT exists(
      );
 ```
 
+## Todo list
+1. Remove legacy sharing objects [In progress](https://github.com/dhis2/dhis2-core/pull/12991).
+2. Transfering `Sharing.owner` before deleting user.
+
 
 
 
