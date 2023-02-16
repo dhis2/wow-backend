@@ -40,6 +40,7 @@ The following section lists guides on various topics.
 * [JPA queries](guides/jpa_api.md)
 * [Lombok annotations](guides/lombok.md)
 * [Monitoring](guides/monitoring.md)
+* [New database table Flyway migration](guides/new_database_table_flyway_migration.md)
 * [PostgreSQL JSONB](guides/postgres_jsonb.md)
 * [PostgreSQL commands](guides/postgresql_commands.md)
 * [Spring controller testing](guides/spring_controller_testing.md)
