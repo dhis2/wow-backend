@@ -13,8 +13,7 @@
 alter table attribute add column if not exists sharing jsonb default '{}'::jsonb;
 ```
 
-- We have defined a hibernate custom type `jsbObjectSharing` in `UserTypes.hbm.xml`
-- In order to enable sharing for a entity, add this property to the entity hbm mapping file.
+- We have defined a hibernate custom type `jsbObjectSharing` in `UserTypes.hbm.xml`, you can add this property to the entity hbm mapping file.
 
 ```
 <property name="sharing" type="jsbObjectSharing"/>
