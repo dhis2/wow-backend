@@ -16,7 +16,7 @@ During regular development the recommended value is:
 connection.schema = validate
 ```
 
-## Get database table creation SQL
+## Get database table definition SQL statement
 
 A useful database administration tool which allows for generating data definition SQL statements is [dBeaver](https://dbeaver.io/), which is an open source universal database tool.
 
