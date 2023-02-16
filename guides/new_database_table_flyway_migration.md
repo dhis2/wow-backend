@@ -72,6 +72,6 @@ CREATE TABLE indicatortype (
 
 -- Foreign keys
 
-ALTER TABLE indicatortype ADD CONSTRAINT fk_lastupdateby_userid FOREIGN KEY (lastupdatedby) REFERENCES public.userinfo(userinfoid);
+ALTER TABLE indicatortype ADD CONSTRAINT fk_lastupdateby_userid FOREIGN KEY (lastupdatedby) REFERENCES userinfo(userinfoid);
 ```
 
