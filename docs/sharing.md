@@ -91,7 +91,7 @@ public class Sharing
 ## Medata and Data Sharing
 - Sharing in DHIS2 has two layers Metadata and Data sharing, to understand more about those sharing types, please read [this document](https://docs.dhis2.org/en/use/user-guides/dhis-core-version-238/configuring-the-system/about-sharing-of-objects.html).
 - By default after adding the `sharing` column to the entity table, that entity class is enabled for Metadata Sharing.
-- In order to enable Data sharing, you need to add below code the the schema descriptor of that class.
+- In order to enable Data sharing, you need to set `Schema.dataShareable` to `true`.
 ```java
 public class TrackedEntityTypeSchemaDescriptor implements SchemaDescriptor
 {
