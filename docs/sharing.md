@@ -114,8 +114,20 @@ public class TrackedEntityTypeSchemaDescriptor implements SchemaDescriptor
 ```
 ## The query for checking sharing access
 
-### We have defined some custom jsonb queries to simplify the sql query and also improve performance.
-#### In order to make the sharing check query faster, we have to use a filter query together with a check access query.
+#### A full SQL query condition for sharing check looks like this
+
+```sql
+( de.sharing->>'owner' is null or de.sharing->>'owner' = 'GOLswS44mh8') 
+
+or de.sharing->>'public' like 'r%' or sharing->>'public' is null 
+
+or ( jsonb_has_user_id ( de.sharing, 'GOLswS44mh8') = true 
+    and jsonb_check_user_access( de.sharing, 'GOLswS44mh8', 'r%' ) = true ) 
+
+or ( jsonb_has_user_group_ids( de.sharing, 'LbeIlyHEhKr') = true 
+    and jsonb_check_user_groups_access ( de.sharing, '%r', 'LbeIlyHEhKr') = true )
+```
+#### In order simplify and make the sharing check query faster, we use a custom filter function together with a check access function.
 
   -  `jsonb_has_user_id( sharingColumn, userId )`: return TRUE if given `sharingColumn` has given User UID.
 ```sql
@@ -140,17 +152,5 @@ SELECT exists(
 ```
 
 
-- A full SQL query condition for sharing check looks like this
 
-```sql
-( de.sharing->>'owner' is null or de.sharing->>'owner' = 'GOLswS44mh8') 
-
-or de.sharing->>'public' like 'r%' or sharing->>'public' is null 
-
-or ( jsonb_has_user_id ( de.sharing, 'GOLswS44mh8') = true 
-    and jsonb_check_user_access( de.sharing, 'GOLswS44mh8', 'r%' ) = true ) 
-
-or ( jsonb_has_user_group_ids( de.sharing, 'LbeIlyHEhKr') = true 
-    and jsonb_check_user_groups_access ( de.sharing, '%r', 'LbeIlyHEhKr') = true )
-```
 
