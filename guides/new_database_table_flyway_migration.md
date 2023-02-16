@@ -45,7 +45,7 @@ When creating a new database table the following applies.
 * Use lowercase table and column names. DHIS 2 uses lowercase naming of all database relations. PostgreSQL will use lowercase values for non-quoted values in any case.
 * Quote column names with double quotes in case of special or reserved characters. This is optional for names without special or reserved characters but is a healthy approach in any case.
 * Use uppercase for all SQL keywords such as `CREATE TABLE IF NOT EXISTS`.
-* Do not include a schema reference, such as `public`, in table names. Implementations may install the DHIS 2 database in a schema other than `public`.
+* Do not include a schema reference, such as `public`, in table names. Implementations may restore the DHIS 2 database in a schema other than `public`.
 
 ## Example
 
