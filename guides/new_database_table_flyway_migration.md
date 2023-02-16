@@ -56,23 +56,23 @@ The following shows an example of a proper table definition.
 -- Table definition
 
 CREATE TABLE IF NOT EXISTS indicatortype (
-  indicatortypeid int8 NOT NULL,
-  name varchar(230) NOT NULL,
-  indicatorfactor int4 NOT NULL,
-  indicatornumber bool NULL,
-  uid varchar(11) NULL,
-  code varchar(50) NULL,
-  lastupdated timestamp NULL,
-  created timestamp NULL,
-  lastupdatedby int8 NULL,
-  translations jsonb NULL,
-  CONSTRAINT indicatortype_code_key UNIQUE (code),
-  CONSTRAINT indicatortype_name_key UNIQUE (name),
-  CONSTRAINT indicatortype_pkey PRIMARY KEY (indicatortypeid),
-  CONSTRAINT indicatortype_uid_key UNIQUE (uid)
+    indicatortypeid int8 NOT NULL,
+    name varchar(230) NOT NULL,
+    indicatorfactor int4 NOT NULL,
+    indicatornumber bool NULL,
+    uid varchar(11) NULL,
+    code varchar(50) NULL,
+    lastupdated timestamp NULL,
+    created timestamp NULL,
+    lastupdatedby int8 NULL,
+    translations jsonb NULL,
+    CONSTRAINT indicatortype_code_key UNIQUE (code),
+    CONSTRAINT indicatortype_name_key UNIQUE (name),
+    CONSTRAINT indicatortype_pkey PRIMARY KEY (indicatortypeid),
+    CONSTRAINT indicatortype_uid_key UNIQUE (uid)
 );
 
--- Foreign keys
+-- Constraints
 
 ALTER TABLE indicatortype ADD CONSTRAINT fk_lastupdateby_userid FOREIGN KEY (lastupdatedby) REFERENCES userinfo(userinfoid);
 ```
