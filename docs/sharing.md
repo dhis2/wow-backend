@@ -115,6 +115,7 @@ public class TrackedEntityTypeSchemaDescriptor implements SchemaDescriptor
 ## The query for checking sharing access
 
 ### We have defined some custom jsonb queries to simplify the sql query and also improve performance.
+- In order to make the sharing check query faster, we have to use a filter query together with a check access query.
 
   -  `jsonb_has_user_id( sharingColumn, userId )`: return TRUE if given `sharingColumn` has given User UID.
 ```sql
