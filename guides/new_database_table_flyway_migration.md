@@ -57,7 +57,7 @@ The following shows an example of a proper table definition.
 CREATE TABLE IF NOT EXISTS indicatortype (
     indicatortypeid int8 NOT NULL,
     name varchar(230) NOT NULL,
-    indicatorfactor int4 NOT NULL,
+    indicatorfactor int8 NOT NULL,
     indicatornumber bool NULL,
     uid varchar(11) NULL,
     code varchar(50) NULL,
