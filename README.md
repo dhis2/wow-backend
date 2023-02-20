@@ -41,6 +41,7 @@ The following section lists guides on various topics.
 * [Lombok annotations](guides/lombok.md)
 * [Monitoring](guides/monitoring.md)
 * [New database table Flyway migration](guides/new_database_table_flyway_migration.md)
+* [OpenAPI](guides/open_api.md)
 * [PostgreSQL JSONB](guides/postgres_jsonb.md)
 * [PostgreSQL commands](guides/postgresql_commands.md)
 * [Spring controller testing](guides/spring_controller_testing.md)
@@ -49,8 +50,7 @@ The following section lists guides on various topics.
 * [Test mocking with Mockito](guides/test_mocking.md)
 * [Testing](guides/testing.md)
 * [Transactions](guides/transactions.md)
-* [Ubuntu Linux Android app mirroring](guides/ubuntu_android_app_mirroring.md) 
-* [OpenAPI](guides/open_api.md)
+* [Ubuntu Linux Android app mirroring](guides/ubuntu_android_app_mirroring.md)
 
 ## Coordination
 
