@@ -63,7 +63,7 @@ The following section lists various areas of coordination.
 The following pages contain high-level developer documentation for various solutions.
 
 * [Job scheduling](docs/job_scheduling.md)
-* [Data Value Set Import/Export](docs/datavalueset.md)
+* [Data value set import/export](docs/datavalueset.md)
 
 ## Talks
 
@@ -71,4 +71,4 @@ The following pages are slides used in talks from Thursday meetings:
 
 * [JSON stream processing](talks/json_stream_processing.md) ([html slides](talks/json_stream_processing.html))
 * [PEG parsers](talks/peg_parsers.md) ([html slides](talks/peg_parsers.html))
-* [Reflection, Generics & Type Erasure](talks/generics.md) ([html slides](talks/generics.html))
+* [Reflection, generics & type erasure](talks/generics.md) ([html slides](talks/generics.html))
