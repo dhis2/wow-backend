@@ -52,52 +52,32 @@ Spring XML-based configuration should be avoided.
 
 All Spring Beans should only use consutructor-based injection.
 
-- All the bean dependencies must be declared as `final`.
-- The bean should have one constructor, where all the dependencies are resolved.
-- The constructor should **not** be annotated with `@Autowired`.
-- The constructor should check for the null status of each dependency.
+1. All the bean dependencies must be declared as `final`.
+2. The bean should have one constructor, where all the dependencies are resolved.
+3. The constructor should **not** be annotated with `@Autowired`.
+
+Points 1. and 2. are fullfilled by lombok in the following example
 
 ```java
-import static com.google.common.base.Preconditions.checkNotNull;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 private final UserStore userStore;
 
-    private final UserGroupService userGroupService;
+    private UserGroupService userGroupService;
 
-    private final UserCredentialsStore userCredentialsStore;
+    private UserCredentialsStore userCredentialsStore;
 
-    private final UserAuthorityGroupStore userAuthorityGroupStore;
+    private UserAuthorityGroupStore userAuthorityGroupStore;
 
-    private final CurrentUserService currentUserService;
+    private CurrentUserService currentUserService;
 
-    private final SystemSettingManager systemSettingManager;
+    private SystemSettingManager systemSettingManager;
 
-    private final PasswordManager passwordManager;
-
-    public DefaultUserService( UserStore userStore, UserGroupService userGroupService,
-        UserCredentialsStore userCredentialsStore, UserAuthorityGroupStore userAuthorityGroupStore,
-        CurrentUserService currentUserService, SystemSettingManager systemSettingManager,
-        PasswordManager passwordManager )
-    {
-        checkNotNull( userStore );
-        checkNotNull( userGroupService );
-        checkNotNull( userCredentialsStore );
-        checkNotNull( userAuthorityGroupStore );
-        checkNotNull( systemSettingManager );
-        checkNotNull( passwordManager );
-
-        this.userStore = userStore;
-        this.userGroupService = userGroupService;
-        this.userCredentialsStore = userCredentialsStore;
-        this.userAuthorityGroupStore = userAuthorityGroupStore;
-        this.currentUserService = currentUserService;
-        this.systemSettingManager = systemSettingManager;
-        this.passwordManager = passwordManager;
-    }
+    private PasswordManager passwordManager;
 ```
 
 ## Bean initialization
 
 Use the `@PostConstruct` annotation to execute initialization code for a Spring bean.
-
 
