@@ -343,3 +343,4 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_40_17 | https://dhis2.atlassian.net/browse/DHIS2-14526 |
 | V2_40_18 | https://dhis2.atlassian.net/browse/DHIS2-7093 |
 | V2_40_19 | https://dhis2.atlassian.net/browse/DHIS2-14815 |
+| V2_40_20 | https://dhis2.atlassian.net/browse/DHIS2-14460 |
