@@ -1,53 +1,11 @@
-# Controller Endpoint Guide
-A brief overview of Dos and Don'ts of controller endpoint design.
+# Parameters binding Guide
 
+This guide explains how the binding for request parameters and fields inside a parameter objects
+works and what happens when the binding fails.
 
-## Path
-A good example for "one path per operation":
-
-```java
-class EntryController {
-  @GetMapping(value = "/{id}", produces = "application/json")
-  Entry getEntryJson( @PathVariable String id ) {
-      //...
-  }
-
-  @GetMapping(value = "/{id}.xml", produces = "application/xml")
-  Entry getEntryXml( @PathVariable String id ) {
-    //...
-  }
-}
-```
-
-**Do**
-* 🚀 do use a unique path per operation; even: different media type => different operation => different path
-* 🚀 do use the "nice" path for JSON or plain text, use suffixes for XML, CSV, ...
-
-**Avoid**
-* ❌ avoid multi-media-type endpoint methods
-* ❌ avoid mapping based on request `Content-Type` (`@GetMapping( consumes = "text/csv" )`)
-* ❌ avoid mapping based on request `Accept` (`@GetMapping( produces = "text/csv" )`)
-* ❌ avoid mapping based on presence of parameters (`@GetMapping( params = "x" )`)
-* ❌ avoid mapping based on presence of headers (`@GetMapping( headers = "x" )`)
-
-To clarify: do use `consumes` and `produces` but not as a means to make the operation unique.
-The path alone should already be unique.
-
-
-## Parameters
-
-**Do**
-* 🚀 do use dedicated but minimal parameter objects (when in doubt overuse, details see below)
-* 🚀 do annotate `String` typed parameters with `@OpenApi.Param` if a more specific type can be given
-
-**Avoid**
-* ❌ avoid reading from `HttpServletRequest`
-* ❌ avoid reading parameters via `Map<String, String>`
-* ❌ avoid adding the super-set of all use case to a parameter object,
-  either use different parameter objects or use the intersection of common parameters
 
 ### Parameter Objects
-A good example for parameter object usage:
+Lets have a look at this example:
 
 ```java
 @Data
@@ -56,6 +14,7 @@ class EntryQueryParams {
     int page = 1;
     int pageSize = 50;
     String filter;
+    CustomField custom = CustomField.empty();
 }
 
 class EntryController {
@@ -69,31 +28,25 @@ class EntryController {
 }
 ```
 
+Spring will try to convert parameters from String into the proper type using a `PropertyEditor` if available, otherwise a `Converter`. `PropertyEditor`s are registered and bind to a class in `CrudControllerAdvice.initBinder(WebDataBinder binder)` method.
+`Converter`s are registered in `WebMvcConfig.addFormatters(FormatterRegistry registry)` method.
+
+`PropertyEditor`s and `Converter`s work in a similar way but in different context, the former is used only when binding parameters, the latter is a global converter that can be used in any layer of the system.
+
+If the conversion fails Spring will raise an exception, `MethodArgumentTypeMismatchException` if the failing conversion happened for a @RequestParam field and a `BindException` if the fails happened in a field of a parameter object.
+Both exceptions are handled in `CrudControllerAdvice`, the first one is a simple exception that will carry the information about the failing field, the failing value and the type of the field.
+On the other side, a `BindException` is a complex exception that wraps field and global errors, at the moment we are not using any validator framework so only field errors are possible.
+To be consistent through the API we are also only considering one field error, even though multiple of them can be present.
+A `FieldError` wraps a `TypeMismatchException` that is similar to a `MethodArgumentTypeMismatchException` and handled in the same way.
+In the case of failure on fields that are `Enums` or `primitive` types, we are building a message for the user with all the relevant information needed to fix the issue. When the failure happens in a "custom" field, then the message returned by the `PropertyEditor` or the `Converter` is returned.
+
+`PropertyEditor`s should throw an exception when the parameter is null or an empty string because this happens when the parameter is specified without value in the URL like `/entries?page` or `/entries?page=`
+
 **Do**
-* 🚀 do use when a set of parameters is occurring in more than one endpoint (keep inheritance in mind) or when parameters belong to a common role
-* 🚀 do include only reoccurring parameters
-* 🚀 do create a dedicated params class only used on controller level (API input)
-* 🚀 do use `@Data`
-* 🚀 do initialise fields with default values where applicable
 * 🚀 do prefer primitives with default over wrappers
 * 🚀 do use enum typed fields (not `String`) for `enum` values
-* 🚀 do use `@OpenApi.Shared` on parameter object types used by multiple endpoints
+* 🚀 do initialise fields with default values where applicable
+* 🚀 create `PropertyEditor` for custom fields and throw an exception if the source is null or an empty string.
 
 **Avoid**
-* ❌ avoid reusing query/params defined outside webapi module
-* ❌ avoid including fields that are not provided via user input (e.g. current user and such)
-* ❌ avoid using service level parameter objects (these often use non input types and have non input fields)
-* ❌ avoid including persisted types in parameter objects (consider creating a dedicated object for expected input)
-
-
-## Responses
-
-**Do**
-* 🚀 do prefer plain return values (exceptions: streaming, field filtering, performance)
-* 🚀 do use `ResponseEntity` wrapper only in case further response properties need to be set
-* 🚀 do return `204 NO_CONTENT` status when there is no response body (not default `200 OK`)
-* 🚀 do use `@OpenApi.Response` to declare how a response looks like in case it is directly written to output stream
-
-**Avoid**
-* ❌ avoid writing directly to `HttpServletResponse` output stream (exceptions: streaming, field filtered, performance and alike)
-
+* ❌ avoid creating a `Converter` for a parameter as it will not handle the empty case in the proper way
