@@ -1,6 +1,6 @@
 # Parameters binding Guide
 
-This guide explains how the binding for request parameters and fields inside a parameter objects
+This guide explains how the binding for request parameters and fields inside a parameter object
 works and what happens when the binding fails.
 
 
