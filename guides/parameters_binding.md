@@ -43,7 +43,7 @@ In the case of failure on fields that are `Enums` or `primitive` types, we are b
 `PropertyEditor`s should throw an exception when the parameter is null or an empty string because this happens when the parameter is specified without value in the URL like `/entries?page` or `/entries?page=`
 
 **Do**
-* 🚀 do prefer primitives with default over wrappers
+* 🚀 do prefer primitives with defaults over wrappers
 * 🚀 do use enum typed fields (instead of `String`) for `enum` values
 * 🚀 do initialise fields with default values where applicable
 * 🚀 create `PropertyEditor` for custom fields and throw an exception if the source is null or an empty string
