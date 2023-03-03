@@ -46,7 +46,7 @@ In the case of failure on fields that are `Enums` or `primitive` types, we are b
 * 🚀 do prefer primitives with default over wrappers
 * 🚀 do use enum typed fields (not `String`) for `enum` values
 * 🚀 do initialise fields with default values where applicable
-* 🚀 create `PropertyEditor` for custom fields and throw an exception if the source is null or an empty string.
+* 🚀 create `PropertyEditor` for custom fields and throw an exception if the source is null or an empty string
 
 **Avoid**
 * ❌ avoid creating a `Converter` for a parameter as it will not handle the empty case in the proper way
