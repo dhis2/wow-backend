@@ -100,7 +100,8 @@ class EntryController {
 ## Parameters binding
 
 Spring will try to convert parameters from String into the proper type using a `PropertyEditor` if available, otherwise a `Converter`. `PropertyEditor`s are registered and bind to a class in `CrudControllerAdvice.initBinder(WebDataBinder binder)` method. `Converter`s are registered in `WebMvcConfig.addFormatters(FormatterRegistry registry)` method.
-`PropertyEditor`s and `Converter`s work in a similar way but in different context, the former is used only in Spring web MVC context to bind request parameters, the latter is a global converter that can be used in any layer of the system.\
+`PropertyEditor`s and `Converter`s work in a similar way but in different context, the former is used only in Spring web MVC context to bind request parameters, the latter is a global converter that can be used in any layer of the system.
+
 If the conversion fails, Spring will raise an exception, `MethodArgumentTypeMismatchException` if the failing conversion happened for a @RequestParam field and a `BindException` if the fails happened in a field of a parameter object.\
 Both exceptions are handled in `CrudControllerAdvice`, the first one is a simple exception that will carry the information about the failing field, the failing value and the type of the field.
 On the other side, a `BindException` is a complex exception that wraps field and global errors, at the moment we are not using any validator framework so only field errors are possible.
