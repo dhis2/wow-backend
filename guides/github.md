@@ -29,7 +29,7 @@ A quick summary of the guidelines, followed by sections with more information fo
 **GitHub conventions**
 1. PR titles must follow the naming convention, prepending the title with "fix|feat|chore|test|ci|", based on the content of their PR.
 2. All PRs (omitting Draft PRs) must have a description explaining the content of the PR.
-3. All branches should be named on the format: "<Jira-issue-number>[_<version>]". Example DHIS2-123 and DHIS2-123-2.40.
+3. All branches should be named on the format: "<Jira-issue-number>[_<version>]". Example DHIS2-123 and DHIS2-123_2.40.
 4. PRs should be assigned to at least 2 reviewers, or a team of reviewers
 5. Reviewers should primarily be in the same product team as the code is for, but exceptions are ok.
 
