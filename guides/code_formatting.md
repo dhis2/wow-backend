@@ -47,7 +47,7 @@ The DHIS2 XML formatting definition is located in the DHIS2 project root: [dhis2
 4. Ensure the "DHIS 2.0 Formatter" item is selected in the “Active profile” section.
 5. Click "OK".
 
-### Step 3: Add the formatting definition file to Eclipse (optional)
+### Step 3: Configure auto-formatting when saving a file (optional)
 
 1. In the Preferences menu (same as in Step 2), type “save actions”, and select Java -> Editor -> Save Actions.
 2. Select “Perform the selected actions on save”.
