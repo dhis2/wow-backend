@@ -351,3 +351,4 @@ The table below contains a list of migration versions. Please reserve the approp
 | -- | --  |
 | V2_41_1  | https://dhis2.atlassian.net/browse/DHIS2-13776 |
 | V2_41_2  | https://dhis2.atlassian.net/browse/DHIS2-15038 |
+| V2_41_3  | https://dhis2.atlassian.net/browse/DHIS2-7763 |
