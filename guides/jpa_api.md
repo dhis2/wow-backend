@@ -5,12 +5,12 @@ From 2.31, Hibernate Native API is replaced by JPA Criteria Query. The old hiber
 Known issues : 
 *  We are still using hibernate xml mapping file .hbm, so if we map a compound primary key then JPA Criteria API won't be able to find the attributes belong to that compound ID, For example:
 
-          <composite-id>
-                  <key-many-to-one name="programStageInstance" class="org.hisp.dhis.program.ProgramStageInstance"
-                    column="programstageinstanceid" foreign-key="fk_entityinstancedatavalue_programstageinstanceid" />
-                  <key-many-to-one name="dataElement" class="org.hisp.dhis.dataelement.DataElement" column="dataelementid"
-                    foreign-key="fk_entityinstancedatavalue_dataelementid" />
-            </composite-id>
+        <composite-id>
+          <key-many-to-one name="programStageInstance" class="org.hisp.dhis.program.ProgramStageInstance"
+              column="programstageinstanceid" foreign-key="fk_entityinstancedatavalue_programstageinstanceid" />
+          <key-many-to-one name="dataElement" class="org.hisp.dhis.dataelement.DataElement" column="dataelementid"
+              foreign-key="fk_entityinstancedatavalue_dataelementid" />
+        </composite-id>
 
     This will fail as JPA can't find the property dataElement of the object TrackedEntityDataValue.
 
@@ -58,15 +58,15 @@ Note that JPA Criteria Query is a bit complicated, so we have implemented some c
     
     * Explicit count expression
         
-            return count( builder, newJpaParameters()
-            .addPredicate( root -> builder.greaterThanOrEqualTo( root.get( "lastUpdated" ), time ) )
-            .count( root -> builder.countDistinct( root ) ) );
+          return count( builder, newJpaParameters()
+              .addPredicate( root -> builder.greaterThanOrEqualTo( root.get( "lastUpdated" ), time ) )
+              .count( root -> builder.countDistinct( root ) ) );
 
     * Implicit count expression: count on root, default distinct = false
          
-            return count( builder, newJpaParameters()
-            .addPredicate( root -> parseFilter( builder, root, query.getFilters() ) )
-            .setUseDistinct( true ) )
+          return count( builder, newJpaParameters()
+              .addPredicate( root -> parseFilter( builder, root, query.getFilters() ) )
+              .setUseDistinct( true ) )
 
 - Conjunction 
     
@@ -83,7 +83,7 @@ Note that JPA Criteria Query is a bit complicated, so we have implemented some c
         .addPredicate( root -> {
             Join<Object, Object> groupSets = root.join( "groupSets" );
             return builder.or( builder.equal( groupSets.get( "id" ) , groupSet.getId() ),
-                                builder.isNull( groupSets.get( "id" ) ) );
+                builder.isNull( groupSets.get( "id" ) ) );
         });
         return getList( builder, parameters );
 
@@ -98,7 +98,7 @@ Note that JPA Criteria Query is a bit complicated, so we have implemented some c
     
         CriteriaBuilder builder = getCriteriaBuilder();
         JpaQueryParameters<T> parameters = new JpaQueryParameters<T>()
-                .addPredicates( getDataSharingPredicates( builder, AclService.LIKE_READ_DATA ) );
+            .addPredicates( getDataSharingPredicates( builder, AclService.LIKE_READ_DATA ) );
 
         return getList( builder, parameters );
 
