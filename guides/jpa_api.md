@@ -45,14 +45,16 @@ Note that JPA Criteria Query is a bit complicated, so we have implemented some c
 
         return getList( builder, newJpaParameters()
             .addPredicate( root -> builder.equal( root.get( "program" ), program ) )
-            .addPredicate( root -> JpaUtils.stringPredicate( builder, root.get( "name" ), "%" + key + "%", JpaUtils.StringSearchMode.LIKE, false ) )
+            .addPredicate( root -> JpaUtils.stringPredicate( 
+                builder, root.get( "name" ), "%" + key + "%", JpaUtils.StringSearchMode.LIKE, false ) )
             .addOrder( root -> builder.asc( root.get( "name" ) ) ) );
 
 - Search Object with compound primary key: need to use an Object to compare with root, instead of comparing each properties.
 
         CriteriaBuilder builder = getCriteriaBuilder();
         return getSingleResult( builder, newJpaParameters()
-            .addPredicate( root -> builder.equal( root, new CompleteDataSetRegistration( dataSet, storedPeriod, source, attributeOptionCombo ) ) ) );
+            .addPredicate( root -> builder.equal( root, 
+                new CompleteDataSetRegistration( dataSet, storedPeriod, source, attributeOptionCombo ) ) ) );
 
 - Count
     
