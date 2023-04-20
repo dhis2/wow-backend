@@ -21,6 +21,7 @@ class EntryController {
 
 **Do**
 * 🚀 do use a unique path per operation; even: different media type => different operation => different path
+* 🚀 do use a dedicated path for parameters that change either the result or how the action is performed in a fundamental way
 * 🚀 do use the "nice" path for JSON or plain text, use suffixes for XML, CSV, ...
 
 **Avoid**
@@ -45,6 +46,10 @@ The path alone should already be unique.
 * ❌ avoid reading parameters via `Map<String, String>`
 * ❌ avoid adding the super-set of all use case to a parameter object,
   either use different parameter objects or use the intersection of common parameters
+
+**Remember**
+* 💡 parameter based mapping (`@GetMapping( params = "x" )`) results in a mapping error when more than one of such endpoints matches
+* 💡 parameter based mapping (`@GetMapping( params = { "a", "b" } )`) match when **all** parameters are present/match
 
 ### Parameter Objects
 A good example for parameter object usage:
@@ -118,3 +123,12 @@ A `PropertyEditor` takes the parameter as a string as input and it tries to conv
 **Avoid**
 * ❌ avoid creating a `Converter` for a parameter as it will not handle the empty case in the proper way
 
+
+## Troubleshooting
+What to do if the API is already release in a way that causes trouble?
+
+#### How to add additional parameters to an inherited method?
+* Override the inherited method and add a mapping that is unlikely to match, e.g. `@GetMapping( params = "doesnotexist" )`
+* Annotate the overridden inherited method with `@OpenApi.Ignore`
+* Implement a new method that has the same path as the inherited method
+* Add the "inherited" and the additional parameters to the new method
