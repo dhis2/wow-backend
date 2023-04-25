@@ -321,7 +321,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_39_21 | https://jira.dhis2.org/browse/DHIS2-7882 |
 | V2_39_22 | https://jira.dhis2.org/browse/DHIS2-9378 |
 | V2_39_23 | https://jira.dhis2.org/browse/DHIS2-9900 |
-| V2_39-24 | https://dhis2.atlassian.net/browse/TECH-1521 |
+| V2_39_24 | https://dhis2.atlassian.net/browse/TECH-1521 |
 
 ### 2.40
 
