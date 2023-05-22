@@ -86,6 +86,6 @@ Locate the Eclipse formatting definition, same as in Step 1 for Eclipse.
 
 ## Maintenance
 
-To apply the plugin from the commmand line, execute:
+To run the plugin from the commmand line and fix all the unformatted files, execute:
 
     mvn spotless:apply
