@@ -19,6 +19,9 @@ When you try to do a commit and the format check fails, the commit will abort be
 
     git config core.hooksPath .git/hooks
 
+**Note:** If your commit hook fails to run in IntelliJ and gives this error message: `.git/hooks/pre-commit: line 11: mvn: command not found`, this means IntelliJ does not have the same PATH as you do in your terminal, and you need to tell IntelliJ what your path is. You can do this by running this command on the command line, and copy it into the ../.git/hooks/pre-commit file:
+'echo $PATH' paste that content rigth above line 10 in the pre-commit, 'cd ./dhis-2; mvn spotless:check'
+
 ### Step 2: Commit your code
 
 When committing your code, Spotless will check the format of the staged files, using the current DHIS2 Eclipse formatting rules:
