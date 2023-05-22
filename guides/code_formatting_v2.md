@@ -7,7 +7,29 @@ We used to use Speedy Spotless, but this project is now deprecated and archived.
 
 ### Step 1: Installing pre-commit hook
 
-From the DHIS2 project root ([dhis2-core/dhis-2](https://github.com/dhis2/dhis2-core/blob/master/dhis-2)), execute:
+From the DHIS2 project root ([dhis2-core/dhis-2](https://github.com/dhis2/dhis2-core/blob/master/dhis-2)), create a file called pre-commit.spotless with this content:
+```bash
+#!/bin/sh
+# From gist at https://gist.github.com/chadmaughan/5889802
+
+echo '[git hook] executing mvn spotless:check before commit'
+
+# stash any unstaged changes
+git stash -q --keep-index
+
+# run mvn spotless:check
+cd ./dhis-2; mvn spotless:check
+cd ./dhis-test-e2e; mvn spotless:check
+
+# store the last exit code in a variable
+RESULT=$?
+
+# unstash the unstashed changes
+git stash pop -q
+
+# return the 'mvn spotless:check' exit code
+exit $RESULT
+```
 
     cp ./pre-commit.spotless ../.git/hooks/pre-commit
     chmod +x ../.git/hooks/pre-commit
