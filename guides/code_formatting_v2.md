@@ -32,7 +32,7 @@ exit $RESULT
 ```
 
 Then execute the commands bellow to copy it into the .git/hooks folder and make it executable:
-```shell
+```bash
 cp ./pre-commit.spotless ../.git/hooks/pre-commit
 chmod +x ../.git/hooks/pre-commit
 ```
