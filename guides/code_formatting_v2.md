@@ -12,7 +12,7 @@ From the DHIS2 project root ([dhis2-core/dhis-2](https://github.com/dhis2/dhis2-
     cp ./pre-commit.spotless ../.git/hooks/pre-commit
     chmod +x ../.git/hooks/pre-commit
 
-This will install the pre-commit hook that invoke Spotless Maven plugin command spotless:check
+This will install the pre-commit hook that invoke Spotless Maven plugin command `spotless:check`
 
 **Note:** Make sure that git `core.hooksPath` is set to `.git/hooks` in order for  Spotless to work.
 
