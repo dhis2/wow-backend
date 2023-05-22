@@ -30,9 +30,12 @@ git stash pop -q
 # return the 'mvn spotless:check' exit code
 exit $RESULT
 ```
+
 Then execute the commands bellow to copy it into the .git/hooks folder and make it executable:
-    cp ./pre-commit.spotless ../.git/hooks/pre-commit
-    chmod +x ../.git/hooks/pre-commit
+```shell
+cp ./pre-commit.spotless ../.git/hooks/pre-commit
+chmod +x ../.git/hooks/pre-commit
+```
 
 This will install the pre-commit hook that invoke Spotless Maven plugin command `spotless:check`.
 When you try to do a commit and the format check fails, the commit will abort before you can write the commit message and show which files failed.
