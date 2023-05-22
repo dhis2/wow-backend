@@ -30,7 +30,7 @@ git stash pop -q
 # return the 'mvn spotless:check' exit code
 exit $RESULT
 ```
-
+Then execute the commands bellow to copy it into the .git/hooks folder and make it executable:
     cp ./pre-commit.spotless ../.git/hooks/pre-commit
     chmod +x ../.git/hooks/pre-commit
 
