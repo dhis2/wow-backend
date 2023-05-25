@@ -11,6 +11,7 @@ From the DHIS2 project root ([dhis2-core/dhis-2](https://github.com/dhis2/dhis2-
 ```bash
 #!/bin/sh
 # From gist at https://gist.github.com/chadmaughan/5889802
+# Version 2 (05/25/23)
 
 echo '[git hook] executing mvn spotless:check before commit'
 
