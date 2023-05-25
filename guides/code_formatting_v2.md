@@ -121,6 +121,7 @@ Locate the Eclipse formatting definition, same as in Step 1 for Eclipse.
 7. Set the "Eclipse Java Formatter config file" to the location of the DHIS2 XML formatting definition file.
 8. Set the "Java Formatting Profile" to "DHIS 2.0 Formatter".
 9. Select "Optimize imports"
+10. Copy import order from spotless plugin config in main pom.xml to the "Manual Import Order" field.
 
 ## Maintenance
 
