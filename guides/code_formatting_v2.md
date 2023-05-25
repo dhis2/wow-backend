@@ -17,12 +17,21 @@ echo '[git hook] executing mvn spotless:check before commit'
 # stash any unstaged changes
 git stash -q --keep-index
 
-# run mvn spotless:check
-cd ./dhis-2; mvn spotless:check
-cd ./dhis-test-e2e; mvn spotless:check
+# Initialize the RESULT variable to 0
+RESULT=0
 
-# store the last exit code in a variable
-RESULT=$?
+# Run mvn spotless:check for each directory, capturing exit codes
+for dir in ./dhis-2 ./dhis-2/dhis-test-e2e
+do
+  cd $dir; mvn spotless:check
+  # If mvn command fails, update RESULT to 1
+  if [ $? -ne 0 ]
+  then
+    RESULT=1
+  fi
+  # Go back to the root directory before the next iteration
+  cd - > /dev/null
+done
 
 # unstash the unstashed changes
 git stash pop -q
