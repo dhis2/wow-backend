@@ -7,7 +7,7 @@ We used to use Speedy Spotless, but this project is now deprecated and archived.
 
 ### Step 1: Installing pre-commit hook
 
-From the DHIS2 project root ([dhis2-core/dhis-2](https://github.com/dhis2/dhis2-core/blob/master/dhis-2)), create a file called pre-commit.spotless with this content:
+From the DHIS2 project root ([dhis2-core/dhis-2](https://github.com/dhis2/dhis2-core/blob/master/dhis-2)), create a file called `pre-commit.spotless` with this content:
 ```bash
 #!/bin/sh
 # From gist at https://gist.github.com/chadmaughan/5889802
@@ -47,15 +47,15 @@ cp ./pre-commit.spotless ../.git/hooks/pre-commit
 chmod +x ../.git/hooks/pre-commit
 ```
 
-This will install the pre-commit hook that invoke Spotless Maven plugin command `spotless:check`.
-When you try to do a commit and the format check fails, the commit will abort before you can write the commit message and show which files failed.
+This will install the pre-commit hook that invoke Spotless Maven plugin command `spotless:check`. When you try to do a commit and the format check fails, the commit will abort before you can write the commit message and show which files failed.
 
 **Note:** Make sure that git `core.hooksPath` is set to `.git/hooks` in order for  Spotless to work.
 
     git config core.hooksPath .git/hooks
 
-**Note:** If your commit hook fails to run in IntelliJ and gives this error message: `.git/hooks/pre-commit: line 11: mvn: command not found`, this means IntelliJ does not have the same PATH as you do in your terminal, and you need to tell it what your path is. You can do this by running this command on the command line, and copy it into the ../.git/hooks/pre-commit file:
-'echo $PATH' paste that content rigth above line 10 in the pre-commit, 'cd ./dhis-2; mvn spotless:check'
+**Note:** If your commit hook fails to run in IntelliJ and gives this error message: `.git/hooks/pre-commit: line 11: mvn: command not found`, this means IntelliJ does not have the same PATH as you do in your terminal, and you need to tell it what your path is. You can do this by running this command on the command line, and copy it into the `../.git/hooks/pre-commit` file:
+
+`'echo $PATH'` paste that content rigth above line 10 in the pre-commit, `'cd ./dhis-2; mvn spotless:check'`.
 
 ### Step 2: Commit your code
 
@@ -65,14 +65,16 @@ When committing your code, Spotless will check the format of the staged files, u
 
 A conditional formatting can be used to prevent the automatic formatter to format blocks of code:
 
-    // @formatter:off
-    IN_USER_ORG_UNIT_HIERARCHY_CACHE = cacheProvider.newCacheBuilder( Boolean.class )
-        .forRegion( "inUserOuHierarchy" )
-        .expireAfterWrite( 3, TimeUnit.HOURS )
-        .withInitialCapacity( 1000 )
-        .forceInMemory()
-        .withMaximumSize( SystemUtils.isTestRun(env.getActiveProfiles() ) ? 0 : 20000 ).build();
-    // @formatter:on
+```java
+// @formatter:off
+IN_USER_ORG_UNIT_HIERARCHY_CACHE = cacheProvider.newCacheBuilder( Boolean.class )
+    .forRegion( "inUserOuHierarchy" )
+    .expireAfterWrite( 3, TimeUnit.HOURS )
+    .withInitialCapacity( 1000 )
+    .forceInMemory()
+    .withMaximumSize( SystemUtils.isTestRun(env.getActiveProfiles() ) ? 0 : 20000 ).build();
+// @formatter:on
+```
 
 ## Eclipse
 
