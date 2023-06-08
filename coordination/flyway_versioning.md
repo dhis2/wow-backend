@@ -353,6 +353,8 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_40_22 | https://dhis2.atlassian.net/browse/DHIS2-15106 |
 | V2_40_23 | https://dhis2.atlassian.net/browse/TECH-1521 |
 | V2_40_24 | https://dhis2.atlassian.net/browse/DHIS2-15305 |
+| V2_40_25 | https://dhis2.atlassian.net/browse/TECH-1576 |
+
 
 ### 2.41
 | Version  | Pull request URL |
