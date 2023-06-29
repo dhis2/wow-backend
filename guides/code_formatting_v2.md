@@ -1,8 +1,8 @@
-# Code formatting (master)
+# Code formatting (from 2.41)
 
 ## Maven Plugin
 
-DHIS2 (master) is now using Spotless (https://github.com/diffplug/spotless) to automatically format the code base.
+DHIS2 (from 2.41) is now using Spotless (https://github.com/diffplug/spotless) to automatically format the code base.
 We used to use Speedy Spotless, but this project is now deprecated and archived.
 
 ### Step 1: Installing pre-commit hook
