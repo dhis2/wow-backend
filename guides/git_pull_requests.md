@@ -1,4 +1,4 @@
-# Git Pull Request Guidelines
+# GitHub Pull Request Guidelines
 
 The following guidelines apply when raising pull requests.
 
@@ -6,7 +6,7 @@ The following guidelines apply when raising pull requests.
 
 **1. Keep the PR as small as possible:** Do as little as possible for each PR and try to only include one feature per PR. The exception is strong dependencies between features. If you come across areas which need clean-up or refactor then create a new, separate PR for that.
 
-**2. Follow the code style:** There are many opinions on code style but we need to adhere to the same one, so pleas follow the code style and clean up the formatting.
+**2. Follow the code style:** code that does not adhere to our [formatting conventions](./code_formatting.md) will not pass the formatting check.
 
 **3. Tidy up the code:** Remove unused import statements, commented out code and unused code. Add license. Add proper Javadoc to methods and classes.
 

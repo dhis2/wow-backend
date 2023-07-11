@@ -26,8 +26,7 @@ The following section lists guides on various topics.
 
 * [API testing](guides/api_testing.md)
 * [Auditing](guides/auditing.md)
-* [Code formatting (to 2.40)](guides/code_formatting.md)
-* [Code formatting (from 2.41)](guides/code_formatting_v2.md)
+* [Code formatting](guides/code_formatting.md)
 * [Coding patterns](guides/preferred_patterns.md)
 * [Component owners](guides/component_owners.md)
 * [Embedded Jetty API build](guides/embedded_jetty.md)
