@@ -373,3 +373,4 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_41_19 | https://dhis2.atlassian.net/browse/DHIS2-14847 |
 | V2_41_20 | https://dhis2.atlassian.net/browse/TECH-1542 |
 | V2_41_21 | https://dhis2.atlassian.net/browse/DHIS2-15288 |
+| V2_41_22 | https://dhis2.atlassian.net/browse/DHIS2-15027 |
