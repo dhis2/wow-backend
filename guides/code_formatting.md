@@ -12,46 +12,22 @@ guide.
 
 #### IntelliJ Idea
 
-##### Step 1: Download the formatting definition
+##### Step 1: Download the Google formatter plugin
 
-Download the Google Java Style Guide for IntelliJ at
-https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml
+Download the Google Java format plugin and follow the setup instructions
+https://github.com/google/google-java-format
 
-##### Step 2: Configure the IntelliJ Java Code Style
-
-1. Open IntelliJ preferences
-2. Go to Editor -> Code Style -> Java
-3. Import the downloaded formatting definition via Settings -> Import Scheme -> IntelliJ IDEA code
-   style XML
-
-##### Step 3: Configure auto-format on save (optional)
+##### Step 2: Configure auto-format on save (optional)
 
 1. Open IntelliJ preferences
 2. Enable `Reformat code` in Tools -> Actions on Save
 
 #### Eclipse
 
-##### Step 1: Download the formatting definition
+##### Step 1: Download the Google formatter plugin
 
-Download the Google Java Style Guide for Eclipse at
-https://github.com/google/styleguide/blob/gh-pages/eclipse-java-google-style.xml
-
-##### Step 2: Add the formatting definition file to Eclipse
-
-1. Open Eclipse preferences
-2. In the search bar on the left, type “formatter”, and select the Java -> Code Style -> Formatter
-   menu item.
-3. Click “Import” and browse to the XML formatting definition file.
-4. Ensure the "DHIS 2.0 Formatter" item is selected in the “Active profile” section.
-5. Click "OK".
-
-##### Step 3: Configure auto-format on save (optional)
-
-1. In the Preferences menu (same as in Step 2), type “save actions”, and select Java -> Editor -> Save Actions.
-2. Select “Perform the selected actions on save”.
-3. Select “Format source code”.
-4. Click the “Formatter” link and ensure the “DHIS 2.0 Formatter” formatter is selected as active.
-5. Click OK.
+Download the Google Java format plugin and follow the setup instructions
+https://github.com/google/google-java-format
 
 ### Option 2: Format manually
 
@@ -76,16 +52,7 @@ https://github.com/diffplug/spotless/issues/623
 
 ## Disable formatting
 
-The Google Java formatter cannot be disabled by design. Spotless which we use to enforce the style
-guide does allow us to [disable any
-formatter](https://github.com/diffplug/spotless/tree/main/plugin-maven\#spotlessoff-and-spotlesson).
-We use the same pattern which is recognized by the Eclipse formatter
-`@formatter:off`/`@formatter:on`. This means if you have setup auto-formatting via your IDE, your
-IDE should also respect sections that you do not want to be formatted.
-
-We should only turn the formatter off when absolutely necessary. Like when creating a DSL that
-represents a tree that would otherwise get flattened or complex SQL statements. Javadocs should use
-the appropriate HTML tags to avoid unwanted formatting.
+The Google Java formatter cannot be disabled by design.
 
 ## Check formatting
 
