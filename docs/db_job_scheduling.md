@@ -1,4 +1,6 @@
-## State Diagram
+## State Machine
+Jobs in the scheduling process move between different states. 
+The main indicator for the state a job is in is the `jobStatus` type but a few other fields also have an influence on the state.
 
 ```mermaid
 stateDiagram-v2
@@ -33,7 +35,7 @@ OBS!
 * `skip` transition affects other job configurations
 
 
-| State | `jobState` | `schedulingType` | Other conditions |
+| State | `jobStatus` | `schedulingType` | Other conditions |
 |--|--|--|--|
 | `Prepared` | `NOT_STARTED` | `ONCE_ASAP` | |
 | `Ready/Scheduled` | `SCHEDULED` | * | |
