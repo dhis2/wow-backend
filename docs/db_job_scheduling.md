@@ -1,5 +1,10 @@
 # Job Schedlunging
 
+## Scheduling Types (Triggers)
+* CRON: executes in an interval defined by a CRON expression
+* Fixed delay: executes in an interval defined by the delay between executions
+* 🌟 Run once ASAP: executes once as soon as possible, then becomes done and eventually deleted
+
 ## State Machine
 Jobs in the scheduling process move between different states. 
 The main indicator for the state a job is in is the `jobStatus` type but a few other fields also have an influence on the state.
