@@ -1,3 +1,5 @@
+# Job Schedlunging
+
 ## State Machine
 Jobs in the scheduling process move between different states. 
 The main indicator for the state a job is in is the `jobStatus` type but a few other fields also have an influence on the state.
@@ -37,7 +39,7 @@ OBS!
 
 | State | `jobStatus` | `schedulingType` | Other conditions |
 |--|--|--|--|
-| `Prepared` | `NOT_STARTED` | `ONCE_ASAP` | |
+| `Prepared` | `NOT_STARTED` | (`ONCE_ASAP`) | |
 | `Ready/Scheduled` | `SCHEDULED` | * | |
 | `Running` | `RUNNING` | * | |
 | `Cancelled` | `RUNNING` | * | `cancel = true` |
@@ -46,13 +48,13 @@ OBS!
 
 | Transition | From | To | Actor |
 |--|--|--|--|
-| `create`   | - | `Prepared` | user via other endpoints (async function) |
-| `executeNow` | `Prepared` | `Ready/Scheduled` | user via other endpoints (async function) |
-| `executeNow` | `Ready/Scheduled` | `Ready/Scheduled` | user via scheduler app or API |
-| `start`    | `Ready/Scheduled` | `Running` | scheduler loop |
-| `updateJobProgress` | `Running` | `Running` | task executor thread |
-| `finish`   | `Running`/`Cancelled` | `Ready/Scheduled`/`Done` | task executor thread |
+| `create`   | - | `Prepared` | 🙋‍♂️ 🙋‍♀️ user via other endpoints (async function) |
+| `executeNow` | `Prepared` | `Ready/Scheduled` | 🙋‍♂️ 🙋‍♀️ user via other endpoints (async function) |
+| `executeNow` | `Ready/Scheduled` | `Ready/Scheduled` | 🙋‍♂️ 🙋‍♀️ user via scheduler app or API |
+| `start`    | `Ready/Scheduled` | `Running` | 🤖 scheduler loop `JobScheduler` |
+| `updateJobProgress` | `Running` | `Running` | 🤖 task executor thread |
+| `finish`   | `Running`/`Cancelled` | `Ready/Scheduled`/`Done` | 🤖 task executor thread |
 | `rescheduleStateJobs` | `Running`/`Cancelled` | `Ready/Scheduled` | heartbeat job |
-| `canel` | `Running` | `Cancelled` | user request cancellation via app or API |
-| `deleteFinishedJobs` | `Done` | (deleted) | heartbeat job |
-| `skip` | `Ready/Scheduled` | `Ready/Scheduled` | task executor thread (of another job configuration in the same queue) |
+| `canel` | `Running` | `Cancelled` | 🤷‍♂️ 🤷‍♀️ user request cancellation via app or API |
+| `deleteFinishedJobs` | `Done` | (deleted) | 🤖 heartbeat job |
+| `skip` | `Ready/Scheduled` | `Ready/Scheduled` | 🤖 task executor thread (of another job configuration in the same queue) |
