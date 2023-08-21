@@ -2,11 +2,13 @@
 
 ```mermaid
 stateDiagram-v2
-direction LR
+
 state ONCE_ASAP {
+direction UD
   [*] --> Prepared: `create` (programmatically)
   Done --> [*]: `deleteFinishedJobs` (heartbeat task)
 }
+direction LR
 Prepared --> Ready/Scheduled: `executeNow`
 Ready/Scheduled --> Ready/Scheduled: `executeNow` (run manually in app)
 Ready/Scheduled --> Running: `start`
@@ -28,6 +30,7 @@ note left of Ready/Scheduled: scheduler loop picks up here
 OBS! 
 * transition to disable and delete can apply in any state but is only shown from `Ready/Scheduled`
 * `Cancelled` is identical to `Running` except it cannot transition to `Cancelled` any more (not all transtions are shown for simplicity)
+* `skip` transition affects other job configurations
 
 
 | State | `jobState` | `schedulingType` | Other conditions |
@@ -38,3 +41,16 @@ OBS!
 | `Cancelled` | `RUNNING` | * | `cancel = true` |
 | `Done` | `DISABLED` | `ONCE_ASAP` | `lastFinished != null` |
 | `Disabled` | * | * | `enabled = false` |
+
+| Transition | From | To | Actor |
+|--|--|--|--|
+| `create`   | - | `Prepared` | user via other endpoints (async function) |
+| `executeNow` | `Prepared` | `Ready/Scheduled` | user via other endpoints (async function) |
+| `executeNow` | `Ready/Scheduled` | `Ready/Scheduled` | user via scheduler app or API |
+| `start`    | `Ready/Scheduled` | `Running` | scheduler loop |
+| `updateJobProgress` | `Running` | `Running` | task executor thread |
+| `finish`   | `Running`/`Cancelled` | `Ready/Scheduled`/`Done` | task executor thread |
+| `rescheduleStateJobs` | `Running`/`Cancelled` | `Ready/Scheduled` | heartbeat job |
+| `canel` | `Running` | `Cancelled` | user request cancellation via app or API |
+| `deleteFinishedJobs` | `Done` | (deleted) | heartbeat job |
+| `skip` | `Ready/Scheduled` | `Ready/Scheduled` | task executor thread (of another job configuration in the same queue) |
