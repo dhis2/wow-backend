@@ -13,7 +13,6 @@ The main indicator for the state a job is in is the `jobStatus` type but a few o
 stateDiagram-v2
 
 state ONCE_ASAP {
-direction UD
   [*] --> Prepared: `create` (programmatically)
   Done --> [*]: `deleteFinishedJobs` (heartbeat task)
 }
@@ -26,7 +25,7 @@ Running --> Done: `finish`
 Running --> Running: `updateProgress`
 Running --> Ready/Scheduled: `rescheduleStaleJobs`
 Running --> Ready/Scheduled: `finish`
-Running --> Ready/Scheduled: `skip`
+Ready/Scheduled --> Ready/Scheduled: `skip`
 Running --> Cancelled: `cancel` (user request)
 Cancelled --> Done
 Cancelled --> Ready/Scheduled
