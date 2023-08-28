@@ -295,6 +295,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_38_47 | https://jira.dhis2.org/browse/DHIS2-12816 |
 | V2_38_48 | https://dhis2.atlassian.net/browse/TECH-1521 |
 | V2_38_49 | https://dhis2.atlassian.net/browse/DHIS2-15305 |
+| V2_38_50 | https://dhis2.atlassian.net/browse/DHIS2-15689 |
 
 ### 2.39
 
