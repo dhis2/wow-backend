@@ -386,4 +386,5 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_41_25 | https://dhis2.atlassian.net/browse/DHIS2-1596 |
 | V2_41_26 | https://dhis2.atlassian.net/browse/DHIS2-1597 |
 | V2_41_27 | https://dhis2.atlassian.net/browse/DHIS2-15689 |
+| V2_41_28 | https://dhis2.atlassian.net/browse/TECH-1614 |
 
