@@ -39,6 +39,8 @@ Please use sensible descriptions separated by underscores for spaces and refrain
 
 - Always use lower case for sql scripts added into .sql files.
 
+- We apply the `{fromtable}_{totable}` convention for many-to-many relationships. For instance, if we have `event` and `note`, we should create a many-to-many `event_notes` table. Notice the link table is in the plural.
+
 - From 2.31, the database will always have a function named _generate_uid()_  for generating uids. Reuse this function for all future versions to generate uids.
 
 - Transactions and sql connection resource handlings are done by flyway. Refrain from explicitly beginning/commiting transactions in sql migration scripts. Also refrain from explicitly closing connections in java  migration scripts.
