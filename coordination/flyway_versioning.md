@@ -388,3 +388,4 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_41_27 | https://dhis2.atlassian.net/browse/DHIS2-15689 |
 | V2_41_28 | https://dhis2.atlassian.net/browse/TECH-1614 |
 | V2_41_29 | https://dhis2.atlassian.net/browse/DHIS2-15725 |
+| V2_41_30 | https://dhis2.atlassian.net/browse/TECH-1636 |
