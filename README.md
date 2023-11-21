@@ -24,7 +24,7 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 
 The following section lists guides on various topics.
 
-* [API testing](guides/api_testing.md)
+* [API testing](guides/testing/api_testing.md)
 * [Auditing](guides/auditing.md)
 * [Code formatting](guides/code_formatting.md)
 * [Coding patterns](guides/preferred_patterns.md)
@@ -44,11 +44,11 @@ The following section lists guides on various topics.
 * [OpenAPI](guides/open_api.md)
 * [PostgreSQL JSONB](guides/postgres_jsonb.md)
 * [PostgreSQL commands](guides/postgresql_commands.md)
-* [Spring controller testing](guides/spring_controller_testing.md)
+* [Spring controller testing](guides/testing/spring_controller_testing.md)
 * [Spring conventions](guides/spring_conventions.md)
 * [Spring controller endpoints](guides/controller_endpoints.md)
-* [Test mocking with Mockito](guides/test_mocking.md)
-* [Testing](guides/testing.md)
+* [Test mocking with Mockito](guides/testing/test_mocking.md)
+* [Testing](guides/testing/testing.md)
 * [Transactions](guides/transactions.md)
 * [Ubuntu Linux Android app mirroring](guides/ubuntu_android_app_mirroring.md)
 
