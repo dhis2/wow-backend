@@ -10,6 +10,7 @@ The goal the platform team has set for test coverage in PRs:
 * bugfix PRs should have a test to show the absense of the bug after the fix
 * new REST APIs should cover each request parameter with at least 1 test (test scenarios that cover multiple parameters count for each of them)
 * Calling out in the PR that affected code is already covered by existing tests will help reviewers understand that tests are already in place (eliminating the need to ask) 
+* Clarification: the above does not apply to `chore:` PRs as they should not change behaviour otherwise they are `refactor:` PRs 
 
 
 ## Test categories
