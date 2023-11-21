@@ -1,5 +1,16 @@
 # Testing guidelines and architecture
 
+## Testing and PRs
+
+### Platform Team Goal
+The goal the platform team has set for test coverage in PRs:
+
+* minimum of 1 test for each PR
+* mockito based tests do not count (to not encourage them)
+* bugfix PRs should have a test to show the absense of the bug after the fix
+* new REST APIs should cover each request parameter with at least 1 test (test scenarios that cover multiple parameters count for each of them)
+
+
 ## Test categories
 
 In DHIS2 there are currently 3 categories of tests:
