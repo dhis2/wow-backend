@@ -9,6 +9,7 @@ The goal the platform team has set for test coverage in PRs:
 * mockito based tests do not count (to not encourage them)
 * bugfix PRs should have a test to show the absense of the bug after the fix
 * new REST APIs should cover each request parameter with at least 1 test (test scenarios that cover multiple parameters count for each of them)
+* Calling out in the PR that affected code is already covered by existing tests will help reviewers understand that tests are already in place (eliminating the need to ask) 
 
 
 ## Test categories
@@ -26,7 +27,7 @@ There is also a fourth test category, used for end to end testing, which is not 
 Unit tests are meant to test classes and methods in isolation (no external dependencies required, such a database or a bean injected by the Spring context).
 These tests make heavy use of _mocks_ for mocking dependencies and are meant to be fast and simple.
 
-See [https://github.com/dhis2/wow-backend/blob/master/guides/test_mocking.md](Mockito guidelines) for more information on mocking and stubbing.
+See [https://github.com/dhis2/wow-backend/blob/master/guides/testing/test_mocking.md](Mockito guidelines) for more information on mocking and stubbing.
 
 Unit tests do not inherit from any superclass and are automatically executed when running `mvn test`.
 
@@ -82,7 +83,7 @@ They offer `GET`, `POST`, `PUT`, `PATCH` and `DELETE` methods with:
 The result returned by these is implicitly or explcitly verified against a HTTP status code or series (2xx,3xx etcetera)
 and can be "virtually mapped" as some JSON object which can be used to make assertions.
 
-All details are found on page [Spring controller testing](guides/spring_controller_testing.md).
+All details are found on page [Spring controller testing](guides/testing/spring_controller_testing.md).
 
 
 ## Test architecture
