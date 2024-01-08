@@ -297,6 +297,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_38_49 | https://dhis2.atlassian.net/browse/DHIS2-15305 |
 | V2_38_50 | https://dhis2.atlassian.net/browse/DHIS2-15689 |
 | V2_38_51 | https://dhis2.atlassian.net/browse/DHIS2-14956 |
+| V2_38_52 | https://dhis2.atlassian.net/browse/DHIS2-15805 |
 
 ### 2.39
 
