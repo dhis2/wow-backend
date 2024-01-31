@@ -1,5 +1,8 @@
 # Sonar
-We use sonar to help us write clean, quality, secure code.
+We use sonar to help us write clean, quality, secure code.  
+SonarLint should be used during local development to:
+- catch issues early
+- easily resolve existing issues (usually code smells)
 
 Useful links:  
 - [dhis2-core sonar project link](https://sonarcloud.io/project/overview?id=dhis2_dhis2-core)  
