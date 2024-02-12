@@ -14,7 +14,9 @@ __SonarLint__ should be used during local development to:
 ## Pull Requests
 Sonar is currently a mandatory step in the PR process. It has to pass in order for a PR to be allowed to merge.
 
-If a PR is blocked by what we think is a trivial/nuisance issue, these can be marked as 'won't fix' (e.g. 'please define a string literal'). This issue should then be brought up at the next weekly meeting.
+If a PR is blocked by what we think is a trivial/nuisance issue, these can be marked as 'won't fix' (e.g. 'please define a string literal'). This issue should then be brought up at the next weekly meeting.  
+
+If a PR introduces a new vulnerability (whether that be on new code or legacy code), the onus is on that developer to resolve it. This can be done in the same PR or as a priority in a follow-up PR.
 
 ## Updating Rules
 We can define what works best for us. If there are issues that we believe are not helping us we can remove these. We can go about that in the following way:
