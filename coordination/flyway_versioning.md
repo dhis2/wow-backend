@@ -404,4 +404,5 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_41_42 | https://dhis2.atlassian.net/browse/DHIS2-16369 |
 | V2_41_43 | https://dhis2.atlassian.net/browse/DHIS2-16326 |
 | V2_41_44 | https://dhis2.atlassian.net/browse/DHIS2-16592 |
+| V2_41_45 | https://dhis2.atlassian.net/browse/DHIS2-16326 |
 
