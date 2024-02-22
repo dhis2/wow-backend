@@ -48,13 +48,13 @@ Always choose a higher-rated issue if possible (high, medium, low).
 ### PR scenarios tested
 
 #### PR includes code in a method that has an open code smell
-- [code smell exits](https://sonarcloud.io/project/issues?resolved=false&rules=java%3AS3776&types=CODE_SMELL&id=dhis2_dhis2-core&open=AYkm1ClLWoNFPwfFjt-q) and status open
+- [code smell exists](https://sonarcloud.io/project/issues?resolved=false&rules=java%3AS3776&types=CODE_SMELL&id=dhis2_dhis2-core&open=AYkm1ClLWoNFPwfFjt-q) and status open
 - [PR submitted](https://github.com/dhis2/dhis2-core/pull/16584) with new code within method with an open code smell
 - PR passes
 - Sonar does not detect this issue as it is already known
 
 #### PR includes code in a method that has a resolved code smell
-- [code smell exits](https://sonarcloud.io/project/issues?resolutions=WONTFIX&rules=java%3AS3776&id=dhis2_dhis2-core&open=AY0SZ1r2jrcOCSid9DqL) and status resolved (accepted)
+- [code smell exists](https://sonarcloud.io/project/issues?resolutions=WONTFIX&rules=java%3AS3776&id=dhis2_dhis2-core&open=AY0SZ1r2jrcOCSid9DqL) and status resolved (accepted)
 - [PR submitted](https://github.com/dhis2/dhis2-core/pull/16585) with new code within method with an open code smell
 - PR passes
 - Sonar does not detect this issue as it is already a known, resolved issue
