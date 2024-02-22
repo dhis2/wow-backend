@@ -10,6 +10,7 @@ __SonarLint__ should be used during local development to:
 - weekly backend team
   - [meeting](https://meet.google.com/upy-nibq-wnd)
   - [agenda](https://www.google.com/url?q=https://docs.google.com/document/d/1rNoPNKcm1B4yGBtR85frXTKylZgBW3g0MZzVCAbeJ94/edit%23heading%3Dh.blgdisivf792&sa=D&source=calendar&ust=1707084037533033&usg=AOvVaw0V7Sd55NRFeQ_QzmiSVRGl)
+- [SonarCloud docs](https://docs.sonarsource.com/sonarcloud/)
 
 ## Pull Requests
 Sonar is currently a mandatory step in the PR process. It has to pass in order for a PR to be allowed to merge.
@@ -39,3 +40,21 @@ Opportunities when to tackle code smells
 
 ## Severity
 Always choose a higher-rated issue if possible (high, medium, low).
+
+## How does PR analysis work?
+[According to the docs:](https://docs.sonarsource.com/sonarcloud/improving/pull-request-analysis/#quality-gate-and-metrics)
+> Only issues that appear in the branch (PR) but not in the trunk (master) are reported in the analysis results.
+
+### PR scenarios tested
+
+#### PR includes code in a method that has an open code smell
+- [code smell exits](https://sonarcloud.io/project/issues?resolved=false&rules=java%3AS3776&types=CODE_SMELL&id=dhis2_dhis2-core&open=AYkm1ClLWoNFPwfFjt-q) and status open
+- [PR submitted](https://github.com/dhis2/dhis2-core/pull/16584) with new code within method with an open code smell
+- PR passes
+- Sonar does not detect this issue as it is already known
+
+#### PR includes code in a method that has a resolved code smell
+- [code smell exits](https://sonarcloud.io/project/issues?resolutions=WONTFIX&rules=java%3AS3776&id=dhis2_dhis2-core&open=AY0SZ1r2jrcOCSid9DqL) and status resolved (accepted)
+- [PR submitted](https://github.com/dhis2/dhis2-core/pull/16585) with new code within method with an open code smell
+- PR passes
+- Sonar does not detect this issue as it is already a known, resolved issue
