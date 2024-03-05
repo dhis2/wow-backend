@@ -7,7 +7,8 @@ The goal the platform team has set for test coverage in PRs:
 
 * minimum of 1 test for each PR
 * mockito based tests do not count (to not encourage them)
-* bugfix PRs should have a test to show the absense of the bug after the fix
+* bugfix PRs should have a test to show the absence of the bug after the fix
+  * bugfix PRs without a test (or at least mentioning testing has been considered) should not be approved
 * new REST APIs should cover each request parameter with at least 1 test (test scenarios that cover multiple parameters count for each of them)
 * new store methods should be covered by at least 1 test (test scenarios that cover multiple methods count for each of them)
 * Calling out in the PR that affected code is already covered by existing tests will help reviewers understand that tests are already in place (eliminating the need to ask)
