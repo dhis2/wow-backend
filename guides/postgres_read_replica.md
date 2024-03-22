@@ -5,7 +5,7 @@ DHIS2 supports having Postgres read replicas. This guide will go through the ste
 - Postgres primary DB
 - Postgres replica DB
 
-**Note:** Postgres uses the [Write-Ahead Log (WAL)](https://www.postgresql.org/docs/current/wal-intro.html) as a means to stream updates to replicas. There are many ways to set up [replication](https://www.postgresql.org/docs/current/runtime-config-replication.html), this way seems to be the simplest. You need to have postgres on your path to be able to execute the following commands.
+**Note:** Postgres uses the [Write-Ahead Log (WAL)](https://www.postgresql.org/docs/current/wal-intro.html) as a means to stream updates to replicas. There are many ways to set up [replication](https://www.postgresql.org/docs/current/runtime-config-replication.html), this way seems to be the simplest. You need to have postgres on your path to be able to execute the following commands. This guide is intended for local development purposes only.
 
 Postgres version `14.7` has been used in this guide.
 
