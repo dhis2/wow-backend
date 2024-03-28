@@ -6,7 +6,7 @@ In DHIS2, transaction boundaries are specified declaratively, via the `@ org.spr
 
 Each Service method that does use a Store class to access the database should be annotated with the `@Transactional` annotation.
 
-## Read-only transactions
+### Read-only transactions
 
 If the method does not require to modify the database (only read data), the `@Transaction` annotation should have the `readOnly` property set to `true`.
 
@@ -27,6 +27,18 @@ When entering a method annotated with a read-only transaction, Postgres sets the
 Note that a method annotated with `@Transactional(readOnly = true)` will throw an exception if there is any kind of database modification happening within the scope of that method.
 
 If the read-only method has no need to be executed within the context of a database transaction, consider removing the annotation altogether.
+
+### Non-annotated transactions
+Some **public** service methods do not rely on spring annotation level transactions to allow a more fine grained transaction management.
+Mostly this is used to avoid opening a transaction unless it is absolutly necessary.
+Example are reading cached state, like settings, or the lazy creation of periods that should not affect transaction requirements of the calling code.
+In such cases a service method should be annotated with `@IndirectTransactional` to inform the reader 
+that this method is intentionally **not** annotated with `@Transactional` but it will potentially database access which is transparent to the caller.
+
+### Non-transational service metods
+Some **public** service methods are known to not doing any transactions at all. 
+For example, they might just read or write to a memory cache.
+Such methods should be annotated with `@NonTransactional` to inform the reader that this service method intentionally is **not** annotated with `@Transactional`.
 
 ## Annotating classes
 
