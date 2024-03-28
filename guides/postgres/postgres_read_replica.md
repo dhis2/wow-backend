@@ -1,6 +1,6 @@
 # PostgreSQL Read Replica
 
-DHIS2 supports having Postgres read replicas. This guide will go through the steps to setup replication streaming. We will have the following components working by the end:  
+DHIS2 supports having Postgres read replicas. This guide will go through the steps to setup replication streaming, [taken from this video](https://www.youtube.com/watch?v=Yy0GJjRQcRQ). We will have the following components working by the end:  
 - DHIS2 server
 - Postgres primary DB
 - Postgres replica DB
