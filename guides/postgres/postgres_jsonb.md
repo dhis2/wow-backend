@@ -42,3 +42,20 @@ update programstageinstance
 set eventdatavalues = eventdatavalues - 'S33cRBsnXPo'
 where uid = 'NkvkOpBjkkH';
 ```
+
+## JSON v JSONB
+Postgres supports 2 types of JSON usage
+- JSON
+- JSONB
+
+Here's a table outlining some of the main differences, in order to help make informed decisions.
+
+| Feature        | JSON                               | JSONB                           |
+|----------------|------------------------------------|---------------------------------|
+| Data storage   | plain string                       | binary                          |
+| Write          | usually faster                     | slower due to binary conversion |
+| Read           | slower, need to parse whole string | faster                          |
+| White spaces   | kept                               | removed                         |
+| Key order      | kept                               | not guaranteed                  |
+| Partial update | no (full string replaced)          | yes (only key/field updated)    |
+| Index support  | no                                 | yes                             |
