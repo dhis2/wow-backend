@@ -48,6 +48,8 @@ Postgres supports 2 types of JSON usage
 - JSON
 - JSONB
 
+At the time of writing, we currently only use JSONB in DHIS2.
+
 Here's a table outlining some of the main differences, in order to help make informed decisions.
 
 | Feature        | JSON                               | JSONB                           |
