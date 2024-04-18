@@ -123,6 +123,16 @@ A `PropertyEditor` takes the parameter as a string as input and it tries to conv
 **Avoid**
 * ❌ avoid creating a `Converter` for a parameter as it will not handle the empty case in the proper way
 
+## Authorisation Checking
+We used to use `@PreAuthorize` on endpoints when we wanted to enforce a specific `Authority` for a `User` on a Specific endpoint. e.g.  
+`@PreAuthorize("hasRole('ALL') or hasRole('F_DATAVALUE_ADD')")`  
+
+This has been replaced with a type-safe alternative `@RequiresAuthority` e.g.  
+`@RequiresAuthority(anyOf = F_DATAVALUE_ADD)`  
+- type-safe (using `Authorities`)
+- can use at class or method level
+- `ALL` Authority is automatically checked (no need to pass in)
+- when used, it will advise which `Authorities` are missing in the response
 
 ## Troubleshooting
 What to do if the API is already release in a way that causes trouble?
