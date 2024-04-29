@@ -360,6 +360,8 @@ It should look something like this:
 There is an easier way to check if a Metadata Sync job was successful, checking the `lastExecutedStatus` field on a `JobConfiguration`, but [this bug](https://dhis2.atlassian.net/browse/DHIS2-17292) needs to be fixed before being able to check this way.
 
 # SQL Commands
+> **NOTE:** The `dev/min-metadata-sync-2-39.sql.gz` has already had these commands executed on it, these commands are purely here to show how that DB got to its state.  
+
 Executing these commands leaves the database with a small amount of data to use in the Metadata sync process, namely:  
 - 1 Data Value
 - 1 Event Program Data Value
