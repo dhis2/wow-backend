@@ -87,9 +87,10 @@ When clicking the play button, chose the last entry "Modify Run Configuration...
 #### Step 4: Add the DHIS2_HOME env var to the configuration
 ![](resources/images/intellij-embedded-config.png)
 
-After setting the DHIS2_HOME variable, click "OK".
+#### Step 5: Make sure the "Working directory" is set to the *dhis-2* folder, as seen in the screenshot above.
+After setting the DHIS2_HOME variable and "Working directory", click "OK".
 
-#### Step 5: Click play again and choose run or debug 
+#### Step 6: Click play again and choose run or debug 
 ![](resources/images/intellij-embedded-run.png)
 
 ## Running embedded Jetty with front-end web apps
