@@ -24,12 +24,17 @@
 * => named schemas are last in the document
 * all named types are "singletons" (simpler, less work)
 * skip properties that have the same value as the one that is assumed when they are omitted
+* no description defaults to `?` (required) or ommitted (non-required)
 
 **Readability**
 
 * compact (single line) arrays
 * no unnecessary empty lines
 * alphabetical sorting of named schemas (UIDs at the end)
-*
+
 
    
+## Outlook Descriptions
+
+Allow descriptions on inherited methods to contain placeholders for the `OpenApi.EntityType`
+so that annotations can be useful on methods that are inherited to many different object types. 
