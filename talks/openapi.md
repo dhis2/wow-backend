@@ -9,7 +9,7 @@
 * `@OpenApi.Document` for grouping controllers into OpenAPI documents
 * `@OpenApi.Tag` got removed (tags are computed, not user defined due to their special treatmeant)
 * `@OpenApi.Filter` to limit visibility of inherited endpoints
-
+* `@JsonSerialize(as=...)` and `@JsonSerialize(contentAs=...)` are considered
 
 **Minor**
 
@@ -17,6 +17,7 @@
 * `required` considers more sources (e.g. `@Nonnull`)
 * all `UID` "links" refer to `IdentifiableObject` `Class`es
 * `@OpenApi.Identifiable` to declare the UID type for views of `IdentifiableObject`s
+* `@JsonSerialize(using=...)` are acompanied by `@OpenApi.Property(...)`
 
 **Scaleing**
 
@@ -34,7 +35,8 @@
 
 
    
-## Outlook Descriptions
+## Outlook
 
-Allow descriptions on inherited methods to contain placeholders for the `OpenApi.EntityType`
+* Split `DateValue` domain more
+* Allow descriptions on inherited methods to contain placeholders for the `OpenApi.EntityType`
 so that annotations can be useful on methods that are inherited to many different object types. 
