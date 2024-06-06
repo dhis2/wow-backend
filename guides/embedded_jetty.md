@@ -105,9 +105,7 @@ See this PR for details: https://github.com/dhis2/dhis2-core/pull/12663
 Follow progress on Jira epic: https://dhis2.atlassian.net/browse/DHIS2-14092
 
 ## Choosing the log format
-By default, the `console` appender now logs in a basic format, which is the format used in production. To be able to use the nicely-formatted colour appender
-just pass the JVM arg 
-`-Dlog4j.appender=console_color` on startup.  
+By default, the `console` appender now logs in a basic format, which is the format used in production. To be able to use the nicely-formatted colour appender just pass the JVM arg `-Dlog4j.appender=console_color` on startup.  
 
 There are currently 2 appenders to choose from:  
 - `console` (default, used in production)
