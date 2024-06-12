@@ -330,6 +330,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_39_26 | https://jira.dhis2.org/browse/DHIS2-15689 |
 | V2_39_27 | https://dhis2.atlassian.net/browse/DHIS2-14956 |
 | V2_39_28 | https://dhis2.atlassian.net/browse/DHIS2-15805 |
+| V2_39_29 | https://dhis2.atlassian.net/browse/DHIS2-16442 |
 
 ### 2.40
 
@@ -364,6 +365,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_40_27 | https://dhis2.atlassian.net/browse/DHIS2-15689 |
 | V2_40_27 | https://dhis2.atlassian.net/browse/DHIS2-15689 |
 | V2_40_28 | https://dhis2.atlassian.net/browse/DHIS2-15805 |
+| V2_40_29 | https://dhis2.atlassian.net/browse/DHIS2-16442 |
 
 ### 2.41
 | Version  | Pull request URL |
@@ -407,6 +409,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_41_45 | https://dhis2.atlassian.net/browse/DHIS2-16326 |
 | ~~V2_41_46~~ | ~~https://dhis2.atlassian.net/browse/DHIS2-16814~~ |
 | V2_41_47 | https://dhis2.atlassian.net/browse/DHIS2-16872 |
+| V2_41_48 | https://dhis2.atlassian.net/browse/DHIS2-16442 |
 
 ### 2.42
 | Version  | Pull request URL |
