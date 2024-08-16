@@ -4,6 +4,8 @@ Follow these detailed steps to set up your project in IntelliJ IDEA seamlessly:
 
 1. Build with Maven. Run the following commands from the command line:
     - `mvn clean install -f dhis-2/pom.xml -DskipTests=true`
+
+    if you are using version 2.41 or older, run this command too:
     - `mvn clean install -f dhis-2/dhis-web/pom.xml -DskipTests=true`
 
 2. Import Project to IntelliJ:
@@ -12,14 +14,17 @@ Follow these detailed steps to set up your project in IntelliJ IDEA seamlessly:
 3. Add as Maven Project:
     - Right-click on the project's pom.xml and select "Add as Maven Project".
 
-4. Configure Maven Projects:
+4. If you are on 2.41 or older, configure the Maven Project:
     - In the plugin list on the right side, click on Maven.
     - Add the web portal project to the list of Maven projects.
     - Make sure it's part of the list of modules in `/File/Project Stucture/Modules`. If it's not, add it to the list.
 
 5. Configure Local Tomcat:
     - Open the configurations menu and add a new local Tomcat configuration.
-    - In the _Deployment_ tab, add the artifact named _dhis-web-portal:war exploded_. This will automatically select this artifact for build before launch. 
+    - In the _Deployment_ tab:
+        1. From 2.42 on, add the artifact named _dhis-web-server:war exploded_. 
+        2. Up until 2.41, add the artifact named _dhis-web-portal:war exploded_. 
+        This will automatically select this artifact for build before launch. 
 ![](resources/images/deploy.png)
 
 6. Configure Tomcat Settings:
