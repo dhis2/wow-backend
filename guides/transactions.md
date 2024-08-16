@@ -26,7 +26,7 @@ When entering a method annotated with a read-only transaction, Postgres sets the
 
 Note that a method annotated with `@Transactional(readOnly = true)` will throw an exception if there is any kind of database modification happening within the scope of that method.
 
-If the read-only method has no need to be executed within the context of a database transaction, consider removing the annotation altogether.
+If the read-only method has no need to be executed within the context of a database transaction, be explicit and use `@NonTransactional`.
 
 ## Annotating classes
 

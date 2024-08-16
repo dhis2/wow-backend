@@ -330,6 +330,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_39_26 | https://jira.dhis2.org/browse/DHIS2-15689 |
 | V2_39_27 | https://dhis2.atlassian.net/browse/DHIS2-14956 |
 | V2_39_28 | https://dhis2.atlassian.net/browse/DHIS2-15805 |
+| V2_39_29 | https://dhis2.atlassian.net/browse/DHIS2-16442 |
 
 ### 2.40
 
@@ -364,6 +365,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_40_27 | https://dhis2.atlassian.net/browse/DHIS2-15689 |
 | V2_40_27 | https://dhis2.atlassian.net/browse/DHIS2-15689 |
 | V2_40_28 | https://dhis2.atlassian.net/browse/DHIS2-15805 |
+| V2_40_29 | https://dhis2.atlassian.net/browse/DHIS2-16442 |
 
 ### 2.41
 | Version  | Pull request URL |
@@ -403,4 +405,22 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_41_41 | https://dhis2.atlassian.net/browse/DHIS2-15805 |
 | V2_41_42 | https://dhis2.atlassian.net/browse/DHIS2-16369 |
 | V2_41_43 | https://dhis2.atlassian.net/browse/DHIS2-16326 |
+| V2_41_44 | https://dhis2.atlassian.net/browse/DHIS2-16592 |
+| V2_41_45 | https://dhis2.atlassian.net/browse/DHIS2-16326 |
+| ~~V2_41_46~~ | ~~https://dhis2.atlassian.net/browse/DHIS2-16814~~ |
+| V2_41_47 | https://dhis2.atlassian.net/browse/DHIS2-16872 |
+| V2_41_48 | https://dhis2.atlassian.net/browse/DHIS2-16442 |
 
+### 2.42
+| Version  | Pull request URL |
+| -- | --  |
+| V2_42_1  | https://dhis2.atlassian.net/browse/DHIS2-16088 |
+| V2_42_3  | https://dhis2.atlassian.net/browse/DHIS2-16442 |
+| V2_42_4  | https://dhis2.atlassian.net/browse/DHIS2-17623 |
+| V2_42_5  | https://dhis2.atlassian.net/browse/DHIS2-14885 |
+| V2_42_6  | https://dhis2.atlassian.net/browse/DHIS2-14885 |
+| V2_42_7  | https://dhis2.atlassian.net/browse/DHIS2-11518 |
+| V2_42_8  | https://dhis2.atlassian.net/browse/DHIS2-17506 |
+| V2_42_9  | https://dhis2.atlassian.net/browse/DHIS2-17606 |
+| V2_42_10 | https://dhis2.atlassian.net/browse/DHIS2-17703 |
+| V2_42_11 | https://dhis2.atlassian.net/browse/DHIS2-15169 |
