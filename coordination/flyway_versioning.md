@@ -428,3 +428,5 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_42_14 | https://dhis2.atlassian.net/browse/DHIS2-16853 |
 | V2_42_15 | Spring 6 upgrade |
 | V2_42_16 | https://dhis2.atlassian.net/browse/DHIS2-18024 |
+| V2_42_17 | https://dhis2.atlassian.net/browse/DHIS2-18025 |
+
