@@ -1,9 +1,11 @@
 # IntelliJ IDEA + Tomcat Project Setup Guide
 
-This guide assumes you have already installed Tomcat on your machine. 
-Additionally, the Maven, Tomcat and Java EE plugins are required, but they come bundled with IntelliJ IDEA and are enabled by default. Unless you have manually disabled them, your environment should be ready.
+By configuring Tomcat with IntelliJ, you can manage key aspects of your development process, such as debugging, logs and hot swapping, all from within the IDE.
 
-To ensure a smooth setup, follow these steps to configure your project in IntelliJ IDEA:
+This guide assumes you have already installed Tomcat on your machine. 
+Additionally, the Maven, Tomcat and Java EE plugins are required, but they come bundled with IntelliJ and are enabled by default. Unless you have manually disabled them, your environment should be ready.
+
+To ensure a smooth setup, follow these steps to configure your project in IntelliJ:
 
 1. Build with Maven. Run the following commands from the command line:
     - `mvn clean install -f dhis-2/pom.xml -DskipTests=true`
