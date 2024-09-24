@@ -1,7 +1,8 @@
 # IntelliJ IDEA Project Setup Guide
 
 This guide assumes you have already installed Tomcat on your machine. 
-Additionally, the Maven and Tomcat and TomEE plugins are required, but they come bundled with IntelliJ IDEA and are enabled by default. Unless you have manually disabled them, your environment should be ready.
+Additionally, the Maven and Tomcat and Java EE plugins are required, but they come bundled with IntelliJ IDEA and are enabled by default. Unless you have manually disabled them, your environment should be ready.
+
 
 To ensure a smooth setup, follow these steps to configure your project in IntelliJ IDEA:
 
