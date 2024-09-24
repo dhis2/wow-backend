@@ -33,7 +33,7 @@ The following section lists guides on various topics.
 * [Flyway database migration](guides/flyway_db_migration.md)
 * [Git PR & commit messages](guides/git_commit_messages.md)
 * [Git pull requests](guides/git_pull_requests.md)
-* [IDEA hot swapping](guides/idea_hot_swapping.md)
+* [IDEA and Tomcat setup (includes hot swapping)](guides/idea_tomcat_setup.md)
 * [Java coding principles](guides/java_coding_principles.md)
 * [Java 11 pitfalls](guides/java11_pitfalls.md)
 * [JPA and database functions](guides/jpa_database_functions.md)
