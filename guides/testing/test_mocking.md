@@ -1,5 +1,11 @@
 # Mocking and Stubbing guidelines
 
+> [!IMPORTANT]  
+> From Oktober 2024 the addition of new mock based tests has been banned for the DHIS2 core projekt.
+> 
+> Instead: Mainly test logic (especially with many combinations) using plain JUnit. Refactor the code to allow this.
+> Add a happy path and error path integration test to verify wiring. 
+
 ## What is mocking
 
 Unit tests are designed to test the behaviour of specific classes or methods without relying on the behaviour of their dependencies. 
