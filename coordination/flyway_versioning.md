@@ -412,6 +412,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_41_48 | https://dhis2.atlassian.net/browse/DHIS2-16442 |
 | V2_41_49 | https://dhis2.atlassian.net/browse/DHIS2-17496 |
 | V2_41_50 | https://dhis2.atlassian.net/browse/DHIS2-9507 |
+| V2_41_51 | https://dhis2.atlassian.net/browse/DHIS2-18075 |
 
 ### 2.42
 | Version  | Pull request URL |
