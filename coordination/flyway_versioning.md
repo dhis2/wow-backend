@@ -422,7 +422,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_42_4  | https://dhis2.atlassian.net/browse/DHIS2-17623 |
 | V2_42_5  | https://dhis2.atlassian.net/browse/DHIS2-14885 |
 | V2_42_6  | https://dhis2.atlassian.net/browse/DHIS2-14885 |
-| V2_42_7  | https://dhis2.atlassian.net/browse/DHIS2-11518 |
+| V2_42_7  | https://dhis2.atlassian.net/browse/DHIS2-17515 |
 | V2_42_8  | https://dhis2.atlassian.net/browse/DHIS2-17506 |
 | V2_42_9  | https://dhis2.atlassian.net/browse/DHIS2-17606 |
 | V2_42_10 | https://dhis2.atlassian.net/browse/DHIS2-17703 |
@@ -436,3 +436,4 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_42_19 | https://dhis2.atlassian.net/browse/DHIS2-18075 |
 | V2_42_20 | https://dhis2.atlassian.net/browse/DHIS2-9507 |
 | V2_42_21 | https://dhis2.atlassian.net/browse/DHIS2-18020 |
+| V2_42_22 | https://dhis2.atlassian.net/browse/DHIS2-11518 |
