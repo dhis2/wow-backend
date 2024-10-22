@@ -26,7 +26,7 @@ To ensure a smooth setup, follow these steps to configure your project in Intell
 
 5. Configure Local Tomcat:
     - Open the configurations menu and add a new local Tomcat configuration.
-        1. From 2.42 on, you'll need at least Tomcat 11.0.0.
+        1. From 2.42 on, you'll need at least Tomcat 10.
         2. Up until 2.41, use Tomcat 9.0.96 and below.
     - In the _Deployment_ tab:
         1. From 2.42 on, add the artifact named _dhis-web-server:war exploded_. 
