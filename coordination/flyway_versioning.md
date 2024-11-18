@@ -443,3 +443,6 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_42_26 | https://dhis2.atlassian.net/browse/DHIS2-15066 |
 | V2_42_27 | https://dhis2.atlassian.net/browse/DHIS2-18370 |
 | V2_42_28 | https://dhis2.atlassian.net/browse/DHIS2-12600 |
+| V2_42_29 | https://dhis2.atlassian.net/browse/DHIS2-13334 |
+
+
