@@ -448,5 +448,6 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_42_28 | https://dhis2.atlassian.net/browse/DHIS2-12600 |
 | V2_42_29 | https://dhis2.atlassian.net/browse/DHIS2-13334 |
 | V2_42_30 | Adding UID constraints in DB |
+| V2_42_31 | https://dhis2.atlassian.net/browse/DHIS2-18474 |
 
 
