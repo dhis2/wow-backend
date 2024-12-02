@@ -331,6 +331,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_39_27 | https://dhis2.atlassian.net/browse/DHIS2-14956 |
 | V2_39_28 | https://dhis2.atlassian.net/browse/DHIS2-15805 |
 | V2_39_29 | https://dhis2.atlassian.net/browse/DHIS2-16442 |
+| V2_39_30 | https://dhis2.atlassian.net/browse/DHIS2-18020 |
 
 ### 2.40
 
@@ -366,6 +367,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_40_27 | https://dhis2.atlassian.net/browse/DHIS2-15689 |
 | V2_40_28 | https://dhis2.atlassian.net/browse/DHIS2-15805 |
 | V2_40_29 | https://dhis2.atlassian.net/browse/DHIS2-16442 |
+| V2_40_30 | https://dhis2.atlassian.net/browse/DHIS2-18020 |
 
 ### 2.41
 | Version  | Pull request URL |
@@ -413,6 +415,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_41_49 | https://dhis2.atlassian.net/browse/DHIS2-17496 |
 | V2_41_50 | https://dhis2.atlassian.net/browse/DHIS2-9507 |
 | V2_41_51 | https://dhis2.atlassian.net/browse/DHIS2-18075 |
+| V2_41_52 | https://dhis2.atlassian.net/browse/DHIS2-18020 |
 
 ### 2.42
 | Version  | Pull request URL |
@@ -438,3 +441,14 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_42_21 | https://dhis2.atlassian.net/browse/DHIS2-18020 |
 | V2_42_22 | https://dhis2.atlassian.net/browse/DHIS2-11518 |
 | V2_42_23 | https://dhis2.atlassian.net/browse/DHIS2-18239 |
+| V2_42_24 | https://dhis2.atlassian.net/browse/DHIS2-16454 |
+| V2_42_25 | https://dhis2.atlassian.net/browse/DHIS2-18117 |
+| V2_42_26 | https://dhis2.atlassian.net/browse/DHIS2-15066 |
+| V2_42_27 | https://dhis2.atlassian.net/browse/DHIS2-18370 |
+| V2_42_28 | https://dhis2.atlassian.net/browse/DHIS2-12600 |
+| V2_42_29 | https://dhis2.atlassian.net/browse/DHIS2-13334 |
+| V2_42_30 | Adding UID constraints in DB |
+| V2_42_31 | https://dhis2.atlassian.net/browse/DHIS2-18474 |
+| V2_42_32 | https://dhis2.atlassian.net/browse/DHIS2-17200 |
+
+

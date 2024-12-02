@@ -126,3 +126,16 @@ In summary: In tests only _junit_ and DHIS2 `Assertions` should be used directly
 Assertions on specfic DHIS2 types might not be possible to add to DHIS2's `Assertions` class because of module dependencies.
 Long term it would be nice to move such types to the `web-api` package.
 Short term the workaround is to make the assertion work on more general types, maybe introduce an interface in `web-api`.
+
+## Query counting in tests
+
+If we want to assert the amount of queries (select, insert, update, delete) for certain store/service calls, we can use the optional query counter data source in a test.
+Follow these steps to use it:
+- add it on the test class: `@ContextConfiguration(classes = {QueryCountDataSourceProxy.class})`
+- reset the counter before the condition being checked: `SQLStatementCountValidator.reset();`
+- use one of the asserts to confirm expected count: `assertDeleteCount(1);`
+
+Some possible reasons for wanting to use it: 
+- assert only 1 delete after a specific action
+- assert only _n_ selects when querying an object with multiple collection properties
+- assert _n_ updates when changing 1 object in a collection
