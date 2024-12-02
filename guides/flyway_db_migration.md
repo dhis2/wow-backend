@@ -10,6 +10,7 @@ Some of the relevant/interesting sections of flyway documentations for dhis2 dev
 3. [Sql based Migrations](https://flywaydb.org/documentation/migrations#sql-based-migrations)
 4. [Java Based Migrations](https://flywaydb.org/documentation/migrations#java-based-migrations)
 
+[Here](https://github.com/dhis2/wow-backend/blob/master/guides/new_database_table_flyway_migration.md9), you’ll find a guide with detailed steps on how to create a new table migration using Flyway.
 
 ## Dhis2 Support Db Migration Module
 
