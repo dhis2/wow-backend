@@ -13,7 +13,8 @@ Looking into why it takes so long, revealed this info:
 | 49      | total, before test execution    |
 
 # Cut start-up time in half
-There is an optional setup to be able to run a Postgres integration test in half this time (`~25 seconds`). To do this we need: 
+As applying the migrations seems to cause most of the start-up time, we can avoid these by generating a new base schema after the migrations have already been applied. 
+This optional setup allows running a Postgres integration test in half this time (`~25 seconds`). To do this we need: 
 1. a new base schema, generated from:
    1. extensions 
    2. original base schema
