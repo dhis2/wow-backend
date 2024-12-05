@@ -69,4 +69,6 @@ If it is not present, the Postgres container will start up as normal & all migra
 # Points of note 
 The generation of a new base schema will need to be kept up to date to include newer migrations. This could be easily automated, chaining a few commands. 
 
-Always delete the new base schema script from the test directory when finished (do not check-in/commit to GitHub), and revert the test property.
+The file `dhis2-core/dhis-2/dhis-support/dhis-support-test/src/main/resources/db/init-db.sql` is included in the `.gitignore` file as it should never be added. 
+
+Revert the test property when finished.
