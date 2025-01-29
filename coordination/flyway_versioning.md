@@ -203,8 +203,8 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_37_9  | DHIS2-7029-1, https://github.com/dhis2/dhis2-core/pull/7867|
 | V2_37_10 | ? |
 | V2_37_11 | DHIS2-7776, https://jira.dhis2.org/browse/DHIS2-7776 |
-| V2_37_12 | https://jira.dhis2.org/browse/DHIS2-11030 | 
-| V2_37_13 | https://jira.dhis2.org/browse/TECH-608 | 
+| V2_37_12 | https://jira.dhis2.org/browse/DHIS2-11030 |
+| V2_37_13 | https://jira.dhis2.org/browse/TECH-608 |
 | V2_37_14 | https://jira.dhis2.org/browse/DHIS2-11172 |
 | V2_37_15 | https://jira.dhis2.org/browse/DHIS2-9674 |
 | V2_37_16 | https://jira.dhis2.org/browse/DHIS2-8328 |
@@ -452,5 +452,6 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_42_32 | https://dhis2.atlassian.net/browse/DHIS2-17200 |
 | V2_42_33 | https://dhis2.atlassian.net/browse/DHIS2-18549 |
 | V2_42_34 | https://dhis2.atlassian.net/browse/DHIS2-17579 |
+| V2_42_35 | https://dhis2.atlassian.net/browse/DHIS2-18213 |
 
 
