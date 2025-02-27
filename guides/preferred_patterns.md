@@ -84,3 +84,29 @@ where the algorithm needs a modifiable collection.
 **Also:**
 * consider using alternative algorithms that can avoid manipulation, 
   e.g. `stream().map(...)` and alike.
+
+
+## Declarative Service API
+The API offered by the service layer should be declarative and communicate in
+terms of concepts that have a counterpart on the HTTP level.
+
+**Goals:**
+* keep the controller level code minimal
+* make it easy to call services
+* prevent breaking abstraction by mixing input (what to do; intent) with processing state (how to do it; solution)
+* fail with checked exceptions that directly map to HTTP status codes
+
+**Follow:**
+* Use UIDs (not objects) as inputs
+* throw checked exceptions from the `org.hisp.dhis.feedback` package
+* use `ErrorCode`s to add context to exceptions
+
+**Avoid:**
+* avoid asking for objects as input that are hard to obtain (e.g. DB or managed objects), use symbols instead (like a UID)
+* avoid mutating the input (what to do) inside the service
+* avoid creating more checked exceptions (unless they are for a used but not yet covered HTTP response code)
+
+**Exceptions:**
+* internally services should use subtypes of `RuntimeException` in the low level code
+  * reuse existing ones like `IllegalArgumentException`, `NoSuchElementException` where suitable,
+  * create new ones in complex domains when needed
