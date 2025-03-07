@@ -456,5 +456,6 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_42_36 | ??? |
 | V2_42_37 | https://dhis2.atlassian.net/browse/DHIS2-18745 |
 | V2_42_38 | https://dhis2.atlassian.net/browse/DHIS2-18969 |
+| V2_42_39 | https://dhis2.atlassian.net/browse/DHIS2-19067 |
 
 
