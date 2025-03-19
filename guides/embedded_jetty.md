@@ -1,5 +1,7 @@
 # DHIS2 API with Embedded Jetty 
 
+> **Note:** Starting from version 2.42, DHIS2 uses embedded Tomcat instead of Jetty. The functionality remains similar, but the implementation has changed. The main class for Tomcat is `org.hisp.dhis.web.tomcat.Main` located in the `dhis-web-server` module. The rest of this document still applies with Tomcat replacing Jetty references.
+
 The DHIS 2 backend API can be built as a JAR file and deployed with an embedded Jetty server for rapid development and testing.
 
 ## Quickstart
@@ -115,7 +117,7 @@ The reason for requiring this change is because we used to have 2 log4j2 files:
 - 1 which was used for production
 - 1 which was used for local dev  
 
-These have been merged now with the use of embedded Tomcat and a module reshuffle.  
+These have been merged now with the use of embedded Tomcat and a module reshuffle. 
 
 The reason for not having the `console_color` appender as the default (and only one) is because it can cause issues in production relating to:
 - breaking parsers
