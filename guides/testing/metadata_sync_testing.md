@@ -1,9 +1,12 @@
 
 # Metadata Synchronisation
 
-Metadata synchronisation is a fundamental part of DHIS2. The ability to push and pull metadata/data between instances is key behaviour.  
+Metadata synchronisation is a fundamental part of DHIS2. The ability to push and pull metadata/data between instances is key behaviour.
 
-This can be difficult to test, given it requires at least 2 DHIS2 instances set up. The following steps outline how to test a Metadata Synchronisation job using [Instance Manager](https://im.dhis2.org/instances).
+This can be difficult to test, given it requires at least 2 DHIS2 instances set up. The following
+steps outline how to test a Metadata Synchronisation job using [Instance
+Manager](https://im.dhis2.org/instances). Alternatively, you can set up instances [locally using
+Docker](https://github.com/dhis2/dhis2-core/blob/c7bf5b7ef57437a832d967b9bf14109284368900/README.md?plain=1#L85).
 
 # Steps
 
