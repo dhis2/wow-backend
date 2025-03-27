@@ -39,7 +39,8 @@ Limit use of lombok to the following annotations:
 * spring injected contstructors do not need nullability annotations
 
 ## Nullability & Immutability
-* avoid allowing `null` as a possible value
+* never return `null` (exception: private methods)
+* only accept `null` as parameter if that means using a _default behaviour_ of sorts
 * use `@Nonnull` and `@CheckForNull` in `interface`s (and where it seems benefitial)
 * use immutable value types as much as possible
 * assume objects passed into a public method are immutable
@@ -69,6 +70,8 @@ Limit use of lombok to the following annotations:
 * document `interface`s with javadoc
 * don't repeat facts the code already communicates
 * make use of `{@link}` and `{@code}`
+* be brief
+* provide notes on background, intentions, goals, considerations
 
 ## Naming Conventions
 * a bean annotated `@Service` should have the `Service` suffix
@@ -82,3 +85,12 @@ Limit use of lombok to the following annotations:
 * a `get` store or service method should never return `null`, but throw an exception if no result exists
 * a `find` store or service method should return an `Optional<X>` if no result exists
 * use `of` and `copyOf` for factory methods where suitable, e.g. `UID.of`
+
+## High Level Code Organisation
+* keep controller code minimal and about presentation concerns
+* use non-persisted "simple to construct" types as (service) inputs
+* do not mutate method inputs, create new immutable values or accept references and load the mutated object internally
+* make inputs either be data or state, never both
+* keep state internal as much as possible
+* services fail with `org.hisp.dhis.feedback.*` exceptions
+* use `ErrorCode`s to specify details of an exception
