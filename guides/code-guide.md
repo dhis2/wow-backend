@@ -94,3 +94,16 @@ Limit use of lombok to the following annotations:
 * keep state internal as much as possible
 * services fail with `org.hisp.dhis.feedback.*` exceptions
 * use `ErrorCode`s to specify details of an exception
+
+## HTTP Endpoints
+* use one media type per method
+* use one unique path per method
+* avoid mapping based on headers and parameters (and ideally even media types)
+* use dedicated parameter objects for multile and/or reoccuring paramters
+* use default values in parameter objects where possible
+* use `204 NO_CONTENT` response status where possible
+* use `@OpenApi` annotations to add details that cannot be analysed
+* use `UID` over `String` for IDs
+* use `enum`s over `String` for enums
+* use `@RequiresAuthority` when an endpoint always needs a special authority
+* use `PropertyEditor`s to add custom type parameters
