@@ -43,11 +43,14 @@ Limit use of lombok to the following annotations:
 * avoid "nested" streams, a stream should be a chain of operations on the same level
 * use JDK collections only
 * use `List.of`, `Set.of`, `Map.of`, `List.copyOf`, `Set.copyOf`, `Map.copyOf` where possible
+* use stream `toList()` when possible (allows `null`)
 
 > [!Caution]
 > `List.of`, `Set.of`, `Map.of`, `List.copyOf`, `Set.copyOf`, `Map.copyOf` and alike do not allow
 > `null` as a value nor calling methods like `contains` with `null`.
 > Before using them consider if `null` is a possibility.
+> Note also that `Set.of` does not allow duplicates in the source collection,
+> `Map.of` does not preseve order.
 
 ## Utilities
 
