@@ -24,34 +24,36 @@ Guides are placed in the _/guides_ directory. Start guides with the \# h1 header
 
 The following section lists guides on various topics.
 
-* [API testing](guides/testing/api_testing.md)
-* [Auditing](guides/auditing.md)
-* [Code formatting](guides/code_formatting.md)
-* [Coding patterns](guides/preferred_patterns.md)
-* [Component owners](guides/component_owners.md)
-* [Embedded Jetty API build](guides/embedded_jetty.md)
+**Collaboration**
 * [Flyway database migration](guides/flyway_db_migration.md)
+* [Component owners](guides/component_owners.md)
 * [Git PR & commit messages](guides/git_commit_messages.md)
 * [Git pull requests](guides/git_pull_requests.md)
+
+**General Coding**
+* [Code Best Practices and Conventions](guides/code-guide.md)
+* [OpenAPI](guides/open_api.md)
+* [Code formatting](guides/code_formatting.md)
+
+**Running**
+* [Embedded Jetty API build](guides/embedded_jetty.md)
 * [IDEA and Tomcat setup (includes hot swapping)](guides/idea_tomcat_setup.md)
-* [Java coding principles](guides/java_coding_principles.md)
-* [Java 11 pitfalls](guides/java11_pitfalls.md)
+* [Monitoring](guides/monitoring.md)
+* [Ubuntu Linux Android app mirroring](guides/ubuntu_android_app_mirroring.md)
+
+**Testing**
+* [API testing](guides/testing/api_testing.md)
+* [Spring controller testing](guides/testing/spring_controller_testing.md)
+* [Test mocking with Mockito](guides/testing/test_mocking.md)
+* [Testing](guides/testing/testing.md)
+
+**Database**
 * [JPA and database functions](guides/jpa_database_functions.md)
 * [JPA queries](guides/jpa_api.md)
-* [Lombok annotations](guides/lombok.md)
-* [Monitoring](guides/monitoring.md)
 * [New database table Flyway migration](guides/new_database_table_flyway_migration.md)
-* [OpenAPI](guides/open_api.md)
 * [PostgreSQL JSONB](guides/postgres/postgres_jsonb.md)
 * [PostgreSQL commands](guides/postgres/postgresql_commands.md)
 * [PostgreSQL read replica](guides/postgres/postgres_read_replica.md)
-* [Spring controller testing](guides/testing/spring_controller_testing.md)
-* [Spring conventions](guides/spring_conventions.md)
-* [Spring controller endpoints](guides/controller_endpoints.md)
-* [Test mocking with Mockito](guides/testing/test_mocking.md)
-* [Testing](guides/testing/testing.md)
-* [Transactions](guides/transactions.md)
-* [Ubuntu Linux Android app mirroring](guides/ubuntu_android_app_mirroring.md)
 
 ## Coordination
 
@@ -65,6 +67,7 @@ The following pages contain high-level developer documentation for various solut
 
 * [Job scheduling](docs/job_scheduling.md)
 * [Data value set import/export](docs/datavalueset.md)
+* [Auditing](guides/auditing.md)
 
 ## Talks
 
