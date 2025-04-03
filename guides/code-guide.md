@@ -1,5 +1,8 @@
 # Code Best Practices and Conventions
 
+## Caching
+* avoid using `CacheProvider` (cluster/cache2k) cache for objects that are or reference hibernate managed objects or detached instances of these
+
 ## Transactions
 Transaction handling is done on the service level. 
 All `public` methods of a `@Service` level bean should be annotated with one of the following
