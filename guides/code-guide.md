@@ -77,6 +77,7 @@ Limit use of lombok to the following annotations:
 * provide notes on background, intentions, goals, considerations
 
 ## Naming Conventions
+Java
 * a bean annotated `@Service` should have the `Service` suffix
 * a bean annotated `@Repositiry` should have the `Store` suffix
 * a bean annotated `@Configuration` should have the `Config` suffix
@@ -88,6 +89,12 @@ Limit use of lombok to the following annotations:
 * a `get` store or service method should never return `null`, but throw an exception if no result exists
 * a `find` store or service method should return an `Optional<X>` if no result exists
 * use `of` and `copyOf` for factory methods where suitable, e.g. `UID.of`
+
+SQL
+* SQL keywords use UPPER CASE
+* SQL table and column names are not quoted (unless required to avoid keyword collision)
+* a single column index: `CREATE INDEX IF NOT EXISTS in_{table}_{column} ON {table} ({column});`
+  
 
 ## High Level Code Organisation
 * keep controller code minimal and about presentation concerns
