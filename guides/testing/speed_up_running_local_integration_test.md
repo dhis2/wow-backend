@@ -12,7 +12,7 @@ Looking into why it takes so long, revealed this info:
 | 7       | for App to come up              |
 | 49      | total, before test execution    |
 
-# Cut start-up time in half
+# Option 1 - Cut start-up time in half
 As applying the migrations seems to cause most of the start-up time, we can avoid these by generating a new base schema after the migrations have already been applied. 
 This optional setup allows running a Postgres integration test in half this time (`~25 seconds`). To do this we need: 
 1. a new base schema, generated from:
@@ -66,9 +66,39 @@ This directory will be checked during Postgres container creation, to see if the
 If it is present, the Postgres container will use that script to initialize the DB. 
 If it is not present, the Postgres container will start up as normal & all migrations will be applied to the base schema (original setup). 
 
-# Points of note 
+## Points of note 
 The generation of a new base schema will need to be kept up to date to include newer migrations. This could be easily automated, chaining a few commands. 
 
 The file `dhis2-core/dhis-2/dhis-support/dhis-support-test/src/main/resources/db/init-db.sql` is included in the `.gitignore` file as it should never be added. 
 
 Revert the test property when finished.
+
+# Option 2 - Cut start-up almost completely
+A new integration test config `use.local.dhis.conf` has been added to the `postgresTestDhis.conf` file. If the value is set to `yes` or `true` then the integration test will use your local `dhis.conf` file for all config. This includes which database to use for the test, bypassing the need to docker.
+
+The intended use of this setting is for scenarios where you might be developing a new feature or debugging and will be running the same test(s) multiple times.
+
+It is not intended to run the entire integration test suite, as some tests require custom dhis config.
+
+Requirements:  
+- have an empty DB with all required extensions running (see script below)
+- update `postgresTestDhis.conf` with config `use.local.dhis.conf=yes`
+- ensure your local `dhis.conf` file points to the correct DB and includes the following config `hibernate.cache.use_second_level_cache=false`  
+
+Watch out for other properties in `postgresTestDhis.conf` that may be required in your local `dhis.conf`.
+
+## Empty DHIS2 DB script
+```text
+#!/bin/bash
+
+echo "drop database dhis2";
+sudo -u <your_postgres_user> dropdb dhis2 --if-exists
+
+echo "create database dhis2";
+sudo -u <your_postgres_user> createdb -O dhis dhis2
+
+echo "create extensions";
+sudo -u <your_postgres_user> psql -c "create extension postgis;" dhis2
+sudo -u <your_postgres_user> psql -c "create extension pg_trgm;" dhis2
+sudo -u <your_postgres_user> psql -c "create extension btree_gin;" dhis2
+```
