@@ -91,7 +91,7 @@ Java
 * use `of` and `copyOf` for factory methods where suitable, e.g. `UID.of`
 
 SQL
-* SQL keywords use UPPER CASE
+* SQL keywords use upper or lower consitently in a statement (teams can chose to only use upper or lower)
 * SQL table and column names are not quoted (unless required to avoid keyword collision)
 * a single column index: `CREATE INDEX IF NOT EXISTS in_{table}_{column} ON {table} ({column});`
   
