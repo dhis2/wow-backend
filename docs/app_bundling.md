@@ -48,7 +48,7 @@ The installation of the bundled apps happens automatically when the DHIS2 server
 
 - The `BundledAppManager` service locates the `apps-bundle.json` manifest on the classpath.
 - It iterates through the list of apps in the manifest. For each app, it compares the `ETag` from the bundle manifest with the `Etag` of the app that is currently installed in the DHIS2 instance (if any).
-- If an app is not installed, or if the `ETag` differ (indicating a new version), the `BundledAppManager` triggers a re-installation of the app from the corresponding ZIP file found in the classpath.
+- If an app is not installed, or if the `ETag` differ (indicating a new version), the `BundledAppManager` triggers a re-installation of the app, using the new .ZIP file for that app that the AppBundler has downloaded during the build.
 
 This ensures that the DHIS2 instance always runs the versions of the apps that were bundled during the last successful build. It ensures that all the apps, either pre-bundled, installed manually or installed via the app-hub are installed and stored the same way, all using the JCloudStorageService for handling the storage. This means that all apps now “live” in the DHIS2_HOME/files/app folder, if you are using local storage.
 
