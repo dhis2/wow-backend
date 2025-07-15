@@ -1,4 +1,4 @@
-# # 2.43 App Bundling Process
+# 2.43 App Bundling Process
 
 ## Overview
 
