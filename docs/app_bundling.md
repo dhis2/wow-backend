@@ -6,7 +6,7 @@ This document explains the new Java-based application bundling process introduce
 
 The primary goal is to fetch pre-packaged application ZIP archives directly, eliminating the overhead and potential failures associated with cloning Git repositories and managing Node.js dependencies for this part of the build.
 
-## The Build Process: A Developer's Perspective
+## The Build Process: A Backend Developer's Perspective
 
 As a Java developer, when you run a standard Maven build (e.g., `mvn clean install`), you will notice the new app bundling process during the `dhis-web-server` module's lifecycle.
 
