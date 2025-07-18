@@ -17,7 +17,7 @@ This will be the central server, which remote servers try to synchronise with.
 2. give appropriate name e.g. `metadata-sync-central`
 3. choose the image you wish to test with
 4. choose the database with the name `dev/min-metadata-sync-2-39.sql.gz`  
-	> **NOTE:** This Sierra Leone DB (2.39) has been modified using [these commands below](#sql-commands), in order for a Metadata Sync job to complete quickly.
+	> **NOTE:** This Sierra Leone DB (2.39) has been modified using [these commands below](#sql-commands), in order for a Metadata Sync job to complete quickly. This is known to work for version 2.40. To use a newer database see [these steps below](#bypass-data-sync) which allow for selecting data to sync by date.
 5. click create (it can take a few mins to start-up)
 
 ## Create remote DHIS2 instance
@@ -27,7 +27,7 @@ This will be the remote server, which will synchronise with the central server.
 2. give appropriate name e.g. `metadata-sync-remote`
 3. choose the image you wish to test with
 4. choose the database with the name `dev/min-metadata-sync-2-39.sql.gz`  
-   > **NOTE:** This Sierra Leone DB (2.39) has been modified using [these commands below](#sql-commands), in order for a Metadata Sync job to complete quickly.
+   > **NOTE:** This Sierra Leone DB (2.39) has been modified using [these commands below](#sql-commands), in order for a Metadata Sync job to complete quickly. This is known to work for version 2.40. To use a newer database see [these steps below](#bypass-data-sync) which allow for selecting data to sync by date.
 5. click create (it can take a few mins to start-up)
 
 ## Setup Sync Settings on Remote Server
@@ -361,6 +361,14 @@ It should look something like this:
 ```
 
 There is an easier way to check if a Metadata Sync job was successful, checking the `lastExecutedStatus` field on a `JobConfiguration`, but [this bug](https://dhis2.atlassian.net/browse/DHIS2-17292) needs to be fixed before being able to check this way.
+
+# Bypass Data Sync
+Syncing data can take a long time depending on the amount in the system. These requests can be used to only sync data after a specific date. Use dates that suit your needs.  
+Sample date used in the requests below: `2025-01-17T16:35:00.090`
+- `POST` `/api/systemSettings/keyLastSuccessfulDataSynch?value={date}`
+- `POST` `/api/systemSettings/keyLastSuccessfulEventsDataSynch?value={date}`
+- `POST` `/api/systemSettings/keyLastCompleteDataSetRegistrationSyncSuccess?value={date}`
+- `POST` `/api/systemSettings/syncSkipSyncForDataChangedBefore?value={date}`
 
 # SQL Commands
 > **NOTE:** The `dev/min-metadata-sync-2-39.sql.gz` has already had these commands executed on it, these commands are purely here to show how that DB got to its state.  
