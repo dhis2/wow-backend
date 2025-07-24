@@ -492,4 +492,5 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_43_14 | https://dhis2.atlassian.net/browse/DHIS2-19865 |
 | V2_43_15 | https://dhis2.atlassian.net/browse/DHIS2-19758 |
 | V2_43_16 | https://dhis2.atlassian.net/browse/DHIS2-19889 |
+| V2_43_17 | https://dhis2.atlassian.net/browse/DHIS2-19679 |
 
