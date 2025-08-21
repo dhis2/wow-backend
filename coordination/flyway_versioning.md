@@ -500,3 +500,4 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_43_22 | https://dhis2.atlassian.net/browse/DHIS2-12547 |
 | V2_43_23 | https://dhis2.atlassian.net/browse/DHIS2-19960 |
 | V2_43_24 | https://dhis2.atlassian.net/browse/DHIS2-12243 |
+| V2_43_25 | https://dhis2.atlassian.net/browse/DHIS2-8162 |
