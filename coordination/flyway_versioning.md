@@ -55,6 +55,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_43_24 | https://dhis2.atlassian.net/browse/DHIS2-12243 |
 | V2_43_25 | https://dhis2.atlassian.net/browse/DHIS2-8162 |
 | V2_43_26 | https://dhis2.atlassian.net/browse/DHIS2-20062 |
+| V2_43_27 | https://dhis2.atlassian.net/browse/DHIS2-20062 |
 
 ### 2.42
 | Version  | Pull request URL |
