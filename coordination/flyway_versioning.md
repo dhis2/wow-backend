@@ -503,5 +503,6 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_34_43 | https://jira.dhis2.org/browse/DHIS2-11599  |
 | V2_34_44 | https://jira.dhis2.org/browse/DHIS2-11693  |
 | V2_34_45 | https://jira.dhis2.org/browse/TECH-823 |
+| V2_34_46 | https://dhis2.atlassian.net/browse/DHIS2-20106 |
 
 
