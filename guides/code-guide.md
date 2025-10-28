@@ -4,7 +4,7 @@
 Overall goal: **Simplification** by reducing the problem space
 
 1. **Local truth**: DHIS2 records what it can observe itself, input cannot override it
-2. **Session User only**: Current user is always the attributed user, input cannot override it
+2. **Session User only**: The attributed user is always the current user, input cannot override it
 3. **Simple, stateless static methods only**: Static methods never make static access nor accept spring beans as parameter
 
 ## Caching
