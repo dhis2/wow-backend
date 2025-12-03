@@ -4,7 +4,7 @@
 * avoid using `CacheProvider` (cluster/cache2k) cache for objects that are or reference hibernate managed objects or detached instances of these
 
 ## Transactions
-Transaction handling is done on the service level. 
+Transaction handling is done on the service level.
 All `public` methods of a `@Service` level bean should be annotated with one of the following
 
 * `@Transactional(readOnly=true)`: a **reading** TX handled by spring opens/closes, usually uses stores, might call other services
@@ -16,6 +16,21 @@ All `public` methods of a `@Service` level bean should be annotated with one of 
 > There are a few exceptions where `@Transactional` is used on the store level.
 > In some special circumstances this is needed to avoid a otherwise taskless intermediate service level.
 > Don't get inspired by these ;)
+
+### Controllers and OSIV
+> [!Warning]
+> OSIV (Open Session In View) is currently active in the application but is an
+> [anti-pattern](https://vladmihalcea.com/the-open-session-in-view-anti-pattern/) that causes
+> database connections to be held for the entire HTTP request duration, leading to connection pool
+> exhaustion and performance issues. OSIV will be removed entirely in the future.
+
+**Do not rely on OSIV.** Instead:
+
+* use explicit transaction management with `@Transactional`
+* add your endpoint patterns to the OSIV exclude filter in `ConditionalOpenEntityManagerInViewFilter`
+  to prevent unnecessary database connection hold times
+* controllers inheriting from the abstract CRUD controller family cannot currently be excluded from
+  OSIV as field filtering relies on OSIV, but this will be addressed in the future
 
 ## Lombok
 Limit use of lombok to the following annotations:
@@ -30,7 +45,7 @@ Limit use of lombok to the following annotations:
 > `@ToString` and `@EqualsAndHashCode` require to think about the fields that should
 > be included or excluded. Use the `@Include` and `@Exclude` annotations.
 > The preferred default for objects which should not include all fields is to use
-> explciit inclusion. 
+> explicit inclusion.
 
 > [!Important]
 > The codebase contains a few more annotations in a few places.
