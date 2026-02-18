@@ -27,11 +27,12 @@ This usually means a high level feature that corresponds to a relativly self-con
 | Aggregate Data Validation Rules | ? | ? |
 | Aggregate Data Approval | ? | ? |
 | Job Scheduling | Jan | ? |
-| Settings | Jan | ? |
+| System Settings | Jan | ? |
 | (Meta)Data Ingetrity (Checks) | Jan | ? |
 | Gist Metadata API | Jan | ? |
 | JSON-tree lib | Jan | ? |
 | OpenAPI | Jan | ? |
+| User Settings | Jan? | ? |
 
 
 
