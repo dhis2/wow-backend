@@ -19,13 +19,21 @@ This usually means a high level feature that corresponds to a relativly self-con
 | Component | Owner  | Priority |
 | :---------| :----- | :------- |
 | Aggregate Data Entry | Jan | ? |
+| Aggregate Data SMS Entry | ? | ? |
+| Aggregate Data Changelog | Jan | ? |
 | Aggregate Data Export | Jan | ? |
+| Aggregate Data Audit | ? | ? |
+| Aggregate Data Set-Completeness | ? | ? |
+| Aggregate Data Validation Rules | ? | ? |
+| Aggregate Data Approval | ? | ? |
 | Job Scheduling | Jan | ? |
 | Settings | Jan | ? |
 | (Meta)Data Ingetrity (Checks) | Jan | ? |
 | Gist Metadata API | Jan | ? |
 | JSON-tree lib | Jan | ? |
 | OpenAPI | Jan | ? |
+
+
 
 ## Appendix
 A list of components brainstromed in the past 
@@ -34,15 +42,8 @@ that might help to find/pick/remember what to add to the above list.
 ```
 # Data
 
-- data entry (general writing)
-- data entry SMS
-- data export (general reading)
-- data audit (changelog)
 - data sync
 - data exchange (ADE)
-- data completeness
-- data approval
-- data validation rules
 - others: data special use case APIs (e.g. dedicated app support)
 - datastore (former platform)
 
@@ -50,13 +51,11 @@ that might help to find/pick/remember what to add to the above list.
 # Metadata
 
 - metadata API (general reading)
-- metadata Gist API (general reading)
 - metadata importer (general writing) (inkl. deletion handlers + bundle hooks)
 - metadata patch (partial update support)
 - metadata sync
 - metadata merge
 - metadata sharing
-- metadata integrity (AKA data integrity)
 - metadata periods
 - others: metadata special use case APIs (e.g. dedicated app support)
 
@@ -65,9 +64,8 @@ that might help to find/pick/remember what to add to the above list.
 
 - users + roles
 - messages
-- settings + configuration
+- configuration
 - icons + files
-- jobs
 - translations
 - SQL views
 - metrics
@@ -77,9 +75,7 @@ that might help to find/pick/remember what to add to the above list.
 
 # Tech + Libs
 
-- tests
 - builds
-- JSON-tree
 - expression-parser
 - caching and cluster mode
 - emails
