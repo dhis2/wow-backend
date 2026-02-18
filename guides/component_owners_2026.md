@@ -25,6 +25,7 @@ This usually means a high level feature that corresponds to a relativly self-con
 | (Meta)Data Ingetrity (Checks) | Jan | ? |
 | Gist Metadata API | Jan | ? |
 | JSON-tree lib | Jan | ? |
+| OpenAPI | Jan | ? |
 
 ## Appendix
 A list of components brainstromed in the past 
