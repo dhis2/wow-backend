@@ -33,8 +33,19 @@ This usually means a high level feature that corresponds to a relativly self-con
 | JSON-tree lib | Jan | ? |
 | OpenAPI | Jan | ? |
 | User Settings | Jan? | ? |
-
-
+| Authentication & IdP | Morten S. | ? |
+| User & User group & User roles | Morten S. | ? |
+| 2FA | Morten S. | ? |
+| OAuth2 & OIDC & JWT | Morten S. | ? |
+| LDAP | Morten S. | ? |
+| PAT | Morten S. | ? |
+| Auditing | Morten S. | ? |
+| App support & Bundling | Morten S. | ? |
+| Static resource cache | Morten S. | ? |
+| API cache | Morten S. | ? |
+| L2 Cache invalidaiton | Morten S. | ? |
+| Clustering | Morten S. | ? |
+| Connection pool | Morten S. | ? |
 
 ## Appendix
 A list of components brainstromed in the past 
@@ -72,6 +83,11 @@ that might help to find/pick/remember what to add to the above list.
 - metrics
 - multi-calendar
 - app support
+- file storage & object storage
+- event hooks
+- sms support
+- route API
+- flyway
 
 
 # Tech + Libs
