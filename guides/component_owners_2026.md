@@ -46,6 +46,7 @@ This usually means a high level feature that corresponds to a relativly self-con
 | L2 Cache invalidaiton | Morten S. | ? | |
 | Clustering | Morten S. | ? | |
 | Connection pool | Morten S. | ? | |
+| Configurations | Morten S. | ? | |
 | Periods | ? | Jan | incl. period types, custom periods, multi-calendar |
 
 ## Appendix
