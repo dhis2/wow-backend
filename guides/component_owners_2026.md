@@ -16,37 +16,37 @@ This usually means a high level feature that corresponds to a relativly self-con
 
 ## Platform Team
 
-| Component | Owner  | Priority |
-| :---------| :----- | :------- |
-| Aggregate Data Entry | Jan | ? |
-| Aggregate Data SMS Entry | ? | ? |
-| Aggregate Data Changelog | Jan | ? |
-| Aggregate Data Export | Jan | ? |
-| Aggregate Data Audit | ? | ? |
-| Aggregate Data Set-Completeness | ? | ? |
-| Aggregate Data Validation Rules | ? | ? |
-| Aggregate Data Approval | ? | ? |
-| Job Scheduling | Jan | ? |
-| System Settings | Jan | ? |
-| (Meta)Data Ingetrity (Checks) | Jan | ? |
-| Gist Metadata API | Jan | ? |
-| JSON-tree lib | Jan | ? |
-| OpenAPI | Jan | ? |
-| User Settings | Jan? | ? |
-| Authentication & IdP | Morten S. | ? |
-| User & User group & User roles | Morten S. | ? |
-| 2FA | Morten S. | ? |
-| OAuth2 & OIDC & JWT | Morten S. | ? |
-| LDAP | Morten S. | ? |
-| PAT | Morten S. | ? |
-| Auditing | Morten S. | ? |
-| App support & Bundling | Morten S. | ? |
-| Static resource cache | Morten S. | ? |
-| API cache | Morten S. | ? |
-| L2 Cache invalidaiton | Morten S. | ? |
-| Clustering | Morten S. | ? |
-| Connection pool | Morten S. | ? |
-| Periods (& types, multi-calendar, custom periods) | ? | ? |
+| Component | Owner  | Disciple(s) | Comments |
+| :---------| :----- | :------- | :-----------|
+| Aggregate Data Entry | Jan | - | |
+| Aggregate Data SMS Entry | ? | - | |
+| Aggregate Data Changelog | Jan | - | |
+| Aggregate Data Export | Jan | - | |
+| Aggregate Data Audit | ? | ? | |
+| Aggregate Data Set-Completeness | ? | Jan | |
+| Aggregate Data Validation Rules | ? | ? | |
+| Aggregate Data Approval | ? | ? | |
+| Job Scheduling | Jan | - | |
+| System Settings | Jan | - | |
+| (Meta)Data Ingetrity (Checks) | Jan | - | |
+| Gist Metadata API | Jan | - | |
+| JSON-tree lib | Jan | - | |
+| OpenAPI | Jan | - | |
+| User Settings | Jan? | ? | |
+| Authentication & IdP | Morten S. | ? | |
+| User & User group & User roles | Morten S. | ? | |
+| 2FA | Morten S. | ? | |
+| OAuth2 & OIDC & JWT | Morten S. | ? | |
+| LDAP | Morten S. | ? | |
+| PAT | Morten S. | ? | |
+| Auditing | Morten S. | ? | |
+| App support & Bundling | Morten S. | ? | |
+| Static resource cache | Morten S. | ? | |
+| API cache | Morten S. | ? | |
+| L2 Cache invalidaiton | Morten S. | ? | |
+| Clustering | Morten S. | ? | |
+| Connection pool | Morten S. | ? | |
+| Periods | ? | Jan | incl. period types, custom periods, multi-calendar |
 
 ## Appendix
 A list of components brainstromed in the past 
