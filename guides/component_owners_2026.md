@@ -48,6 +48,10 @@ This usually means a high level feature that corresponds to a relativly self-con
 | Connection pool | Morten S. | ? | |
 | Configurations | Morten S. | ? | |
 | Periods | ? | Jan | incl. period types, custom periods, multi-calendar |
+| Metadata merge | David | | |
+| Metadata copy | David | | |
+| File/Object storage | David? | | |
+| FileResource cleanup | David | | |
 
 ## Appendix
 A list of components brainstromed in the past 
