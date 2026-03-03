@@ -81,9 +81,10 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_43_50 | https://dhis2.atlassian.net/browse/DHIS2-20891 |
 | V2_43_51 | https://dhis2.atlassian.net/browse/DHIS2-20845 |
 | V2_43_52 | https://dhis2.atlassian.net/browse/DHIS2-20486 |
-| V2_43_53 | https://dhis2.atlassian.net/browse/DHIS2-20991 |
+| V2_43_53 | https://github.com/dhis2/dhis2-core/pull/23061 |
 | V2_43_54 | User performance                               |
 | V2_43_55 | https://dhis2.atlassian.net/browse/DHIS2-20416 |
+| V2_43_56 | https://github.com/dhis2/dhis2-core/pull/23093 |
 
 ### 2.42
 | Version  | Pull request URL |
