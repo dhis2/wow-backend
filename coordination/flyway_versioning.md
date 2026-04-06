@@ -85,6 +85,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_43_54 | User performance                               |
 | V2_43_55 | https://dhis2.atlassian.net/browse/DHIS2-20416 |
 | V2_43_56 | https://github.com/dhis2/dhis2-core/pull/23093 |
+| V2_43_57 | Tracker event orgunit denormilization |
 
 ### 2.42
 | Version  | Pull request URL |
