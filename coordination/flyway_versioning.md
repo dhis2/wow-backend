@@ -26,6 +26,11 @@ Regarding backports of Flyway migrations, extreme caution must be taken in order
 
 The table below contains a list of migration versions. Please reserve the appropriate version using the migration version and the link to the corresponding Jira issue or PR.
 
+### 2.44
+| Version  | Pull request URL |
+| -- | --  |
+| V2_44_1 | https://dhis2.atlassian.net/browse/DHIS2-21253 |
+
 ### 2.43
 | Version  | Pull request URL |
 | -- | --  |
