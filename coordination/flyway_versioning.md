@@ -29,6 +29,7 @@ The table below contains a list of migration versions. Please reserve the approp
 ### 2.44
 | Version  | Pull request URL |
 | -- | --  |
+| V2_44_1 | https://dhis2.atlassian.net/browse/DHIS2-21330 |
 
 ### 2.43
 | Version  | Pull request URL |
