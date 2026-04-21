@@ -30,6 +30,9 @@ The table below contains a list of migration versions. Please reserve the approp
 | Version  | Pull request URL |
 | -- | --  |
 | V2_44_1 | https://dhis2.atlassian.net/browse/DHIS2-21330 |
+| V2_44_2 | https://dhis2.atlassian.net/browse/DHIS2-21347 |
+‎dhis-2/dhis-support/dhis-support-db-migration/src/main/resources/org/hisp/dhis/db/migration/2.44/V2_44_2__add_name_to_oauth2_client.sql‎
+
 
 ### 2.43
 | Version  | Pull request URL |
@@ -91,6 +94,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_43_55 | https://dhis2.atlassian.net/browse/DHIS2-20416 |
 | V2_43_56 | https://github.com/dhis2/dhis2-core/pull/23093 |
 | V2_43_57 | Data value trim job index |
+| V2_43_58 | https://dhis2.atlassian.net/browse/DHIS2-21347 |
 
 ### 2.42
 | Version  | Pull request URL |
