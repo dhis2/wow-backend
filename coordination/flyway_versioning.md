@@ -202,6 +202,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_41_55 | https://dhis2.atlassian.net/browse/DHIS2-19208 |
 | V2_41_56 | V2_41_56__Add_responsetimeout_route.sql ???   |
 | V2_41_57 | https://dhis2.atlassian.net/browse/DHIS2-9851 |
+| V2_41_58 | https://dhis2.atlassian.net/browse/DHIS2-21416|
 
 ### 2.40
 
