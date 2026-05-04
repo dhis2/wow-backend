@@ -96,6 +96,9 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_43_56 | https://github.com/dhis2/dhis2-core/pull/23093 |
 | V2_43_57 | Data value trim job index |
 | V2_43_58 | https://dhis2.atlassian.net/browse/DHIS2-21347 |
+| V2_43_59 | https://dhis2.atlassian.net/browse/DHIS2-21361 |
+| V2_43_60 | https://dhis2.atlassian.net/browse/DHIS2-21361 |
+
 
 ### 2.42
 | Version  | Pull request URL |
