@@ -98,6 +98,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_43_58 | https://dhis2.atlassian.net/browse/DHIS2-21347 |
 | V2_43_59 | https://dhis2.atlassian.net/browse/DHIS2-21361 |
 | V2_43_60 | https://dhis2.atlassian.net/browse/DHIS2-21361 |
+| V2_43_61 | https://dhis2.atlassian.net/browse/DHIS2-21416 |
 
 
 ### 2.42
@@ -149,6 +150,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_42_46 | https://dhis2.atlassian.net/browse/DHIS2-19112 |
 | V2_42_47 | https://dhis2.atlassian.net/browse/DHIS2-19208 |
 | V2_42_48 | https://dhis2.atlassian.net/browse/DHIS2-9851 |
+| V2_42_49 | https://dhis2.atlassian.net/browse/DHIS2-21416|
 
 ### 2.41
 | Version  | Pull request URL |
@@ -243,6 +245,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_40_32 | https://dhis2.atlassian.net/browse/DHIS2-19112 |
 | V2_40_33__Add_responsetimeout_route.sql |
 | V2_40_34 | https://dhis2.atlassian.net/browse/DHIS2-9851 |
+| V2_40_35 | https://dhis2.atlassian.net/browse/DHIS2-21416|
 
 ### 2.39
 
