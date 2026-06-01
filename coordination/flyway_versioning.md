@@ -38,6 +38,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_44_7 | https://dhis2.atlassian.net/browse/DHIS2-21537 |
 | V2_44_8 | https://dhis2.atlassian.net/browse/DHIS2-21537 |
 | V2_44_9 | JPP                                            |
+| V2_44_10 | https://dhis2.atlassian.net/browse/DHIS2-21537 |
 
 ### 2.43
 | Version  | Pull request URL |
