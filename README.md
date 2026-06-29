@@ -7,7 +7,8 @@ The purpose of this document is to works as a resource for any developer working
 1. Using this document
 2. Contributing
 3. Guides
-3. Coordination
+4. Coordination
+5. Skills (for Claude Code)
 
 ## Using this document
 
@@ -68,6 +69,12 @@ The following pages contain high-level developer documentation for various solut
 * [Job scheduling](docs/job_scheduling.md)
 * [Data value set import/export](docs/datavalueset.md)
 * [Auditing](guides/auditing.md)
+
+## Skills (for Claude Code)
+
+Reusable Claude Code skills that capture team workflows. See [`skills/`](skills/) for the list and installation instructions.
+
+* [`syncing-dhis2-translations`](skills/syncing-dhis2-translations/) — fixing fake "English-as-translation" entries, pushing to Transifex, handling stuck `dhis2-bot` sync PRs, coordinating cleanup across release branches.
 
 ## Talks
 
