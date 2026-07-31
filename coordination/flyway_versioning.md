@@ -229,6 +229,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_41_57 | https://dhis2.atlassian.net/browse/DHIS2-9851 |
 | V2_41_58 | https://dhis2.atlassian.net/browse/DHIS2-21416|
 | V2_41_59 | https://dhis2.atlassian.net/browse/DHIS2-21273 |
+| V2_41_60 | https://dhis2.atlassian.net/browse/DHIS2-18694 |
 
 ### 2.40
 
