@@ -1,68 +1,48 @@
-# Guidelines for AI-assisted development
+# Guidelines for AI-Assisted Development
 
-## Why introduce guidelines?
+## Why Introduce Guidelines?
 
-DHIS2 allows using coding agents as part of project development. After several months of use, it has become obvious that we need some guidelines to maintain valuable human interactions and attempt to integrate AI code successfully. Some byproducts of AI use can be:
-- overly-lengthy text descriptions
-- text descriptions ___can be___ harder to comprehend vs someone's own thoughts
+DHIS2 uses AI as part of project development. After several months of use, it has become clear that we need some guidelines to maintain valuable human interactions and ensure that AI-generated code is integrated successfully. AI-assisted development can introduce issues such as:
+- overly long text descriptions
+- text that can obscure the author's intended meaning or actual thoughts
 - code that may not be fully understood by the human author
 - code that may not fit in with project direction/patterns/guidelines
-- communicating with collegues through AI
-- not being considerate to fellow colleagues
+- replacing meaningful communication with colleagues
+- being less considerate to colleagues
 
 These guidelines should be treated as a living document. They can be updated/debated as new behaviours emerge and existing behaviours change over time.
 
-Initial guideline categories cover aspects like:
-- `Language`
-    - words used
-    - scope
-    - meaning
-    - structure
-- `Code`
-    - comprehension of produced code
-    - relevance of produced code
-    - bloat
-    - project compatibility (style, convention, patterns etc.)
-- `Human Interaction`
-    - consideration for fellow colleagues
-    - keeping meaningful/valuable human interactions
-
 ## Guidelines
 
-### Language
-1. Text produced by AI should be fully understandable and easy to read. Some examples:
+**Guiding principle:** AI should assist, not replace, human judgement or ownership.
+
+### Text
+1. Text drafted with AI should be clear, concise and understandable to its intended audience. This includes, for example:
     - PR descriptions
     - Jira issues (features, bugs)
     - code comments
 
-   If the text looks too wordy or convoluted, use your judgement and edit until it:
-    - reads more easily
-    - is clearer
-    - is more concise
+   If the text is unnecessarily wordy or convoluted, use your judgement and edit it to make it clearer and more concise.
+2. Text should communicate the author's intended meaning and not the AI's explanation of its own process.
 
 ### Code
-1. Code produced **must** be fully understood by the author. The author should be able to:
+1. AI-generated code **must** be reviewed and fully understood by the author before it is committed. The author should be able to:
     - explain what the code does
     - answer any questions about the code
-    - defend/advocate why the code is warranted
-2. Code produced should align with project direction/patterns
-
-3. New patterns/approaches should benefit and fit in with the project. They should:
-    - help long-term vision
-    - ideally not be one-off hacks
+    - explain and justify why the code is needed
+2. AI-generated code should follow existing project patterns, conventions and architectural direction.
+3. New patterns or approaches should only be introduced when they provide a clear long-term benefit to the project.
+4. Avoid unnecessary code, abstractions, dependencies and complexity. Solutions should be no more complex than necessary to solve the problem.
 
 ### Human Interaction
-1. Do not dump AI output onto a colleague. This may be from an AI code review or a bug report. Try to:
-    - understand it (where possible)
-    - filter out false positives before sending on
-    - filter out noise/unnecessary text
-    - confirm/reproduce its assertions/theories/claims
-
-2. Keep human-to-human communication where relevant/valuable
+1. Do not pass AI-generated output directly to a colleague without reviewing it first. This may be from an AI code review or for a bug report. Before sharing, the author should:
+    - understand it
+    - filter out false positives
+    - remove noise and unnecessary text
+    - verify or reproduce its claims
+2. The author should take ownership of the message and communicate the conclusion in their own words.
+3. Keep meaningful human-to-human communication where relevant and valuable:
     - PR comments/responses
     - Jira issue comments/responses
     - Slack messages
-
-## Can any of this be automated?
-
-Some of the guidelines could ___potentially___ be automated which would make things easier e.g. Experiment with agent config/tools to get closer to a desired output for `Language` & `Code` topics.
+4. Reply to review comments yourself. Do not configure an agent to auto-respond.
