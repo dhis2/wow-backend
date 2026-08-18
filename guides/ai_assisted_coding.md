@@ -42,8 +42,4 @@ The `platform-backend` team is adopting these guidelines to start with. These gu
     - remove noise and unnecessary text
     - verify or reproduce its claims
 3. The author should take ownership of the message and communicate the conclusion in their own words.
-4. Keep meaningful human-to-human communication where relevant and valuable:
-    - PR comments/responses
-    - Jira issue comments/responses
-    - Slack messages
-5. Reply to review comments yourself. Do not configure an agent to auto-respond.
+4. Post your own Slack messages and PR/Jira comments (whether you're starting a thread or replying). Drafting with AI is fine, wiring up an agent to post or reply for you is not.
