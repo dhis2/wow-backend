@@ -10,7 +10,7 @@ DHIS2 uses AI as part of project development. After several months of use, it ha
 - replacing meaningful communication with colleagues
 - being less considerate to colleagues
 
-These guidelines should be treated as a living document. They can be updated/debated as new behaviours emerge and existing behaviours change over time.
+The `platform-backend` team is adopting these guidelines to start with. These guidelines should be treated as a living document. They can be updated/debated as new behaviours emerge and existing behaviours change over time.
 
 ## Guidelines
 
@@ -35,14 +35,15 @@ These guidelines should be treated as a living document. They can be updated/deb
 4. Avoid unnecessary code, abstractions, dependencies and complexity. Solutions should be no more complex than necessary to solve the problem.
 
 ### Human Interaction
-1. Do not pass AI-generated output directly to a colleague without reviewing it first. This may be from an AI code review or for a bug report. Before sharing, the author should:
+1. Your productivity gains land in someone else's review queue. More PRs, bigger diffs and more discussion all fall on colleagues. Factor in their time, not just yours.
+2. Do not pass AI-generated output directly to a colleague without reviewing it first. This may be from an AI code review or for a bug report. Before sharing, the author should:
     - understand it
     - filter out false positives
     - remove noise and unnecessary text
     - verify or reproduce its claims
-2. The author should take ownership of the message and communicate the conclusion in their own words.
-3. Keep meaningful human-to-human communication where relevant and valuable:
+3. The author should take ownership of the message and communicate the conclusion in their own words.
+4. Keep meaningful human-to-human communication where relevant and valuable:
     - PR comments/responses
     - Jira issue comments/responses
     - Slack messages
-4. Reply to review comments yourself. Do not configure an agent to auto-respond.
+5. Reply to review comments yourself. Do not configure an agent to auto-respond.
