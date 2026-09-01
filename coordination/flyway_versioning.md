@@ -51,6 +51,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_44_20 | https://dhis2.atlassian.net/browse/DHIS2-21917 |
 | V2_44_21 | https://dhis2.atlassian.net/browse/DHIS2-21924 |
 | V2_44_22 | https://dhis2.atlassian.net/browse/DHIS2-21263 |
+| V2_44_23 | https://dhis2.atlassian.net/browse/DHIS2-22034 |
 
 ### 2.43
 | Version  | Pull request URL |
@@ -122,6 +123,7 @@ The table below contains a list of migration versions. Please reserve the approp
 | V2_43_65 | https://dhis2.atlassian.net/browse/DHIS2-18694 |
 | V2_43_66 | https://dhis2.atlassian.net/browse/DHIS2-21738 |
 | V2_43_67 | https://dhis2.atlassian.net/browse/DHIS2-21917 |
+| V2_43_68 | https://dhis2.atlassian.net/browse/DHIS2-22034 |
 
 ### 2.42
 | Version  | Pull request URL |
