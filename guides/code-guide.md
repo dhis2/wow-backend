@@ -1,5 +1,12 @@
 # Code Best Practices and Conventions
 
+## Design Guidance 
+Overall goal: **Simplification** by reducing the problem space
+
+1. **Local truth**: DHIS2 records what it can observe itself, input cannot override it
+2. **Session User only**: The attributed user is always the current user, input cannot override it
+3. **Simple, stateless static methods only**: Static methods never make static access nor accept spring beans as parameter
+
 ## Caching
 * avoid using `CacheProvider` (cluster/cache2k) cache for objects that are or reference hibernate managed objects or detached instances of these
 
