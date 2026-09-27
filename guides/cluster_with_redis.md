@@ -1,6 +1,6 @@
 # Local DHIS2 API Cluster with Redis and Nginx
 
-The DHIS 2 backend API can be built as a JAR file and deployed with an embedded Jetty server for rapid development and testing. Multiple nodes can be run at the same time to form a cluster. For details on running with embedded Jetty see the [embedded Jetty guide](embedded_jetty.md).
+DHIS2 2.44 or later can run as an executable WAR with embedded Tomcat for local development and testing. Multiple nodes can run at the same time to form a cluster. For build and run instructions, see the [embedded Tomcat guide](embedded_tomcat.md).
 
 > **Note**
 >
@@ -34,6 +34,12 @@ Nginx will be used to load balance requests to the running DHIS2 nodes.
             listen 80;
             location / {
                 proxy_pass http://dhis2_cluster;
+                proxy_http_version 1.1;
+                proxy_set_header Host $http_host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto $scheme;
+                proxy_set_header X-Forwarded-Port $server_port;
             }
         }
     }
@@ -87,19 +93,27 @@ All DHIS2 nodes should use this config to connect to the same Redis server.
 
 ## Start cluster
 
-With the prerequisites in place and running we can now start 2 DHIS2 nodes. There are multiple ways to do this but this guide will show the easiest and quickest way which is through Intellij.
+Build the executable WAR once using the [embedded Tomcat guide](embedded_tomcat.md). Prepare a separate `DHIS2_HOME` directory for each node, each containing a `dhis.conf` that points to the same PostgreSQL database and Redis server. Start the nodes in separate terminals from the dhis2-core repository root.
 
-### 1. Allow running of multiple instances of embedded Jetty
+### 1. Start the first node
 
-Open the Run configuration and allow running of multiple instances.  
-This screenshot also shows where we can set the port for each of the DHIS2 nodes. Each instance should have its own port and should align with the Nginx upstream server settings [mentioned here](#nginx).
+```sh
+JAVA_TOOL_OPTIONS=-Dserver.forward-headers-strategy=native \
+  ./dhis-2/run-api.sh -s -d /opt/dhis2-node1 -p 9091
+```
 
-![](resources/images/intellij-allow-multiple-instances.png)
+Wait for startup to finish before starting the second node.
 
-### 2. Start cluster nodes
+### 2. Start the second node
 
-1. Click the `Play` button to start the first node, making sure to pass in the desired port number for that node.
-2. Click the `Play` button again to start the second node, making sure to pass in the desired port number for that node.
+```sh
+JAVA_TOOL_OPTIONS=-Dserver.forward-headers-strategy=native \
+  ./dhis-2/run-api.sh -s -d /opt/dhis2-node2 -p 9092
+```
+
+The `-s` flag reuses the WAR built earlier. The `-p` flags set `-Dserver.port=9091` and `-Dserver.port=9092`, matching the [nginx upstream ports](#nginx). The forward-headers strategy honours headers from the local proxy.
+
+Alternatively, duplicate the [IntelliJ Application configuration](embedded_tomcat.md#running-from-intellij-idea), give each configuration its own `DHIS2_HOME`, and set `-Dserver.port=9091` or `-Dserver.port=9092` in its VM options along with `-Dserver.forward-headers-strategy=native`. Run both configurations.
 
 ### 3. Test load balancing
 
