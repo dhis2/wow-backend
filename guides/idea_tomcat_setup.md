@@ -2,6 +2,8 @@
 
 By configuring Tomcat with IntelliJ, you can manage key aspects of your development process, such as debugging, logs and hot swapping, all from within the IDE.
 
+For DHIS2 2.44 or later, [embedded Tomcat](embedded_tomcat.md) is a simpler option that does not require a separate Tomcat installation.
+
 This guide assumes you have already installed Tomcat on your machine. 
 Additionally, the Maven, Tomcat and Java EE plugins are required, but they come bundled with IntelliJ and are enabled by default. Unless you have manually disabled them, your environment should be ready.
 
@@ -26,7 +28,7 @@ To ensure a smooth setup, follow these steps to configure your project in Intell
 
 5. Configure Local Tomcat:
     - Open the configurations menu and add a new local Tomcat configuration.
-        1. From 2.42 on, you'll need at least Tomcat 10.
+        1. From 2.42 on, you'll need Tomcat 10.1 or later.
         2. Up until 2.41, use Tomcat 9.0.96 and below.
     - In the _Deployment_ tab:
         1. From 2.42 on, add the artifact named _dhis-web-server:war exploded_. 
@@ -42,7 +44,7 @@ To ensure a smooth setup, follow these steps to configure your project in Intell
 
 7. Set Environment Variable:
     - In the _Startup/Connection_ tab, add a new environment variable called ***DHIS2_HOME***. Repeat this action for the Debug profile too.
-    - Set the value to your configuration file.
+    - Set the value to the directory containing your `dhis.conf` file, not to the file itself.
 
 8. Configure Logging (optional):
     - Go to the _Logs_ tab and click on Save console output to file.
