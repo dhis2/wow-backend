@@ -1,5 +1,5 @@
 # Run DHIS2 with embedded Tomcat
-<!-- Author: Morten (Morty) <netroms@gmail.com> -->
+<!-- Author: Morten Svanæs <msvanaes@dhis2.org> -->
 
 Embedded mode runs DHIS2 directly from an executable WAR, without installing a separate servlet container. The `dhis-web-server` module starts Tomcat through `org.hisp.dhis.web.tomcat.Main`; the executable WAR uses the Spring Boot WAR launcher to invoke that class. It is not a Spring Boot application with Spring Boot command-line configuration.
 
@@ -38,7 +38,7 @@ For example, restart an existing build on another port:
 ./dhis-2/run-api.sh -s -d /opt/dhis2 -p 9091
 ```
 
-Stop with Ctrl-C. From 2.44, shutdown closes the Spring context, stops Tomcat and removes its temporary directory; SIGTERM uses the same shutdown hook.
+Stop with Ctrl-C. From 2.44, shutdown stops Tomcat, which closes the Spring context, and removes its temporary directory; SIGTERM uses the same shutdown hook.
 
 ## Build and run the executable WAR
 
@@ -68,7 +68,7 @@ Normal builds include web apps. For a faster backend-only development build, add
 | HTTP port | `-Dserver.port=9090` | `SERVER_PORT` | `8080` |
 | Context path | `-Dserver.servlet.context.path=/dhis2` | `SERVER_SERVLET_CONTEXT_PATH` | Root, no prefix |
 | Forwarded headers (2.44+) | `-Dserver.forward-headers-strategy=native` | `SERVER_FORWARD_HEADERS_STRATEGY` | `none` |
-| Internal proxy addresses (2.44+) | `-Dserver.tomcat.remoteip.internal-proxies=<regex>` | `SERVER_TOMCAT_REMOTEIP_INTERNAL_PROXIES` | Tomcat's loopback and private-network list |
+| Internal proxy addresses (2.44+) | `-Dserver.tomcat.remoteip.internal-proxies=<regex or CIDR list>` | `SERVER_TOMCAT_REMOTEIP_INTERNAL_PROXIES` | Tomcat's loopback and private-network list |
 
 System properties take precedence over environment variables. `run-api.sh -p` supplies the port as a system property, so it also takes precedence over `SERVER_PORT`. Put JVM options **before** `-jar`, or in `JAVA_TOOL_OPTIONS`:
 
@@ -84,7 +84,7 @@ Arguments after `-jar dhis.war` are ignored, including `--server.port=9090`. Emb
 
 ### Behind a reverse proxy
 
-Use `native` when a trusted reverse proxy terminates HTTPS. It honours `X-Forwarded-For`, `X-Forwarded-Proto`, `X-Forwarded-Port` and `X-Forwarded-Host` from trusted proxies. Restrict direct access to the backend and override the internal-proxy regex if your proxy is outside Tomcat's default list.
+Use `native` when a trusted reverse proxy terminates HTTPS. It honours `X-Forwarded-For`, `X-Forwarded-Proto`, `X-Forwarded-Port` and `X-Forwarded-Host` from trusted proxies. Restrict direct access to the backend and set the internal proxies, as a regular expression such as `127\.0\.0\.1` or a comma-separated CIDR list such as `127.0.0.1/32`, if your proxy is outside Tomcat's default list.
 
 Configure the proxy to use HTTP/1.1 upstream, preserve the public Host including its port, and supply forwarded headers. In `dhis.conf`, set `server.base.url` to the public URL and `server.https = on`; configure HSTS at the proxy. These settings do not create an embedded TLS listener.
 
@@ -124,6 +124,6 @@ docker compose up
 
 Open `http://localhost:8080/`. This setup supplies its own database and mounted `dhis.conf`; it does not use the host's `DHIS2_HOME`.
 
-The `dhis2/core-dev` images use embedded Tomcat from 2.43 onwards. The `dhis2/core` images still use external Tomcat, so their `CATALINA_OPTS` examples do not configure embedded mode. Use `JAVA_TOOL_OPTIONS` for JVM options in embedded containers. The repository's Compose setup is for development; see [docker-deployment](https://github.com/dhis2/docker-deployment) for production containers.
+The `dhis2/core-dev` images built from the 2.43 and later development branches use embedded Tomcat. The `dhis2/core` images still use external Tomcat, so their `CATALINA_OPTS` examples do not configure embedded mode. Use `JAVA_TOOL_OPTIONS` for JVM options in embedded containers. The repository's Compose setup is for development; see [docker-deployment](https://github.com/dhis2/docker-deployment) for production containers.
 
 Tomcat is bundled into the embedded application, so upgrading DHIS2 also updates the bundled container. If you enable the OAuth2 authorization server, configure a persistent PKCS12 keystore using `oauth2.server.jwt.keystore.*` for stable signing keys. Otherwise each restart generates a new key and previously issued access tokens are rejected, though refresh tokens continue to work.
