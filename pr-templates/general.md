@@ -7,7 +7,7 @@ The rules apply to humans and to AI agents.
 
 PR descriptions are mainly for humans.
 Two humans must review and approve each PR.
-A reader must be able to understand the PR from less than one page of text.
+A reader must understand the PR from less than one page of text.
 Thus the description must be small and compressed.
 
 ## Pick a template
@@ -31,9 +31,10 @@ Build changes (Maven, dependencies, packaging) use the `chore` type.
 ## Format
 
 - Do not add other sections.
-- A PR description has no test section and no test line.
+- Do not add a section with the name Test, Tests or Testing.
+  In a fix, the Proof section can name the test that proves the fix, in one sentence.
 - Remove the hint text and the optional parts that you do not use.
-- Add "AI Assisted" on the last line if AI has been used a lot to create the PR
+- If AI wrote a large part of the PR, put "AI Assisted" on the last line.
 
 ## Size
 
@@ -43,16 +44,17 @@ Build changes (Maven, dependencies, packaging) use the `chore` type.
 
 ## Content
 
-- Tell what changes and why. Be brief about how, the code shows that.
+- Tell what changes and why. Keep the how short. The code shows it.
 - Keep it simple. Do not list each small detail.
 - Name 1-3 key classes, methods or endpoints as the entry points to the code.
-- Use Caveats for items that a reviewer can miss: behaviour changes, risks, limits.
+- Caveats is an optional section. Most PRs do not need it.
+  Use it only if the template has it and a reviewer must know about a behaviour change, risk or limit.
 - Put the Jira key in the title. Put related PRs in the link line.
-- Always link with the full JIRA url as shown in the templates. Only in very rare cases there are no JIRA.
+- Link the Jira issue with its full URL, as the templates show. Most PRs have a Jira issue.
 
 ## Language
 
-Try to write in [ASD-STE100](https://www.asd-ste100.org/) Simplified Technical English (STE):
+Write in [ASD-STE100](https://www.asd-ste100.org/) Simplified Technical English (STE):
 
 - One sentence, one statement. Maximum 20 words in a sentence.
 - Use the active voice. Write "The import rejects the row", not "The row is rejected".
@@ -78,7 +80,7 @@ It can contain reports, tables and diagrams.
 - Put the PR doc in the [`pr/`](../pr/README.md) folder of dhis2/wow-backend.
 - File name: `<PR number>_<type>_<short_title>.md`. Use underscores between the words.
   The type is the prefix of the PR title, for example `fix`, `feat` or `perf`.
-  Example: `23200_feat_API_ETag_cache.md`. (Always PR nr first so it can be ordered by creation time)
+  Example: `23200_feat_API_ETag_cache.md`. The PR number comes first, so the files sort in PR order.
 - Open the code PR first. Then open the doc PR in dhis2/wow-backend, with the code PR number in the file name.
 - Then put a link to the PR doc in the link line of the code PR description.
   Until the doc PR merges, the link points to the doc on its branch.
