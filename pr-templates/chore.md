@@ -8,17 +8,14 @@
 1-3 sentences on what the clean-up or maintenance changes and why it is necessary, linking it to key place or entry point in the code
 
 
-# Example 1 (based on dhis2/dhis2-core#25979)
-
-**Jira**: https://dhis2.atlassian.net/browse/DHIS2-22376
+# Example 1 (based on dhis2/dhis2-core#25817)
 
 ## What
-The `TWO_YEARLY` period type stopped working in 2011.
-We decided to remove it in 2.44.
-This PR removes `TWO_YEARLY` from the code.
-A Flyway migration deletes its periods and its period type.
-The migration keeps them if a data set or a data approval workflow uses the type.
-Then it logs an error, and an admin must clean up by hand.
+The performance tests download async-profiler 4.4 in `docker-compose.profile.yml`.
+This PR changes the version to 4.6.
+Version 4.6 adds a tree view to `profile.html` and shows real units in flame graphs.
+It is a drop-in update, so the profile scripts do not change.
+DHIS2 code, the API and the database do not change.
 
 
 # Example 2 (based on dhis2/dhis2-core#26066)

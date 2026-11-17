@@ -13,4 +13,4 @@ Example: `23200_feat_API_ETag_cache.md`
 A PR doc stays here permanently, as the record of the PR.
 Do not update it after the code PR merges.
 
-For the rules, see [Large PRs: the PR doc](../pr-templates/general.md#large-prs-the-pr-doc).
+For the rules, see [Large PRs: the PR doc](../pr-templates/README.md#large-prs-the-pr-doc).
