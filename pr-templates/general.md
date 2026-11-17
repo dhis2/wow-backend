@@ -59,10 +59,13 @@ It can contain reports, tables and diagrams.
 - Put the PR doc in the [`pr/`](../pr/README.md) folder of dhis2/wow-backend.
 - File name: `<PR number>_<type>_<short_title>.md`. Use underscores between the words.
   The type is the prefix of the PR title, for example `fix`, `feat` or `perf`.
-  Example: `23200_fix_embedded_WAR_startup_crash_from_duplicate_slf4j_bindings.md`.
-- Open the PR first. Then you know the PR number for the file name.
+  Example: `23200_feat_API_ETag_cache.md`.
+- Open the code PR first. Then open the doc PR in dhis2/wow-backend, with the code PR number in the file name.
+- Then put a link to the PR doc in the link line of the code PR description.
+  Until the doc PR merges, the link points to the doc on its branch.
 - The PR description still follows the template of its type and the word limit.
-- Put a link to the PR doc in the link line of the PR description.
+- The PR doc stays in `pr/` permanently, as the record of the PR.
+  Do not update it after the code PR merges.
 - The PR doc is optional, never required.
 
 ## Content
