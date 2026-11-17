@@ -6,8 +6,8 @@ The rules apply to humans and to AI agents.
 ## Why
 
 PR descriptions are mainly for humans.
-Two persons must review and approve each PR.
-A reader must understand the PR from less than one page of text.
+Two humans must review and approve each PR.
+A reader must be able to understand the PR from less than one page of text.
 Thus the description must be small and compressed.
 
 ## Pick a template
@@ -30,55 +30,29 @@ Build changes (Maven, dependencies, packaging) use the `chore` type.
 
 ## Format
 
-- All templates have the same sections in the same order:
-  optional link line, **Problem**, **Solution**, optional **Changes/Caveats** list, AI line.
 - Do not add other sections.
 - A PR description has no test section and no test line.
-  The tests are in the diff and in CI.
-- AI line: one line. Tell which parts AI made.
 - Remove the hint text and the optional parts that you do not use.
+- Add "AI Assisted" on the last line if AI has been used a lot to create the PR
 
 ## Size
 
 - Maximum 250 words, headings included. Count with `wc -w`.
 - Aim for 150 words or fewer.
-- Problem and Solution: maximum 2 short paragraphs each.
-- Changes/Caveats: maximum 5 bullets, one line each.
-- If you need more words, split the PR.
-  If you cannot split it, write a [PR doc](#large-prs-the-pr-doc).
-
-## Large PRs: the PR doc
-
-Some PRs need more text than the word limit allows.
-Examples: a new feature, a big refactor, a large performance test with many reports.
-For such a PR, you can write a PR doc.
-A PR doc is a full document about the feature or the PR.
-It has no word limit and no fixed sections.
-It can contain reports, tables and diagrams.
-
-- Put the PR doc in the [`pr/`](../pr/README.md) folder of dhis2/wow-backend.
-- File name: `<PR number>_<type>_<short_title>.md`. Use underscores between the words.
-  The type is the prefix of the PR title, for example `fix`, `feat` or `perf`.
-  Example: `23200_feat_API_ETag_cache.md`.
-- Open the code PR first. Then open the doc PR in dhis2/wow-backend, with the code PR number in the file name.
-- Then put a link to the PR doc in the link line of the code PR description.
-  Until the doc PR merges, the link points to the doc on its branch.
-- The PR description still follows the template of its type and the word limit.
-- The PR doc stays in `pr/` permanently, as the record of the PR.
-  Do not update it after the code PR merges.
-- The PR doc is optional, never required.
+- If the PR is very large, write a [PR doc](#large-prs-the-pr-doc).
 
 ## Content
 
-- Tell what changes and why. Do not tell how, file by file. The code shows that.
-- Keep it simple and generic. Do not list each small detail.
-- Name one key class, method or endpoint as the entry point to the code.
+- Tell what changes and why. Be brief about how, the code shows that.
+- Keep it simple. Do not list each small detail.
+- Name 1-3 key classes, methods or endpoints as the entry points to the code.
 - Use Caveats for items that a reviewer can miss: behaviour changes, risks, limits.
 - Put the Jira key in the title. Put related PRs in the link line.
+- Always link with the full JIRA url as shown in the templates. Only in very rare cases there are no JIRA.
 
 ## Language
 
-Write in [ASD-STE100](https://www.asd-ste100.org/) Simplified Technical English (STE):
+Try to write in [ASD-STE100](https://www.asd-ste100.org/) Simplified Technical English (STE):
 
 - One sentence, one statement. Maximum 20 words in a sentence.
 - Use the active voice. Write "The import rejects the row", not "The row is rejected".
@@ -92,7 +66,27 @@ Keep the load on the reader low:
 - Put a modifier immediately next to the word that it modifies.
 - Start with the main statement. Keep introductions short.
 
+## Large PRs: the PR doc
+
+Some PRs need more text than the word limit allows.
+Examples: a new feature, a big refactor, a large performance test with many reports.
+For such a PR, you can write a PR doc.
+A PR doc is a full document about the PR.
+It has no word limit and no fixed sections.
+It can contain reports, tables and diagrams.
+
+- Put the PR doc in the [`pr/`](../pr/README.md) folder of dhis2/wow-backend.
+- File name: `<PR number>_<type>_<short_title>.md`. Use underscores between the words.
+  The type is the prefix of the PR title, for example `fix`, `feat` or `perf`.
+  Example: `23200_feat_API_ETag_cache.md`. (Always PR nr first so it can be ordered by creation time)
+- Open the code PR first. Then open the doc PR in dhis2/wow-backend, with the code PR number in the file name.
+- Then put a link to the PR doc in the link line of the code PR description.
+  Until the doc PR merges, the link points to the doc on its branch.
+- The PR description still follows the template of its type and the word limit.
+- The PR doc stays in `pr/` permanently, as the record of the PR.
+  Do not update it after the code PR merges.
+- The PR doc is optional, never required.
+
 ## Examples
 
 Each template has examples. They are short rewrites of real dhis2-core PRs.
-Their AI lines show the form, not the facts.
