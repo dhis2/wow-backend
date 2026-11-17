@@ -14,8 +14,6 @@
 
 1 indicator line on AI disclaimer/use
 
-1 indicator line qualifying test coverage
-
 
 ## Example 1 (based on dhis2/dhis2-core#24207)
 
@@ -29,8 +27,6 @@ It shows how to record a browser session and change it into a simulation.
 
 No AI used
 
-Docs only.
-
 
 ## Example 2 (based on dhis2/dhis2-core#22626)
 
@@ -42,8 +38,6 @@ It is not ready yet.
 Change the text: the Docker Compose setup is work in progress.
 
 No AI used
-
-Docs only.
 
 
 ## Example 3 (based on dhis2/dhis2-core#23872)
@@ -58,5 +52,3 @@ It links the runner.
 It asks contributors to try changes locally and to use CI only for published numbers.
 
 Changes made by AI 🤖
-
-Docs only.

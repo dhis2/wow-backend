@@ -14,8 +14,6 @@
 
 1 indicator line on AI disclaimer/use
 
-1 indicator line qualifying test coverage
-
 
 ## Example 1 (based on dhis2/dhis2-core#26191)
 
@@ -34,8 +32,6 @@ Postgres uses the unique indexes on `from_relationshipitemid` and `to_relationsh
 
 Changes made by AI 🤖
 
-Existing relationship tests pass. Gatling on Perf Land MNCH shows the gain.
-
 
 ## Example 2 (based on dhis2/dhis2-core#26257)
 
@@ -49,8 +45,6 @@ The iteration order stays the same, and removal takes constant time.
 The behaviour does not change.
 
 AI Assisted 🤖
-
-Existing predictor unit tests pass.
 
 
 ## Example 3 (based on dhis2/dhis2-core#25983)
@@ -69,5 +63,3 @@ Without an explicit `order`, the export has no `ORDER BY`.
 - A client that needs stable pages must set `order`.
 
 No AI used
-
-Paging checked by hand on 875,623 rows: each row came once, in the same order in each run.

@@ -14,8 +14,6 @@
 
 1 indicator line on AI disclaimer/use
 
-1 indicator line qualifying test coverage
-
 
 ## Example 1 (based on dhis2/dhis2-core#25979)
 
@@ -33,8 +31,6 @@ A Flyway migration deletes its periods and its period type.
 
 Code: human, Flyway: AI 🤖
 
-Existing period tests pass without `TWO_YEARLY`.
-
 
 ## Example 2 (based on dhis2/dhis2-core#26066)
 
@@ -48,8 +44,6 @@ The behaviour stays the same: `*` matches any characters.
 Names are still lower case, with `-` changed to `_`.
 
 Changes made by AI 🤖
-
-A new test compares the matcher with the old regex on 5,000 random pairs.
 
 
 ## Example 3 (based on dhis2/dhis2-core#26096)
@@ -67,5 +61,3 @@ It is Debian based, like most production servers.
 - The collation stays `C` (`LC_COLLATE=C`).
 
 No AI used
-
-Integration and e2e tests pass on the new image.

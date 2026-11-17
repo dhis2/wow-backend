@@ -14,8 +14,6 @@
 
 1 indicator line on AI disclaimer/use 
 
-1 indicator line qualifying test coverage
-
 
 ## Example 1
 
@@ -49,8 +47,6 @@ They write all other assigned numbers in plain decimal notation (`53093393.25`).
 
 Changes made by AI 🤖
 
-New tests cover large numbers, equal values and the overwrite setting.
-
 
 ## Example 3 (based on dhis2/dhis2-core#26039)
 
@@ -65,5 +61,3 @@ Declare `path:/api/dataApprovals` in the `@OpenApi.Document` classifiers.
 The document now also lists the `/api/dataAcceptances` endpoints of the same controller.
 
 AI Assisted 🤖
-
-A new test in `OpenApiControllerTest` fails without the fix.

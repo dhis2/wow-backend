@@ -14,8 +14,6 @@
 
 1 indicator line on AI disclaimer/use
 
-1 indicator line qualifying test coverage
-
 
 ## Example 1 (based on dhis2/dhis2-core#26258)
 
@@ -35,8 +33,6 @@ The step logs the tag that it uses, and it fails if it finds no tag.
 
 AI Assisted 🤖
 
-A run with the `deploy` label creates a new instance.
-
 
 ## Example 2 (based on dhis2/dhis2-core#26045)
 
@@ -55,8 +51,6 @@ This applies to `jenkinsfiles/dev`, `jenkinsfiles/stable` and `deploy-instance.y
 
 No AI used
 
-Not testable before the im-manager release.
-
 
 ## Example 3 (based on dhis2/dhis2-core#25491)
 
@@ -70,5 +64,3 @@ Remove the Codecov upload.
 JaCoCo stays, so you can make coverage reports locally.
 
 No AI used
-
-No test change.

@@ -22,21 +22,20 @@ For the title rules, see [Git PR & commit messages](../guides/git_commit_message
 | `perf:` | [perf.md](perf.md) | Faster or less memory, same behaviour |
 | `refactor:` | [refactor.md](refactor.md) | New code structure, same behaviour |
 | `chore:` | [chore.md](chore.md) | Clean-up and maintenance |
-| `build:` | [build.md](build.md) | Maven, dependencies, packaging |
 | `ci:` | [ci.md](ci.md) | CI workflows and pipelines |
 | `test:` | [test.md](test.md) | Test code only |
 | `docs:` | [docs.md](docs.md) | Documentation only |
 
+Build changes (Maven, dependencies, packaging) use the `chore` type.
+
 ## Format
 
 - All templates have the same sections in the same order:
-  optional link line, **Problem**, **Solution**, optional **Changes/Caveats** list, AI line, test line.
+  optional link line, **Problem**, **Solution**, optional **Changes/Caveats** list, AI line.
 - Do not add other sections.
-- Do not add a "Tests" section.
-  AI now writes most code, so we expect that tests and coverage are correct.
-  Reviewers read the tests only when they need them to understand a part of the change.
+- A PR description has no test section and no test line.
+  The tests are in the diff and in CI.
 - AI line: one line. Tell which parts AI made.
-- Test line: one line. Tell what the tests verify.
 - Remove the hint text and the optional parts that you do not use.
 
 ## Size
@@ -74,4 +73,4 @@ Keep the load on the reader low:
 ## Examples
 
 Each template has examples. They are short rewrites of real dhis2-core PRs.
-Their AI and test lines show the form, not the facts.
+Their AI lines show the form, not the facts.

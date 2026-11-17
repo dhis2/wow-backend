@@ -14,8 +14,6 @@
 
 1 indicator line on AI disclaimer/use
 
-1 indicator line qualifying test coverage (for a test PR: what now runs, and where)
-
 
 ## Example 1 (based on dhis2/dhis2-core#26137)
 
@@ -28,8 +26,6 @@ Thus two bugs in the user org unit checks were not found.
 Rename the seven classes to end in `Test`.
 
 Changes made by AI 🤖
-
-CI now runs the seven classes, and they pass.
 
 
 ## Example 2 (based on dhis2/dhis2-core#26183)
@@ -49,8 +45,6 @@ The new `openapi-own-jvm` profile in `dhis-test-web-api` does this.
 
 AI Assisted 🤖
 
-The Jenkins build passes, and the test runs one time in each build.
-
 
 ## Example 3 (based on dhis2/dhis2-core#26281)
 
@@ -69,5 +63,3 @@ Each journey is built for a program, so ANC can use it too.
 - The 11 p95 thresholds stay on the same requests.
 
 No AI used
-
-Smoke runs of `PerfLandMnchTrackerTest` and `TrackerTest` pass.

@@ -14,8 +14,6 @@
 
 1 indicator line on AI disclaimer/use
 
-1 indicator line qualifying test coverage
-
 
 ## Example 1 (based on dhis2/dhis2-core#25977)
 
@@ -33,8 +31,6 @@ The analysis runs only the listed rules, on the same org units and periods.
 - Behaviour change: an unknown `vrg` now gives 404. Before, it ran all rules in the system.
 
 Changes made by AI 🤖
-
-New controller tests cover one rule, many rules and each error case.
 
 
 ## Example 2 (based on dhis2/dhis2-core#26064)
@@ -56,8 +52,6 @@ The check and the startup warning use the same `ServerBaseUrlValidator`.
 
 Code by AI 🤖, reviewed by the author
 
-New tests cover each invalid URL form.
-
 
 ## Example 3 (based on dhis2/dhis2-core#25405)
 
@@ -75,5 +69,3 @@ Then the hook deletes the Tomcat base folder and stops Log4j.
 - The Log4j shutdown hook is off, so the shutdown logs stay complete.
 
 AI Assisted 🤖
-
-Checked by hand with SIGTERM, Ctrl-C and systemd. Stop takes about 1.5 s.

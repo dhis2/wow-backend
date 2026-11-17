@@ -14,8 +14,6 @@
 
 1 indicator line on AI disclaimer/use
 
-1 indicator line qualifying test coverage
-
 
 ## Example 1 (based on dhis2/dhis2-core#24227)
 
@@ -34,8 +32,6 @@ Its public API stays the same.
 
 Changes made by AI 🤖
 
-Existing tracker import tests pass without changes.
-
 
 ## Example 2 (based on dhis2/dhis2-core#24521)
 
@@ -51,8 +47,6 @@ Table, columns, types and foreign key names stay the same, so the schema does no
 - `status` uses `@Enumerated(EnumType.STRING)`. The stored values stay the same.
 
 Changes made by AI 🤖
-
-Existing tracker tests pass on the new mapping.
 
 
 ## Example 3 (based on dhis2/dhis2-core#24541)
@@ -70,5 +64,3 @@ Use the pattern of `FieldFilterService`: a `@JsonFilter` mixin and a `SimpleBean
 The rule that selects the collections stays the same.
 
 Changes made by AI 🤖
-
-Existing JSON Patch tests pass.
