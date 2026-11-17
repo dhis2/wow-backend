@@ -31,8 +31,6 @@ This only excepts imports that are deletions only.
 
 Changes made by AI 🤖
 
-New tests verify deletions of any data are possible.
-
 
 ## Example 2 (based on dhis2/dhis2-core#26246)
 
