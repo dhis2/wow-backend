@@ -44,7 +44,26 @@ Build changes (Maven, dependencies, packaging) use the `chore` type.
 - Aim for 150 words or fewer.
 - Problem and Solution: maximum 2 short paragraphs each.
 - Changes/Caveats: maximum 5 bullets, one line each.
-- If you need more words, the PR is too large. Split it.
+- If you need more words, split the PR.
+  If you cannot split it, write a [PR doc](#large-prs-the-pr-doc).
+
+## Large PRs: the PR doc
+
+Some PRs need more text than the word limit allows.
+Examples: a new feature, a big refactor, a large performance test with many reports.
+For such a PR, you can write a PR doc.
+A PR doc is a full document about the feature or the PR.
+It has no word limit and no fixed sections.
+It can contain reports, tables and diagrams.
+
+- Put the PR doc in the [`pr/`](../pr/README.md) folder of dhis2/wow-backend.
+- File name: `<PR number>_<type>_<short_title>.md`. Use underscores between the words.
+  The type is the prefix of the PR title, for example `fix`, `feat` or `perf`.
+  Example: `23200_fix_embedded_WAR_startup_crash_from_duplicate_slf4j_bindings.md`.
+- Open the PR first. Then you know the PR number for the file name.
+- The PR description still follows the template of its type and the word limit.
+- Put a link to the PR doc in the link line of the PR description.
+- The PR doc is optional, never required.
 
 ## Content
 
