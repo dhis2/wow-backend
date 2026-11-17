@@ -20,7 +20,8 @@ max 1 paragraph
 # Example 1
 
 ## Problem
-Users (even admins) could not delete existing data that would not pass validation in `DefaultDataEntryService.validate` because of not being consistent with the metadata.
+Users (even admins) could not delete existing data that would not pass validation in `DefaultDataEntryService.validate`.
+The data was not consistent with the metadata.
 
 ## Solution
 Deletions do no longer validate consistency with the metadata.
@@ -30,11 +31,11 @@ This only excepts imports that are deletions only.
 New tests verify deletions of any data are possible.
 
 ## Caveats
-- deletion counts in report reflect actual rows deleted
-- ATM duplicate keys are undetected for default expressed as `null` one time and as default `UID` another time
-- DS completion now skips lock-status check for admins to be symmetrical with data entry
+Deletion counts in report reflect actual rows deleted.
+ATM duplicate keys are undetected for default expressed as `null` one time and as default `UID` another time.
+DS completion now skips lock-status check for admins to be symmetrical with data entry.
 
-Changes made by AI 🤖
+AI Assisted
 
 
 # Example 2 (based on dhis2/dhis2-core#26246)

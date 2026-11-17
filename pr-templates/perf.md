@@ -5,13 +5,13 @@
 **Jira**: [full link to the Jira]
 
 ## Problem
-1-3 sentences on what is slow and how slow (one number), linking it to key place or entry point in the code
+1-3 sentences on what is slow, linking it to key place or entry point in the code
 
 ## Solution
-1-3 sentences summarizing the change and the result, with numbers before and after
+1-3 sentences summarizing the change and the result
 
 ## Data/proof it works
-1-3 sentences showing the most important performance metrics/numbers, totals etc.
+1-3 sentences or a small table with the most important performance metrics/numbers, totals etc.
 Keep it compressed and compact, only the most important numbers.
 
 

@@ -5,7 +5,7 @@
 **Jira**: [full link to the Jira]
 
 ## What
-1-3 sentences on why the clean-up or maintenance is necessary, linking it to key place or entry point in the code
+1-3 sentences on what the clean-up or maintenance changes and why it is necessary, linking it to key place or entry point in the code
 
 
 # Example 1 (based on dhis2/dhis2-core#25979)

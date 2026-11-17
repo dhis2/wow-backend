@@ -40,7 +40,7 @@ Build changes (Maven, dependencies, packaging) use the `chore` type.
 
 - Maximum 250 words, headings included. Count with `wc -w`.
 - Aim for 150 words or fewer.
-- If the PR is very large, write a [PR doc](#large-prs-the-pr-doc).
+- If the PR is very large, you can write a [PR doc](#large-prs-the-pr-doc).
 
 ## Content
 
@@ -91,4 +91,4 @@ It can contain reports, tables and diagrams.
 
 ## Examples
 
-Each template has examples. They are short rewrites of real dhis2-core PRs.
+Each template has examples. Most are short rewrites of real dhis2-core PRs.

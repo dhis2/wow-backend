@@ -5,7 +5,7 @@
 **Jira**: [full link to the Jira]
 
 ## What
-1-3 sentences on what is missing, wrong or not clear in the documentation, and who needs it
+1-3 sentences on what is missing, wrong or not clear in the documentation, who needs it, and what this PR changes
 
 # Example 1 (based on dhis2/dhis2-core#24207)
 
