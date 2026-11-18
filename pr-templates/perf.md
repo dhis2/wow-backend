@@ -10,7 +10,7 @@
 ### Solution
 1-3 sentences summarizing the change and the result; use bullets for several separate parts
 
-### Data/proof it works
+### Results
 1-3 sentences or a small table with the most important performance metrics/numbers, totals etc.
 Keep it compressed and compact, only the most important numbers.
 
@@ -30,7 +30,7 @@ The query starts from the items of the entity and joins their relationships.
 Postgres uses the unique indexes on `from_relationshipitemid` and `to_relationshipitemid`.
 The p95 of the two relationship requests goes down by 62% and 72%.
 
-### Data/proof it works
+### Results
 Gatling load test on Perf Land MNCH, p95:
 
 | Request | Before | After |
@@ -55,7 +55,7 @@ Change it to a `LinkedHashSet`.
 The iteration order stays the same, and removal takes constant time.
 The run time goes from 50.8 s to 28.4 s.
 
-### Data/proof it works
+### Results
 A Yearly predictor on a copy of a national database: 265,734 org units, 188,211 predictions.
 `PredictionDataConsolidator.getData` goes from about 21 s to 1.5 s.
 
@@ -76,7 +76,7 @@ In one export, 306k of 875k rows had the same sort key as another row.
 Without an explicit `order`, the export has no `ORDER BY`.
 A client that needs stable pages must set `order`.
 
-### Data/proof it works
+### Results
 We exported 875,623 rows with `limit=25000`, idle and with 3 concurrent exports.
 
 - Each run returned each row exactly one time, in the same order.
