@@ -51,7 +51,7 @@ Build changes (Maven, dependencies, packaging) use the `chore` type.
 
 - Tell what changes and why. Keep the how short. The code shows it.
 - Keep it simple. Do not list each small detail.
-- Name 1-3 key classes, methods or endpoints as the entry points to the code.
+- Try to name at least one class, methods or endpoints as the entry points to the code for the reviewer, especially when you explain the problem code in fixes and the solution code in fixes and features.
 - Caveats is an optional section. Most PRs do not need it.
   Use it only if the template has it and a reviewer must know about a behaviour change, risk or limit.
 - Put the Jira key in the title. Put related PRs in the link line.
