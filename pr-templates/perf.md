@@ -12,9 +12,9 @@
 
 ### Results
 1-3 sentences or a small table with the most important performance metrics/numbers, totals etc.
+Always explain how you got the results, your method and interpretation.
+If a performance test was created, show the class/method.
 Keep it compressed and compact, only the most important numbers.
-
-
 
 # Example 1 (based on dhis2/dhis2-core#26191)
 
