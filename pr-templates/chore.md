@@ -4,13 +4,13 @@
 
 **Jira**: [full link to the Jira]
 
-## What
+### What
 1-3 sentences on what the clean-up or maintenance changes and why it is necessary, linking it to key place or entry point in the code
 
 
 # Example 1 (based on dhis2/dhis2-core#25817)
 
-## What
+### What
 The performance tests download async-profiler 4.4 in `docker-compose.profile.yml`.
 This PR changes the version to 4.6.
 Version 4.6 adds a tree view to `profile.html` and shows real units in flame graphs.
@@ -22,7 +22,7 @@ DHIS2 code, the API and the database do not change.
 
 **Jira**: https://dhis2.atlassian.net/browse/DHIS2-22396
 
-## What
+### What
 Data integrity check selection (`checks=program*`) uses a regex to match wildcard names.
 A regex is more than this simple match needs.
 A small matcher, `DefaultDataIntegrityService.matchesWildcard`, replaces the regex.
@@ -33,7 +33,7 @@ AI Assisted
 
 # Example 3 (based on dhis2/dhis2-core#26096)
 
-## What
+### What
 Our tests use three different PostGIS images.
 The e2e image `postgis/postgis:16-3.5-alpine` is available for amd64 only.
 This PR uses `ghcr.io/baosystems/postgis:16-3.5` in the integration and e2e tests.

@@ -4,36 +4,36 @@
 
 **Jira**: [full link to the Jira]
 
-## What
+### What
 1-3 sentences on what fails or is missing in CI, with the workflow, job or run
 
-## Solution
-1-3 sentences summarizing the change to the workflows or pipelines
+### Solution
+1-3 sentences summarizing the change to the workflows or pipelines; use bullets for several separate parts
 
 # Example 1 (based on dhis2/dhis2-core#26258)
 
-## What
+### What
 New PR preview instances (`deploy` label) fail with `stack not found: dhis2-db`.
 `deploy-instance.yml` finds the latest im-manager tag with `git ls-remote --sort='v:refname'`.
 IM removed the `v` prefix at 0.69.0, and this sort puts all `v*` tags last.
 Thus the workflow uses `v0.68.0`, which creates retired stacks.
 
-## Solution
-Sort on the version without an optional `v`.
-`destroy-instance.yml` gets the same fix.
-The step logs the tag that it uses, and it fails if it finds no tag.
+### Solution
+- Sort on the version without an optional `v`.
+- `destroy-instance.yml` gets the same fix.
+- The step logs the tag that it uses, and it fails if it finds no tag.
 
 AI Assisted
 
 
 # Example 2 (based on dhis2/dhis2-core#26045)
 
-## What
+### What
 A restart of an IM Play or PR instance restarts the full stack, Postgres too.
 DHIS2 can start before the database is ready.
 Then DHIS2 stays unhealthy, and the `dhis2-core-dev` build stops.
 
-## Solution
+### Solution
 Restart only the `dhis2` component in `jenkinsfiles/dev`, `jenkinsfiles/stable` and `deploy-instance.yml`.
 This needs an im-manager release with `restart.sh <id> <component>`.
 Until then, IM ignores the extra argument.
@@ -41,11 +41,11 @@ Until then, IM ignores the extra argument.
 
 # Example 3 (based on dhis2/dhis2-core#25491)
 
-## What
+### What
 The Codecov upload is not reliable.
 Codecov outages fail CI, and its coverage numbers do not agree with local JaCoCo.
 We cannot update from v3: v4 broke our build, and v5 needs a token.
 
-## Solution
+### Solution
 Remove the Codecov upload.
 JaCoCo stays, so you can make coverage reports locally.

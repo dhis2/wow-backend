@@ -31,8 +31,13 @@ Build changes (Maven, dependencies, packaging) use the `chore` type.
 ## Format
 
 - Do not add other sections.
+- Section headings are h3 (`###`), for example `### What`.
 - Do not add a section with the name Test, Tests or Testing.
   In a fix, the Proof section can name the test that proves the fix, in one sentence.
+- Use a bullet list when a section has several separate points.
+  Examples: the components or steps in How, the items in Caveats, a list of changed items.
+  Use sentences for one thought or a short narrative, typically in What and Why.
+  Do not make a list from one or two sentences.
 - Remove the hint text and the optional parts that you do not use.
 - If AI wrote a large part of the PR, put "AI Assisted" on the last line.
 
