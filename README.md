@@ -29,6 +29,8 @@ The following section lists guides on various topics.
 * [Component owners](guides/component_owners.md)
 * [Git PR & commit messages](guides/git_commit_messages.md)
 * [Git pull requests](guides/git_pull_requests.md)
+* [PR description templates](pr-templates/README.md)
+* [PR docs for large PRs](pr/README.md)
 
 **General Coding**
 * [Code Best Practices and Conventions](guides/code-guide.md)
