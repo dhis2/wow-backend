@@ -95,7 +95,7 @@ A different node of a cluster does not evict those collections for each change.
 
 ### Migration
 
-`V2_44_37__add_usergroupmembers_userid_index.sql` adds the index `in_usergroupmembers_userid` on `usergroupmembers(userid)`.
+`V2_44_39__add_usergroupmembers_userid_index.sql` adds the index `in_usergroupmembers_userid` on `usergroupmembers(userid)`.
 dhis2/wow-backend#146 reserves the number.
 The migration uses `if not exists`, so a large installation can make the index first with `CREATE INDEX CONCURRENTLY` and the same name.
 
@@ -126,7 +126,7 @@ This document did not check that statement against the diff.
 | `f97924b16b` | Refresh settings. A `system.session.user_details_refresh_interval` that is not a number (for example `900s`) gives the default 900 and a warning. Before, it turned the timed rebuild off. The value 0 still turns the timed rebuild off, now with a warning. A `system.session.timeout` of 0 or less keeps changes without expiry. Before, the in-memory tracker forgot them at once, and Redis refused each change token. One startup log line tells how the server keeps changes and if the timed rebuild is on. |
 | `f58a8f83a8` | More filter chain tests. A new user group and a new org unit are visible on the next request of the same session. |
 | `c2672d0c04` | `/api/me` lists groups that the user can read through a new group. `/api/me` loads the user groups and user roles without the sharing filter of the query. That filter takes the groups of the user from a cache that only the changing node clears. Before, a different node left out some groups and roles. The user could read those groups and roles only through a group that the user just joined. The read check against the user details still leaves out each group and role that the user cannot read. |
-| `321bcaea71` | Migration renumbered. Master took `V2_44_35` (`V2_44_35__remove_search_in_all_authority.sql`), so the index migration became `V2_44_36`. Renumbered again to `V2_44_37` in dhis2-core#25854 (`8f050cd4250d`), because #26299 took `V2_44_36`. |
+| `321bcaea71` | Migration renumbered. Master took `V2_44_35` (`V2_44_35__remove_search_in_all_authority.sql`), so the index migration became `V2_44_36`. Renumbered again to `V2_44_37` in dhis2-core#25854 (`8f050cd4250d`), because #26299 took `V2_44_36`. Renumbered a third time to `V2_44_39` (`59b64700fdde`), because dhis2-core#26361 took `V2_44_37` and dhis2-core#26372 took `V2_44_38`. |
 | `68a45e19be` | Refresh settings helpers. `UserDetailsRefreshSettings` takes the `dhis.conf` values, not the configuration provider. |
 
 ## How the behaviour is proven
