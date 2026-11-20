@@ -36,7 +36,7 @@ The following section lists guides on various topics.
 * [Code formatting](guides/code_formatting.md)
 
 **Running**
-* [Embedded Jetty API build](guides/embedded_jetty.md)
+* [Run DHIS2 with embedded Tomcat](guides/embedded_tomcat.md)
 * [IDEA and Tomcat setup (includes hot swapping)](guides/idea_tomcat_setup.md)
 * [Monitoring](guides/monitoring.md)
 * [Ubuntu Linux Android app mirroring](guides/ubuntu_android_app_mirroring.md)
